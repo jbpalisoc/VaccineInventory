@@ -1,0 +1,20 @@
+﻿<Window x:Class="VaccineInventory.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:prism="http://prismlibrary.com/"
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        Title="{Binding Title}" Height="500" Width="800" >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+            <Button Command="{Binding NavigateCommand}" CommandParameter="Patient" Height="50">Patient</Button>
+            <Button Command="{Binding NavigateCommand}" CommandParameter="Vaccine" Height="50">Vaccine</Button>
+            <Button Command="{Binding NavigateCommand}" CommandParameter="Inventory" Height="50">Inventory</Button>
+            <Button Command="{Binding NavigateCommand}" CommandParameter="VaccineHistory" Height="50">Vaccination History</Button>
+        </StackPanel>
+        <ContentControl Grid.Column="1"  prism:RegionManager.RegionName="ContentRegion" />
+    </Grid>
+</Window>
