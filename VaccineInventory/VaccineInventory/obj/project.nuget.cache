@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1xO92fRv5mnnNN72aKm5EA4ee0i1sxfb8h4gCHRD28Odh+oO6ySFZXsE74iDByMmndSNYpwPB+6iWgFfTwyS4w==",
+  "dgSpecHash": "8dDwUXVR23i8QQEP8k/eU47uaE7nIAPYFk/011Hvr1DOP1SUaQHjmyL3Hql0OsMztG7aEIRLA5nihdg9AmHnfg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\your name\\source\\repos\\VaccineInventory\\VaccineInventory\\VaccineInventory.csproj",
+  "projectFilePath": "C:\\Users\\your name\\source\\repos\\gitFolder\\VaccineInventory\\VaccineInventory\\VaccineInventory.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\your name\\.nuget\\packages\\dryioc.dll\\4.5.0\\dryioc.dll.4.5.0.nupkg.sha512",
     "C:\\Users\\your name\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.7\\microsoft.aspnet.webapi.client.5.2.7.nupkg.sha512",

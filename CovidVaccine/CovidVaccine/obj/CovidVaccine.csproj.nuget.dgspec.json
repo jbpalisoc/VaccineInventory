@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\your name\\source\\repos\\CovidVaccine\\CovidVaccine\\CovidVaccine.csproj": {}
+    "C:\\Users\\your name\\source\\repos\\gitFolder\\CovidVaccine\\CovidVaccine\\CovidVaccine.csproj": {}
   },
   "projects": {
-    "C:\\Users\\your name\\source\\repos\\CovidVaccine\\CovidVaccine\\CovidVaccine.csproj": {
+    "C:\\Users\\your name\\source\\repos\\gitFolder\\CovidVaccine\\CovidVaccine\\CovidVaccine.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\your name\\source\\repos\\CovidVaccine\\CovidVaccine\\CovidVaccine.csproj",
+        "projectUniqueName": "C:\\Users\\your name\\source\\repos\\gitFolder\\CovidVaccine\\CovidVaccine\\CovidVaccine.csproj",
         "projectName": "CovidVaccine",
-        "projectPath": "C:\\Users\\your name\\source\\repos\\CovidVaccine\\CovidVaccine\\CovidVaccine.csproj",
+        "projectPath": "C:\\Users\\your name\\source\\repos\\gitFolder\\CovidVaccine\\CovidVaccine\\CovidVaccine.csproj",
         "packagesPath": "C:\\Users\\your name\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\your name\\source\\repos\\CovidVaccine\\CovidVaccine\\obj\\",
+        "outputPath": "C:\\Users\\your name\\source\\repos\\gitFolder\\CovidVaccine\\CovidVaccine\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"

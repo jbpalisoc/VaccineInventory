@@ -5476,11 +5476,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\your name\\source\\repos\\VaccineInventory\\VaccineInventory\\VaccineInventory.csproj",
+      "projectUniqueName": "C:\\Users\\your name\\source\\repos\\gitFolder\\VaccineInventory\\VaccineInventory\\VaccineInventory.csproj",
       "projectName": "VaccineInventory",
-      "projectPath": "C:\\Users\\your name\\source\\repos\\VaccineInventory\\VaccineInventory\\VaccineInventory.csproj",
+      "projectPath": "C:\\Users\\your name\\source\\repos\\gitFolder\\VaccineInventory\\VaccineInventory\\VaccineInventory.csproj",
       "packagesPath": "C:\\Users\\your name\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\your name\\source\\repos\\VaccineInventory\\VaccineInventory\\obj\\",
+      "outputPath": "C:\\Users\\your name\\source\\repos\\gitFolder\\VaccineInventory\\VaccineInventory\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"

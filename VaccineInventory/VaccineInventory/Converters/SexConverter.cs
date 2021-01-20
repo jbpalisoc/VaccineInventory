@@ -9,12 +9,13 @@ namespace VaccineInventory.Converters
     {
         public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
         {
-            return true ? parameter : Binding.DoNothing;
+            return (string)parameter == value.ToString();
+
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
         {
-            return ((bool)value) ? parameter : Binding.DoNothing;
+            return (bool)value ? parameter : Binding.DoNothing;
         }
     }
 }

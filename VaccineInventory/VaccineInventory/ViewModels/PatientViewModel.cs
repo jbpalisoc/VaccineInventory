@@ -135,6 +135,12 @@ namespace VaccineInventory.ViewModels
             {
                 GetPatient();
                 Message = "Item Added!!!";
+                FirstName = string.Empty;
+                MiddleName = string.Empty;
+                LastName = string.Empty;
+                Birthday = DateTime.Now;
+                ContactNo = string.Empty;
+                Sex = '\0' ;
             }
         }
 
@@ -189,6 +195,12 @@ namespace VaccineInventory.ViewModels
             {
                 GetPatient();
                 Message = "Item Updated!!!";
+                FirstName = string.Empty;
+                MiddleName = string.Empty;
+                LastName = string.Empty;
+                Birthday = DateTime.Now;
+                ContactNo = string.Empty;
+                Sex = '\0';
             }
         }
     }

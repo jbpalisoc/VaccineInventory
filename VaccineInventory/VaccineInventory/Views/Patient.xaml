@@ -41,8 +41,8 @@
         <TextBox Grid.Row="5" Grid.Column="2" Height="25" Margin="10 0 10 10" Text="{Binding ContactNo}"></TextBox>
         <TextBlock Grid.Row="4" Grid.Column="3" Margin="10" Text="Sex"/>
         <StackPanel Grid.Row="5" Grid.Column="3" Orientation="Horizontal">
-            <RadioButton Margin="5" IsChecked="{Binding Sex, Converter={StaticResource ResourceKey=SexConverterKey}, ConverterParameter=M}" Content="Male"/>
-            <RadioButton Margin="5" IsChecked="{Binding Sex, Converter={StaticResource ResourceKey=SexConverterKey}, ConverterParameter=F}" Content="Female"/>
+            <RadioButton Margin="5" IsChecked="{Binding Sex, Converter={StaticResource ResourceKey=SexConverterKey}, ConverterParameter='M'}" Content='Male'/>
+            <RadioButton Margin="5" IsChecked="{Binding Sex, Converter={StaticResource ResourceKey=SexConverterKey}, ConverterParameter='F'}" Content='Female'/>
         </StackPanel>
         <Button Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="3" Margin="10" Command="{Binding SaveButtonClick}">Save</Button>
         <Button Grid.Column="1" Grid.Row="7" Grid.ColumnSpan="3" Margin="10" Command="{Binding UpdateButtonClick}">Update</Button>

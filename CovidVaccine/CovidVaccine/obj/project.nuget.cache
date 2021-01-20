@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/AUNT7ebH2/Xz3RvcQLmETp21KtOP0x1agXRyKyuYGJIMVhAvkXnWCgaQ0AuBjw9zsEwrAtD82CXf5SgEFrpPw==",
+  "dgSpecHash": "4kpmWxaSumtU1wk29rDOCWxtJe5hBTKRNII5b0RNGBwOTuX2WLl51LBDK1hyOQetPRvdQSlk65mqRFca6TUaow==",
   "success": true,
-  "projectFilePath": "C:\\Users\\your name\\source\\repos\\CovidVaccine\\CovidVaccine\\CovidVaccine.csproj",
+  "projectFilePath": "C:\\Users\\your name\\source\\repos\\gitFolder\\CovidVaccine\\CovidVaccine\\CovidVaccine.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\your name\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\your name\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
