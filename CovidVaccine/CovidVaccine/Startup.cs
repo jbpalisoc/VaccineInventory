@@ -1,4 +1,5 @@
 using CovidVaccine.Models;
+using CovidVaccine.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -26,9 +27,11 @@ namespace CovidVaccine
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //services.AddScoped<IRepository, Repository<VaccineContext>>();
             string mySqlConnectionStr = Configuration.GetConnectionString("DefaultConnection");
             services.AddDbContextPool<VaccineContext>(options => options.UseMySql(mySqlConnectionStr, ServerVersion.AutoDetect(mySqlConnectionStr)));
             services.AddControllers();
+            services.AddScoped<IRepository, Repository<VaccineContext>>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

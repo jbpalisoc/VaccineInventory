@@ -8,8 +8,10 @@ namespace CovidVaccine.Models
 {
     public class VaccineContext : DbContext
     {
+        private readonly DbContextOptions _options;
         public VaccineContext(DbContextOptions<VaccineContext> options) : base(options)
         {
+            _options = options;
         }
 
         public DbSet<Patient> Patients { get; set; }

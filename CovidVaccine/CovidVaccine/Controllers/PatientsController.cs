@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using CovidVaccine.Models;
+using CovidVaccine.Repositories;
 
 namespace CovidVaccine.Controllers
 {
@@ -13,32 +14,33 @@ namespace CovidVaccine.Controllers
     [ApiController]
     public class PatientsController : ControllerBase
     {
-        private readonly VaccineContext _context;
+        private readonly IRepository _repository;
 
-        public PatientsController(VaccineContext context)
+        public PatientsController(VaccineContext context, IRepository repository)
         {
-            _context = context;
+            _repository = repository;
         }
 
         // GET: api/Patients
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Patient>>> GetPatients()
         {
-            return await _context.Patients.ToListAsync();
+            var model = await _repository.SelectAll<Patient>();
+            return model;
         }
 
         // GET: api/Patients/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Patient>> GetPatient(int id)
         {
-            var patient = await _context.Patients.FindAsync(id);
+            var model = await _repository.SelectById<Patient>(id);
 
-            if (patient == null)
+            if (model == null)
             {
                 return NotFound();
             }
 
-            return patient;
+            return model;
         }
 
         // PUT: api/Patients/5
@@ -52,23 +54,7 @@ namespace CovidVaccine.Controllers
                 return BadRequest();
             }
 
-            _context.Entry(patient).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!PatientExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+            await _repository.UpdateAsync<Patient>(patient);
 
             return NoContent();
         }
@@ -79,9 +65,7 @@ namespace CovidVaccine.Controllers
         [HttpPost]
         public async Task<ActionResult<Patient>> PostPatient(Patient patient)
         {
-            _context.Patients.Add(patient);
-            await _context.SaveChangesAsync();
-
+            await _repository.CreateAsync<Patient>(patient);
             return CreatedAtAction("GetPatient", new { id = patient.Id }, patient);
         }
 
@@ -89,21 +73,21 @@ namespace CovidVaccine.Controllers
         [HttpDelete("{id}")]
         public async Task<ActionResult<Patient>> DeletePatient(int id)
         {
-            var patient = await _context.Patients.FindAsync(id);
-            if (patient == null)
+            var model = await _repository.SelectById<Patient>(id);
+
+            if (model == null)
             {
                 return NotFound();
             }
 
-            _context.Patients.Remove(patient);
-            await _context.SaveChangesAsync();
+            await _repository.DeleteAsync<Patient>(model);
 
-            return patient;
+            return model;
         }
 
-        private bool PatientExists(int id)
+        /*private bool PatientExists(int id)
         {
             return _context.Patients.Any(e => e.Id == id);
-        }
+        }*/
     }
 }
