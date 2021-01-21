@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using CovidVaccine.Models;
 using CovidVaccine.Repositories;
+using CovidVaccine.Queries;
+using MediatR;
 
 namespace CovidVaccine.Controllers
 {
@@ -15,18 +17,22 @@ namespace CovidVaccine.Controllers
     public class PatientsController : ControllerBase
     {
         private readonly IRepository _repository;
+        private readonly IMediator _mediator;
 
-        public PatientsController(VaccineContext context, IRepository repository)
+        public PatientsController(VaccineContext context, IRepository repository, IMediator mediator)
         {
             _repository = repository;
+            _mediator = mediator;
         }
 
         // GET: api/Patients
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Patient>>> GetPatients()
         {
-            var model = await _repository.SelectAll<Patient>();
-            return model;
+            var query = new GetPatientsQuery();
+            var result = await _mediator.Send(query);
+            return Ok(result);
+            
         }
 
         // GET: api/Patients/5

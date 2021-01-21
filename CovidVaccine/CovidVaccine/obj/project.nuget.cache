@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "4kpmWxaSumtU1wk29rDOCWxtJe5hBTKRNII5b0RNGBwOTuX2WLl51LBDK1hyOQetPRvdQSlk65mqRFca6TUaow==",
+  "dgSpecHash": "Q0OYMI3teHzLjibhlVb4VfEOBy7cHIF4tWNQfJkWU2PK+v2DM8D03hiHCiAoN2hchvacwSQz7SSfXtNzghUnbw==",
   "success": true,
   "projectFilePath": "C:\\Users\\your name\\source\\repos\\gitFolder\\CovidVaccine\\CovidVaccine\\CovidVaccine.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\your name\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512",
+    "C:\\Users\\your name\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\9.0.0\\mediatr.extensions.microsoft.dependencyinjection.9.0.0.nupkg.sha512",
     "C:\\Users\\your name\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\your name\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
     "C:\\Users\\your name\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\3.1.0\\microsoft.aspnetcore.razor.language.3.1.0.nupkg.sha512",
