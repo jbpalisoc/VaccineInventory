@@ -13,11 +13,12 @@ namespace CovidVaccine.Repositories
         {
             dbContext = context;
         }
-        public async Task CreateAsync<T>(T entity) where T : class
+        public async Task<int> CreateAsync<T>(T entity) where T : class
         {
             this.dbContext.Set<T>().Add(entity);
 
-            _ = await this.dbContext.SaveChangesAsync();
+            //_ = await this.dbContext.SaveChangesAsync();
+            return await this.dbContext.SaveChangesAsync();
         }
 
         public async Task DeleteAsync<T>(T entity) where T : class
@@ -33,7 +34,7 @@ namespace CovidVaccine.Repositories
         }
 
 
-        public async Task<T> SelectById<T>(long id) where T : class
+        public async Task<T> SelectById<T>(int id) where T : class
         {
             return await this.dbContext.Set<T>().FindAsync(id);
         }

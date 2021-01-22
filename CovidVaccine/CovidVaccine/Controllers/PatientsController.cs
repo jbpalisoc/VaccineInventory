@@ -9,6 +9,7 @@ using CovidVaccine.Models;
 using CovidVaccine.Repositories;
 using CovidVaccine.Queries;
 using MediatR;
+using CovidVaccine.Commands;
 
 namespace CovidVaccine.Controllers
 {
@@ -39,14 +40,10 @@ namespace CovidVaccine.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Patient>> GetPatient(int id)
         {
-            var model = await _repository.SelectById<Patient>(id);
+            var query = new GetPatientQuery(id);
+            var result = await _mediator.Send(query);
+            return result != null ? (ActionResult) Ok(result) : NotFound();
 
-            if (model == null)
-            {
-                return NotFound();
-            }
-
-            return model;
         }
 
         // PUT: api/Patients/5
@@ -69,10 +66,14 @@ namespace CovidVaccine.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
-        public async Task<ActionResult<Patient>> PostPatient(Patient patient)
+        public async Task<ActionResult<Patient>> PostPatient([FromBody] PostPatientCommand command)
         {
-            await _repository.CreateAsync<Patient>(patient);
-            return CreatedAtAction("GetPatient", new { id = patient.Id }, patient);
+            var result = await _mediator.Send(command);
+
+            return result != null ? (ActionResult)Ok(result) : NotFound();
+
+            //await _repository.CreateAsync<Patient>(patient);
+            //return CreatedAtAction("GetPatient", new { id = patient.Id }, patient);
         }
 
         // DELETE: api/Patients/5
