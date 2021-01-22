@@ -50,23 +50,28 @@ namespace CovidVaccine.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutPatient(int id, Patient patient)
+        public async Task<IActionResult> PutPatient(int id, PutPatientCommand command)
         {
-            if (id != patient.Id)
+            
+            if (id != command.Id)
             {
                 return BadRequest();
             }
 
+            var result = await _mediator.Send(command);
+            return result != null ? (ActionResult)Ok(result) : NotFound();
+
+            /*
             await _repository.UpdateAsync<Patient>(patient);
 
-            return NoContent();
+            return NoContent();*/
         }
 
         // POST: api/Patients
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
-        public async Task<ActionResult<Patient>> PostPatient([FromBody] PostPatientCommand command)
+        public async Task<ActionResult<Patient>> PostPatient(PostPatientCommand command)
         {
             var result = await _mediator.Send(command);
 
@@ -80,16 +85,21 @@ namespace CovidVaccine.Controllers
         [HttpDelete("{id}")]
         public async Task<ActionResult<Patient>> DeletePatient(int id)
         {
-            var model = await _repository.SelectById<Patient>(id);
+            var query = new DeletePatientCommand(id);
+            var result = await _mediator.Send(query);
 
-            if (model == null)
-            {
-                return NotFound();
-            }
+            return result != null ? (ActionResult)Ok(result) : NotFound();
 
-            await _repository.DeleteAsync<Patient>(model);
+            //var model = await _repository.SelectById<Patient>(id);
 
-            return model;
+            //if (model == null)
+            //{
+            //    return NotFound();
+            //}
+
+            //await _repository.DeleteAsync<Patient>(model);
+
+            //return model;
         }
 
         /*private bool PatientExists(int id)

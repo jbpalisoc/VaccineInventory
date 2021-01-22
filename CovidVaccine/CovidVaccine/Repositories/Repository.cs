@@ -13,12 +13,10 @@ namespace CovidVaccine.Repositories
         {
             dbContext = context;
         }
-        public async Task<T> CreateAsync<T>(T entity) where T : class
+        public async Task CreateAsync<T>(T entity) where T : class
         {
             this.dbContext.Set<T>().Add(entity);
-            int isSuccess = await this.dbContext.SaveChangesAsync();
-            //_ = await this.dbContext.SaveChangesAsync();
-            return isSuccess > 0 ? entity : null;
+            _ = await this.dbContext.SaveChangesAsync();
         }
 
         public async Task DeleteAsync<T>(T entity) where T : class

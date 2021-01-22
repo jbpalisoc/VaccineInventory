@@ -20,7 +20,7 @@ namespace CovidVaccine.Handlers
 
         public async Task<Patient> Handle(PostPatientCommand request, CancellationToken cancellationToken)
         {
-            Patient newPatient = new Patient()
+            Patient patient = new Patient()
             {
                 FirstName = request.FirstName,
                 MiddleName = request.MiddleName,
@@ -30,7 +30,7 @@ namespace CovidVaccine.Handlers
                 Sex = request.Sex
             };
 
-            var patient = await _repository.CreateAsync<Patient>(newPatient);
+            await _repository.CreateAsync<Patient>(patient);
             var model = patient != null ? await _repository.SelectById<Patient>(patient.Id) : null;
             return  model == null ? null : model;
             //return CreatedAtAction("GetPatient", new { id = request.Id }, request);
