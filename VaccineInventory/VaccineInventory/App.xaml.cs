@@ -1,6 +1,8 @@
 ﻿using Prism.Ioc;
 using System.Windows;
 using System.Windows.Controls;
+using VaccineInventory.Handlers;
+using VaccineInventory.ViewModels;
 using VaccineInventory.Views;
 
 namespace VaccineInventory
@@ -21,7 +23,10 @@ namespace VaccineInventory
             containerRegistry.RegisterForNavigation<Vaccine>();
             containerRegistry.RegisterForNavigation<Inventory>();
             containerRegistry.RegisterForNavigation<VaccineHistory>();
+            containerRegistry.RegisterDialog<EditDialog, EditDialogViewModel>();
+            containerRegistry.RegisterDialog<AddDialog, AddDialogViewModel>();
 
+            containerRegistry.RegisterSingleton<IRequestHandler, RequestHandler>();
         }
     }
 }

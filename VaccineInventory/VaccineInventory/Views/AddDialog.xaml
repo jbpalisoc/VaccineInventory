@@ -1,0 +1,50 @@
+﻿<UserControl x:Class="VaccineInventory.Views.AddDialog"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:l="clr-namespace:VaccineInventory.Converters"
+             xmlns:prism="http://prismlibrary.com/"             
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             Width="300" Height="auto">
+    <Grid x:Name="LayoutRoot" Margin="5">
+        <Grid.Resources>
+            <l:SexConverter x:Key="SexConverterKey" />
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="5"/>
+        </Grid.RowDefinitions>
+        <TextBlock Margin="5,0,0,0" Grid.Row="1" VerticalAlignment="Bottom" Text="First Name"/>
+        <TextBlock Margin="5,0,0,0" Grid.Row="1" HorizontalAlignment="Right" Foreground="Green" FontSize="20" Text="{Binding Message}"/>
+        <TextBox Grid.Row="2" Margin="5" Height="25" Text="{Binding FirstName}"/>
+        <TextBlock Margin="5,0,0,0" Grid.Row="3" Text="Middle Name"/>
+        <TextBox Grid.Row="4" Margin="5" Height="25" Text="{Binding MiddleName}"/>
+        <TextBlock Margin="5,0,0,0" Grid.Row="5" Text="Last Name"/>
+        <TextBox Grid.Row="6" Margin="5" Height="25" Text="{Binding LastName}"/>
+        <TextBlock Margin="5,0,0,0" Grid.Row="7" Text="Birthday"/>
+        <DatePicker Grid.Row="8" Margin="5" Height="25" Text="{Binding Birthday}"/>
+        <TextBlock Margin="5,0,0,0" Grid.Row="9" Text="Contact#"/>
+        <TextBox Grid.Row="10" Margin="5" Height="25" Text="{Binding ContactNo}"/>
+        <TextBlock Margin="5,0,0,0" Grid.Row="11" Text="Sex"/>
+        <StackPanel Grid.Row="12" Margin="5" Grid.Column="3" Orientation="Horizontal">
+            <RadioButton Margin="5" IsChecked="{Binding Sex, Converter={StaticResource ResourceKey=SexConverterKey}, ConverterParameter='M'}" Content='Male'/>
+            <RadioButton Margin="5" IsChecked="{Binding Sex, Converter={StaticResource ResourceKey=SexConverterKey}, ConverterParameter='F'}" Content='Female'/>
+        </StackPanel>
+        <StackPanel Grid.Row="13" Margin="0 10" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Command="{Binding SaveButtonClick}" CommandParameter="true" Content="Add" Width="75" Height="25" HorizontalAlignment="Right" Margin="5" IsDefault="True" />
+            <Button Command="{Binding CloseDialogCommand}" CommandParameter="true" Content="Cancel" Width="75" Height="25" HorizontalAlignment="Right" Margin="0,5,5,5" IsDefault="True" />
+        </StackPanel>
+    </Grid>
+</UserControl>

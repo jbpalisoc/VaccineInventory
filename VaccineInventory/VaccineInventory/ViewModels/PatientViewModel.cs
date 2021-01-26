@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using Prism.Commands;
 using Prism.Mvvm;
+using Prism.Services.Dialogs;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -8,13 +9,19 @@ using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Data;
+using VaccineInventory.Handlers;
 using VaccineInventory.Models;
 
 namespace VaccineInventory.ViewModels
 {
     public class PatientViewModel : BindableBase
     {
+        private IDialogService _dialogService;
+        private IRequestHandler _requestHandler;
+
         private string _title = "Patient";
         public string Title
         {
@@ -27,6 +34,13 @@ namespace VaccineInventory.ViewModels
         {
             get { return _message; }
             set { SetProperty(ref _message, value); }
+        }
+
+        private string _messageColor = String.Empty;
+        public string MessageColor
+        {
+            get { return _messageColor; }
+            set { SetProperty(ref _messageColor, value); }
         }
 
         private string _firstName;
@@ -85,123 +99,85 @@ namespace VaccineInventory.ViewModels
         public DelegateCommand DeleteButtonClick { get; private set; }
         public DelegateCommand UpdateButtonClick { get; private set; }
 
-        public PatientViewModel()
+        public PatientViewModel(IRequestHandler requestHandler, IDialogService dialogService)
         {
+            _dialogService = dialogService;
+            _requestHandler = requestHandler;
             GetSelected = new DelegateCommand(Selected);
             SaveButtonClick = new DelegateCommand(Insert);
             DeleteButtonClick = new DelegateCommand(Delete);
-            UpdateButtonClick = new DelegateCommand(Update);
+            //UpdateButtonClick = new DelegateCommand(Update);
             GetPatient();
         }
 
-        private void GetPatient()
+        private async void GetPatient()
         {
-            HttpClient client = new HttpClient();
-            client.BaseAddress = new Uri("http://localhost:16866/");
-            //client.DefaultRequestHeaders.Add("appkey", "myapp_key");
-            client.DefaultRequestHeaders.Accept.Add(
-               new MediaTypeWithQualityHeaderValue("application/json"));
+             _requestHandler.Execute("http://localhost:16866/");
+            HttpResponseMessage response = await Task.Run(() => _requestHandler.GetAsync("api/Patients"));
 
-            HttpResponseMessage response = client.GetAsync("api/Patients").Result;
             if (response.IsSuccessStatusCode)
             {
-                //var employees = response.Content.ReadAsAsync<IEnumerable<List>>().Result;
                 PatientList = response.Content.ReadAsAsync<IEnumerable<Patient>>().Result;
-
             }
         }
 
         private void Insert()
         {
-            Patient newPatient = new Patient()
+            _dialogService.Show("AddDialog", null, r =>
             {
-                FirstName = FirstName,
-                MiddleName = MiddleName,
-                LastName = LastName,
-                Birthday = Birthday,
-                ContactNo = ContactNo,
-                Sex = Sex
-            };
-
-            HttpClient client = new HttpClient();
-            client.BaseAddress = new Uri("http://localhost:16866/");
-            //client.DefaultRequestHeaders.Add("appkey", "myapp_key");
-            client.DefaultRequestHeaders.Accept.Add(
-               new MediaTypeWithQualityHeaderValue("application/json"));
-
-            var json = JsonConvert.SerializeObject(newPatient);
-            HttpResponseMessage response = client.PostAsync("api/Patients", new StringContent(json, Encoding.UTF8, "application/json")).Result;
-            if (response.IsSuccessStatusCode)
-            {
-                GetPatient();
-                Message = "Item Added!!!";
-                FirstName = string.Empty;
-                MiddleName = string.Empty;
-                LastName = string.Empty;
-                Birthday = DateTime.Now;
-                ContactNo = string.Empty;
-                Sex = '\0' ;
-            }
+                if (r.Result == ButtonResult.None)
+                    GetPatient();
+                else if (r.Result == ButtonResult.OK)
+                    GetPatient();
+                else if (r.Result == ButtonResult.Cancel)
+                    GetPatient();
+                else
+                    Title = "I Don't know what you did!?";
+            }) ;
         }
 
         private void Selected()
         {
-            FirstName = SelectedPatient.FirstName;
-            MiddleName = SelectedPatient.MiddleName;
-            LastName = SelectedPatient.LastName;
-            Birthday = SelectedPatient.Birthday;
-            ContactNo = SelectedPatient.ContactNo;
-            Sex = SelectedPatient.Sex;
+            _dialogService.ShowDialog("EditDialog", new DialogParameters {
+                                    { "Id", SelectedPatient.Id },
+                                    { "FirstName", SelectedPatient.FirstName },
+                                    { "MiddleName", SelectedPatient.MiddleName },
+                                    { "LastName", SelectedPatient.LastName },
+                                    { "Birthday", SelectedPatient.Birthday },
+                                    { "ContactNo", SelectedPatient.ContactNo},
+                                    { "Sex", SelectedPatient.Sex}},
+                                      r =>
+                                     {
+                                         if (r.Result == ButtonResult.None)
+                                             Title = "Result is None";
+                                         else if (r.Result == ButtonResult.OK)
+                                         {
+                                             GetPatient();
+                                             Message = "Item Updated!!!";
+                                             MessageColor = "#008000";
+                                         }
+                                         else if (r.Result == ButtonResult.Cancel)
+                                             Title = "Result is Cancel";
+                                         else
+                                             Title = "I Don't know what you did!?";
+                                     });
         }
 
-        private void Delete()
+        private async void Delete()
         {
-            HttpClient client = new HttpClient();
-            client.BaseAddress = new Uri("http://localhost:16866/");
-            //client.DefaultRequestHeaders.Add("appkey", "myapp_key");
-            client.DefaultRequestHeaders.Accept.Add(
-               new MediaTypeWithQualityHeaderValue("application/json"));
-
-            HttpResponseMessage response = client.DeleteAsync("api/Patients/"+SelectedPatient.Id).Result;
-            if (response.IsSuccessStatusCode)
+            MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show("Are you sure?", "Delete Confirmation", System.Windows.MessageBoxButton.YesNo);
+            if (messageBoxResult == MessageBoxResult.Yes)
             {
-                GetPatient();
-                Message = "Item Deleted!!!";
+                _requestHandler.Execute("http://localhost:16866/");
+                HttpResponseMessage response = await Task.Run(() => _requestHandler.DeleteAsync("api/Patients/" + SelectedPatient.Id));
+                if (response.IsSuccessStatusCode)
+                {
+                    GetPatient();
+                    Message = "Item Deleted!!!";
+                    MessageColor = "#ff0000";
+                }
             }
         }
 
-        private void Update()
-        {
-            Patient newPatient = new Patient()
-            {
-                Id = SelectedPatient.Id,
-                FirstName = FirstName,
-                MiddleName = MiddleName,
-                LastName = LastName,
-                Birthday = Birthday,
-                ContactNo = ContactNo,
-                Sex = Sex
-            };
-
-            HttpClient client = new HttpClient();
-            client.BaseAddress = new Uri("http://localhost:16866/");
-            //client.DefaultRequestHeaders.Add("appkey", "myapp_key");
-            client.DefaultRequestHeaders.Accept.Add(
-               new MediaTypeWithQualityHeaderValue("application/json"));
-
-            var json = JsonConvert.SerializeObject(newPatient);
-            HttpResponseMessage response = client.PutAsync("api/Patients/" + SelectedPatient.Id, new StringContent(json, Encoding.UTF8, "application/json")).Result;
-            if (response.IsSuccessStatusCode)
-            {
-                GetPatient();
-                Message = "Item Updated!!!";
-                FirstName = string.Empty;
-                MiddleName = string.Empty;
-                LastName = string.Empty;
-                Birthday = DateTime.Now;
-                ContactNo = string.Empty;
-                Sex = '\0';
-            }
-        }
     }
 }

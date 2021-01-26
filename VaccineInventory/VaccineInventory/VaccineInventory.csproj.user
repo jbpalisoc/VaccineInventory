@@ -7,6 +7,12 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Views\AddDialog.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\EditDialog.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\Inventory.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -21,6 +27,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Views\AddDialog.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\EditDialog.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Views\Inventory.xaml">
       <SubType>Designer</SubType>
     </Page>

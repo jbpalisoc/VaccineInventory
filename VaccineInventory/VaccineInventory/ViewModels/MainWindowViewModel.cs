@@ -20,7 +20,7 @@ namespace VaccineInventory.ViewModels
         {
             NavigateCommand = new DelegateCommand<string>(Navigate);
             _regionManager = regionManager;
-        }
+        }   
 
         private void Navigate(string viewName)
         {
