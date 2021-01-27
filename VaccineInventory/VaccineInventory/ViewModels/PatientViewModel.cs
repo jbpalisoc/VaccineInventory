@@ -36,7 +36,7 @@ namespace VaccineInventory.ViewModels
             set { SetProperty(ref _message, value); }
         }
 
-        private string _messageColor = String.Empty;
+        private string _messageColor = "#0000";
         public string MessageColor
         {
             get { return _messageColor; }
@@ -109,7 +109,6 @@ namespace VaccineInventory.ViewModels
             //UpdateButtonClick = new DelegateCommand(Update);
             GetPatient();
         }
-
         private async void GetPatient()
         {
              _requestHandler.Execute("http://localhost:16866/");
@@ -123,14 +122,20 @@ namespace VaccineInventory.ViewModels
 
         private void Insert()
         {
-            _dialogService.Show("AddDialog", null, r =>
+            _dialogService.ShowDialog("AddDialog", new DialogParameters(), r =>
             {
                 if (r.Result == ButtonResult.None)
+                {
                     GetPatient();
+                }
                 else if (r.Result == ButtonResult.OK)
+                {
                     GetPatient();
+                }
                 else if (r.Result == ButtonResult.Cancel)
+                {
                     GetPatient();
+                }
                 else
                     Title = "I Don't know what you did!?";
             }) ;
@@ -138,6 +143,7 @@ namespace VaccineInventory.ViewModels
 
         private void Selected()
         {
+            //EnableGrid = false;
             _dialogService.ShowDialog("EditDialog", new DialogParameters {
                                     { "Id", SelectedPatient.Id },
                                     { "FirstName", SelectedPatient.FirstName },
@@ -149,17 +155,18 @@ namespace VaccineInventory.ViewModels
                                       r =>
                                      {
                                          if (r.Result == ButtonResult.None)
-                                             Title = "Result is None";
+                                             GetPatient();
                                          else if (r.Result == ButtonResult.OK)
                                          {
                                              GetPatient();
                                              Message = "Item Updated!!!";
                                              MessageColor = "#008000";
+                                             
                                          }
                                          else if (r.Result == ButtonResult.Cancel)
-                                             Title = "Result is Cancel";
+                                             GetPatient();
                                          else
-                                             Title = "I Don't know what you did!?";
+                                             GetPatient();
                                      });
         }
 

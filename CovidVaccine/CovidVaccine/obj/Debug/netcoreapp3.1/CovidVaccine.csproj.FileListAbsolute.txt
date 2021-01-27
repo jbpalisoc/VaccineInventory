@@ -306,3 +306,17 @@ C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine\obj\Debug\ne
 C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine\obj\Debug\netcoreapp3.1\CovidVaccine.dll
 C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine\obj\Debug\netcoreapp3.1\CovidVaccine.pdb
 C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine\obj\Debug\netcoreapp3.1\CovidVaccine.genruntimeconfig.cache
+C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine\obj\Debug\netcoreapp3.1\CovidVaccine.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine\bin\Debug\netcoreapp3.1\Serilog.dll
+C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine\bin\Debug\netcoreapp3.1\Serilog.AspNetCore.dll
+C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine\bin\Debug\netcoreapp3.1\Serilog.Extensions.Hosting.dll
+C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine\bin\Debug\netcoreapp3.1\Serilog.Extensions.Logging.dll
+C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine\bin\Debug\netcoreapp3.1\Serilog.Formatting.Compact.dll
+C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine\bin\Debug\netcoreapp3.1\Serilog.Settings.Configuration.dll
+C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine\bin\Debug\netcoreapp3.1\Serilog.Sinks.Console.dll
+C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine\bin\Debug\netcoreapp3.1\Serilog.Sinks.Debug.dll
+C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine\bin\Debug\netcoreapp3.1\Serilog.Sinks.File.dll

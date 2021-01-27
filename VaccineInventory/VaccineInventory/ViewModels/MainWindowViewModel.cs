@@ -1,6 +1,7 @@
 ﻿using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Regions;
+using VaccineInventory.Views;
 
 namespace VaccineInventory.ViewModels
 {
@@ -20,6 +21,7 @@ namespace VaccineInventory.ViewModels
         {
             NavigateCommand = new DelegateCommand<string>(Navigate);
             _regionManager = regionManager;
+            _regionManager.RegisterViewWithRegion("ContentRegion", typeof(Patient));
         }   
 
         private void Navigate(string viewName)

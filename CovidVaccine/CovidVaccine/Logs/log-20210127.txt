@@ -1,0 +1,8 @@
+2021-01-27 11:39:27.113 +08:00 [INF] Starting web host
+2021-01-27 11:39:29.226 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-01-27 11:39:29.231 +08:00 [INF] Hosting environment: Development
+2021-01-27 11:39:29.234 +08:00 [INF] Content root path: C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine
+2021-01-27 11:39:29.258 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/index.html  
+2021-01-27 11:39:29.361 +08:00 [INF] Request finished in 107.523ms 200 text/html;charset=utf-8
+2021-01-27 11:39:29.589 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json  
+2021-01-27 11:39:29.775 +08:00 [INF] Request finished in 185.4074ms 200 application/json;charset=utf-8
