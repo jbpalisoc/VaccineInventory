@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "a72yWfBz/7sELx6T54BIM0HXDxInI5kSuidR1doZBgt9aplwdqQTbZxHEFUqM9tbIb73w6zCMKIMyQeHBFqlJw==",
+  "dgSpecHash": "/JjGmx/BrBSfAheT6jf14s5YZWxX9pym10+wWphz8YJKF85lyO451RwSf7FzObZGxPP9+L0EdEb8odY/8Pir8A==",
   "success": true,
   "projectFilePath": "C:\\Users\\your name\\source\\repos\\gitFolder\\CovidVaccine\\CovidVaccine\\CovidVaccine.csproj",
   "expectedPackageFiles": [
@@ -54,6 +54,7 @@
     "C:\\Users\\your name\\.nuget\\packages\\microsoft.netcore.platforms\\2.1.2\\microsoft.netcore.platforms.2.1.2.nupkg.sha512",
     "C:\\Users\\your name\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\your name\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\your name\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.9\\microsoft.visualstudio.azure.containers.tools.targets.1.10.9.nupkg.sha512",
     "C:\\Users\\your name\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration\\3.1.4\\microsoft.visualstudio.web.codegeneration.3.1.4.nupkg.sha512",
     "C:\\Users\\your name\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.contracts\\3.1.4\\microsoft.visualstudio.web.codegeneration.contracts.3.1.4.nupkg.sha512",
     "C:\\Users\\your name\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.core\\3.1.4\\microsoft.visualstudio.web.codegeneration.core.3.1.4.nupkg.sha512",

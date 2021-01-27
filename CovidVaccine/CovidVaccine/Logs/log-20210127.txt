@@ -6,3 +6,61 @@
 2021-01-27 11:39:29.361 +08:00 [INF] Request finished in 107.523ms 200 text/html;charset=utf-8
 2021-01-27 11:39:29.589 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json  
 2021-01-27 11:39:29.775 +08:00 [INF] Request finished in 185.4074ms 200 application/json;charset=utf-8
+2021-01-27 14:10:53.885 +08:00 [INF] Starting web host
+2021-01-27 14:10:56.099 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-01-27 14:10:56.105 +08:00 [INF] Hosting environment: Development
+2021-01-27 14:10:56.108 +08:00 [INF] Content root path: C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine
+2021-01-27 14:10:56.132 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/index.html  
+2021-01-27 14:10:56.230 +08:00 [INF] Request finished in 102.2307ms 200 text/html;charset=utf-8
+2021-01-27 14:10:56.574 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json  
+2021-01-27 14:10:56.778 +08:00 [INF] Request finished in 204.8038ms 200 application/json;charset=utf-8
+2021-01-27 06:27:47.732 +00:00 [INF] Starting web host
+2021-01-27 06:27:50.541 +00:00 [INF] Now listening on: http://[::]:80
+2021-01-27 06:27:50.547 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-01-27 06:27:50.549 +00:00 [INF] Hosting environment: Development
+2021-01-27 06:27:50.550 +00:00 [INF] Content root path: /app
+2021-01-27 06:27:51.669 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:49153/swagger  
+2021-01-27 06:27:51.715 +00:00 [INF] Request finished in 47.5622ms 301 
+2021-01-27 06:27:51.740 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:49153/swagger/index.html  
+2021-01-27 06:27:51.782 +00:00 [INF] Request finished in 42.0278ms 200 text/html;charset=utf-8
+2021-01-27 06:27:51.807 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:49153/swagger/swagger-ui-bundle.js  
+2021-01-27 06:27:51.807 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:49153/swagger/swagger-ui.css  
+2021-01-27 06:27:51.845 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:49153/swagger/swagger-ui-standalone-preset.js  
+2021-01-27 06:27:52.174 +00:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2021-01-27 06:27:52.174 +00:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-01-27 06:27:52.174 +00:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2021-01-27 06:27:52.178 +00:00 [INF] Request finished in 370.6428ms 200 application/javascript
+2021-01-27 06:27:52.178 +00:00 [INF] Request finished in 370.3682ms 200 text/css
+2021-01-27 06:27:52.178 +00:00 [INF] Request finished in 332.4696ms 200 application/javascript
+2021-01-27 06:27:52.361 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:49153/swagger/v1/swagger.json  
+2021-01-27 06:27:52.405 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:49153/swagger/favicon-32x32.png  
+2021-01-27 06:27:52.409 +00:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2021-01-27 06:27:52.411 +00:00 [INF] Request finished in 5.2922ms 200 image/png
+2021-01-27 06:27:52.493 +00:00 [INF] Request finished in 131.9791ms 200 application/json;charset=utf-8
+2021-01-27 06:29:38.901 +00:00 [INF] Starting web host
+2021-01-27 06:29:41.028 +00:00 [INF] Now listening on: http://[::]:80
+2021-01-27 06:29:41.034 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-01-27 06:29:41.034 +00:00 [INF] Hosting environment: Development
+2021-01-27 06:29:41.035 +00:00 [INF] Content root path: /app
+2021-01-27 06:29:41.750 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:49153/swagger/index.html  
+2021-01-27 06:29:41.833 +00:00 [INF] Request finished in 85.6301ms 200 text/html;charset=utf-8
+2021-01-27 06:29:42.147 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:49153/swagger/v1/swagger.json  
+2021-01-27 06:29:42.280 +00:00 [INF] Request finished in 133.0723ms 200 application/json;charset=utf-8
+2021-01-27 06:36:08.025 +00:00 [INF] Starting web host
+2021-01-27 06:36:10.080 +00:00 [INF] Now listening on: http://[::]:80
+2021-01-27 06:36:10.085 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-01-27 06:36:10.086 +00:00 [INF] Hosting environment: Development
+2021-01-27 06:36:10.087 +00:00 [INF] Content root path: /app
+2021-01-27 06:36:10.864 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:49153/swagger/index.html  
+2021-01-27 06:36:10.959 +00:00 [INF] Request finished in 96.4432ms 200 text/html;charset=utf-8
+2021-01-27 06:36:11.148 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:49153/swagger/v1/swagger.json  
+2021-01-27 06:36:11.280 +00:00 [INF] Request finished in 131.9709ms 200 application/json;charset=utf-8
+2021-01-27 06:36:50.605 +00:00 [INF] Starting web host
+2021-01-27 06:36:52.622 +00:00 [INF] Now listening on: http://[::]:80
+2021-01-27 06:36:52.629 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-01-27 06:36:52.630 +00:00 [INF] Hosting environment: Development
+2021-01-27 06:36:52.631 +00:00 [INF] Content root path: /app
+2021-01-27 06:36:53.431 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:49153/swagger/index.html  
+2021-01-27 06:36:53.519 +00:00 [INF] Request finished in 93.2912ms 200 text/html;charset=utf-8
+2021-01-27 06:36:53.712 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:49153/swagger/v1/swagger.json  
+2021-01-27 06:36:53.858 +00:00 [INF] Request finished in 146.096ms 200 application/json;charset=utf-8
