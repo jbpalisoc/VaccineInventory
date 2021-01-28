@@ -22,15 +22,15 @@ namespace CovidVaccine.Handlers
 
         public async Task<Patient> Handle(PostPatientCommand request, CancellationToken cancellationToken)
         {
-            Patient patient = new Patient() 
-            {
-                FirstName = request.FirstName,
-                MiddleName = request.MiddleName,
-                LastName = request.LastName,
-                Birthday = request.Birthday,
-                ContactNo = request.ContactNo,
-                Sex = request.Sex
-            };
+            Patient patient = new Patient(
+                request.Id,
+                request.FirstName,
+                request.MiddleName,
+                request.LastName,
+                request.ContactNo,
+                request.Birthday,
+                request.Sex
+            );
 
             _repository.CreateAsync<Patient>(patient);
             _unitOfWork.Commit();

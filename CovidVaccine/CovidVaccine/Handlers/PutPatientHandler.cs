@@ -30,12 +30,15 @@ namespace CovidVaccine.Handlers
             }
             else
             {
-                model.FirstName = request.FirstName;
-                model.MiddleName = request.MiddleName;
-                model.LastName = request.LastName;
-                model.Birthday = request.Birthday;
-                model.ContactNo = request.ContactNo;
-                model.Sex = request.Sex;
+                model.UpdatePatient(request.Id,
+                request.FirstName,
+                request.MiddleName,
+                request.LastName,
+                request.ContactNo,
+                request.Birthday,
+                request.Sex);
+
+
 
                 _repository.UpdateAsync<Patient>(model);
                 _unitOfWork.Commit();
