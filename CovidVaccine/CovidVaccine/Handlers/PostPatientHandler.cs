@@ -1,6 +1,6 @@
 ﻿using CovidVaccine.Commands;
-using CovidVaccine.Models;
-using CovidVaccine.Repositories;
+using CovidVaccine.Model;
+using CovidVaccine.Repository;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -13,14 +13,16 @@ namespace CovidVaccine.Handlers
     public class PostPatientHandler : IRequestHandler<PostPatientCommand, Patient>
     {
         IRepository _repository;
-        public PostPatientHandler(IRepository repository)
+        IUnitOfWork _unitOfWork;
+        public PostPatientHandler(IRepository repository, IUnitOfWork unitOfWork)
         {
             _repository = repository;
+            _unitOfWork = unitOfWork;
         }
 
         public async Task<Patient> Handle(PostPatientCommand request, CancellationToken cancellationToken)
         {
-            Patient patient = new Patient()
+            Patient patient = new Patient() 
             {
                 FirstName = request.FirstName,
                 MiddleName = request.MiddleName,
@@ -30,7 +32,8 @@ namespace CovidVaccine.Handlers
                 Sex = request.Sex
             };
 
-            await _repository.CreateAsync<Patient>(patient);
+            _repository.CreateAsync<Patient>(patient);
+            _unitOfWork.Commit();
             var model = patient != null ? await _repository.SelectById<Patient>(patient.Id) : null;
             return  model == null ? null : model;
             //return CreatedAtAction("GetPatient", new { id = request.Id }, request);

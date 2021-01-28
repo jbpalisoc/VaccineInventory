@@ -1,6 +1,5 @@
-﻿using CovidVaccine.Models;
+﻿using CovidVaccine.Model;
 using CovidVaccine.Queries;
-using CovidVaccine.Repositories;
 using MediatR;
 using System;
 using System.Collections.Generic;

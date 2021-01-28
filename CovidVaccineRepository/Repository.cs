@@ -1,29 +1,31 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using CovidVaccine.Model;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
-namespace CovidVaccine.Repositories
+namespace CovidVaccine.Repository
 {
     public class Repository<TDbContext> : IRepository where TDbContext : DbContext
     {
-        protected TDbContext dbContext;
+        protected DbContext dbContext;
         public Repository(TDbContext context)
         {
             dbContext = context;
         }
-        public async Task CreateAsync<T>(T entity) where T : class
+        public void CreateAsync<T>(T entity) where T : class
         {
             this.dbContext.Set<T>().Add(entity);
-            _ = await this.dbContext.SaveChangesAsync();
+            //_ = await this.dbContext.SaveChangesAsync();
         }
 
-        public async Task DeleteAsync<T>(T entity) where T : class
+        public void DeleteAsync<T>(T entity) where T : class
         {
-            this.dbContext.Set<T>().Remove(entity);
+             this.dbContext.Set<T>().Remove(entity);
 
-            _ = await this.dbContext.SaveChangesAsync();
+            //_ = await this.dbContext.SaveChangesAsync();
         }
 
         public async Task<List<T>> SelectAll<T>() where T : class
@@ -37,11 +39,11 @@ namespace CovidVaccine.Repositories
             return await this.dbContext.Set<T>().FindAsync(id);
         }
 
-        public async Task UpdateAsync<T>(T entity) where T : class
+        public void UpdateAsync<T>(T entity) where T : class
         {
             this.dbContext.Set<T>().Update(entity);
 
-            _ = await this.dbContext.SaveChangesAsync();
+            //_ = await this.dbContext.SaveChangesAsync();
         }
     }
 }

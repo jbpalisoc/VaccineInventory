@@ -319,3 +319,4 @@ C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine\obj\Debug\ne
 C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine\obj\Debug\netcoreapp3.1\CovidVaccine.dll
 C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine\obj\Debug\netcoreapp3.1\CovidVaccine.pdb
 C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine\obj\Debug\netcoreapp3.1\CovidVaccine.genruntimeconfig.cache
+C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine\obj\Debug\netcoreapp3.1\CovidVaccine.csprojAssemblyReference.cache

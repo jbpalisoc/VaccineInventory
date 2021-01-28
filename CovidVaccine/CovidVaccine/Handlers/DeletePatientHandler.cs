@@ -1,6 +1,6 @@
 ﻿using CovidVaccine.Commands;
-using CovidVaccine.Models;
-using CovidVaccine.Repositories;
+using CovidVaccine.Model;
+using CovidVaccine.Repository;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -13,10 +13,12 @@ namespace CovidVaccine.Handlers
     public class DeletePatientHandler : IRequestHandler<DeletePatientCommand, Patient>
     {
         private readonly IRepository _repository;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public DeletePatientHandler(IRepository repository)
+        public DeletePatientHandler(IRepository repository, IUnitOfWork unitOfWork)
         {
             _repository = repository;
+            _unitOfWork = unitOfWork;
         }
 
         public async Task<Patient> Handle(DeletePatientCommand request, CancellationToken cancellationToken)
@@ -27,7 +29,8 @@ namespace CovidVaccine.Handlers
                 return null;
             }
 
-            await _repository.DeleteAsync<Patient>(patient);
+            _repository.DeleteAsync<Patient>(patient);
+            _unitOfWork.Commit();
 
             return patient;
 

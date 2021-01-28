@@ -1,6 +1,6 @@
 ﻿using CovidVaccine.Commands;
-using CovidVaccine.Models;
-using CovidVaccine.Repositories;
+using CovidVaccine.Model;
+using CovidVaccine.Repository;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -13,9 +13,11 @@ namespace CovidVaccine.Handlers
     public class PutPatientHandler : IRequestHandler<PutPatientCommand, Patient>
     {
         private readonly IRepository _repository;
-        public PutPatientHandler(IRepository repository)
+        private readonly IUnitOfWork _unitOfWork;
+        public PutPatientHandler(IRepository repository, IUnitOfWork unitOfWork)
         {
             _repository = repository;
+            _unitOfWork = unitOfWork;
         }
 
         public async Task<Patient> Handle(PutPatientCommand request, CancellationToken cancellationToken)
@@ -35,7 +37,8 @@ namespace CovidVaccine.Handlers
                 model.ContactNo = request.ContactNo;
                 model.Sex = request.Sex;
 
-                await _repository.UpdateAsync<Patient>(model);
+                _repository.UpdateAsync<Patient>(model);
+                _unitOfWork.Commit();
                 return model;
 
             }

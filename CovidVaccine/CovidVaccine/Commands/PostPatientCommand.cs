@@ -1,4 +1,4 @@
-﻿using CovidVaccine.Models;
+﻿using CovidVaccine.Model;
 using MediatR;
 using System;
 using System.Collections.Generic;

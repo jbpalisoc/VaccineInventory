@@ -1,5 +1,3 @@
-using CovidVaccine.Models;
-using CovidVaccine.Repositories;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -16,6 +14,8 @@ using System.Threading.Tasks;
 using System.Reflection;
 using System.IO;
 using Microsoft.OpenApi.Models;
+using CovidVaccine.Model;
+using CovidVaccine.Repository;
 
 namespace CovidVaccine
 {
@@ -33,9 +33,10 @@ namespace CovidVaccine
         {
             //services.AddScoped<IRepository, Repository<VaccineContext>>();
             string mySqlConnectionStr = Configuration.GetConnectionString("DefaultConnection");
-            services.AddDbContextPool<VaccineContext>(options => options.UseMySql(mySqlConnectionStr, ServerVersion.AutoDetect(mySqlConnectionStr)));
+            services.AddDbContextPool<CovidVaccineContext>(options => options.UseMySql(mySqlConnectionStr, ServerVersion.AutoDetect(mySqlConnectionStr)));
             services.AddControllers();
-            services.AddScoped<IRepository, Repository<VaccineContext>>();
+            services.AddScoped<IRepository, Repository<CovidVaccineContext>>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddMediatR(typeof(Startup));
 
             services.AddSwaggerGen();

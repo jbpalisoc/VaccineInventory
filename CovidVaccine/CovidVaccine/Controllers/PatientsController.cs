@@ -5,11 +5,11 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using CovidVaccine.Models;
-using CovidVaccine.Repositories;
 using CovidVaccine.Queries;
 using MediatR;
 using CovidVaccine.Commands;
+using CovidVaccine.Repository;
+using CovidVaccine.Model;
 
 namespace CovidVaccine.Controllers
 {
@@ -17,12 +17,14 @@ namespace CovidVaccine.Controllers
     [ApiController]
     public class PatientsController : ControllerBase
     {
-        private readonly IRepository _repository;
+        //private readonly IRepository _repository;
+        //private readonly IUnitOfWork _unitOfWork;
         private readonly IMediator _mediator;
 
-        public PatientsController(VaccineContext context, IRepository repository, IMediator mediator)
+        public PatientsController(IMediator mediator)
         {
-            _repository = repository;
+            //_unitOfWork = unitOfWork;
+            //_repository = repository;
             _mediator = mediator;
         }
 
