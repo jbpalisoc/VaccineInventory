@@ -43,7 +43,6 @@ namespace CovidVaccine
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddMediatR(typeof(Startup));
 
-            services.AddSwaggerGen();
             services.AddApiVersioning(
                 options =>
                 {
