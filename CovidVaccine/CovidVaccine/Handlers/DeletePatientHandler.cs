@@ -30,7 +30,7 @@ namespace CovidVaccine.Handlers
             }
 
             _repository.DeleteAsync<Patient>(patient);
-            _unitOfWork.Commit();
+            await _unitOfWork.Commit();
 
             return patient;
 

@@ -33,7 +33,7 @@ namespace CovidVaccine.Handlers
             );
 
             _repository.CreateAsync<Patient>(patient);
-            _unitOfWork.Commit();
+            await _unitOfWork.Commit();
             var model = patient != null ? await _repository.SelectById<Patient>(patient.Id) : null;
             return  model == null ? null : model;
             //return CreatedAtAction("GetPatient", new { id = request.Id }, request);
