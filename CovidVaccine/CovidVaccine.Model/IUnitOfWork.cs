@@ -10,7 +10,7 @@ namespace CovidVaccine.Repository
     public interface IUnitOfWork : IDisposable
     {
         //IPatientRepository Patients { get; }
-        void Commit();
+        Task<int> Commit();
         //void Rollback();
     }
 }

@@ -15,9 +15,10 @@ namespace CovidVaccine.Repository
             _databaseContext = databaseContext;          
         }
 
-        public void Commit()
-        { 
-            _databaseContext.SaveChanges(); 
+        public async Task<int> Commit()
+        {
+            return await(_databaseContext.SaveChangesAsync());
+            
         }
 
         public void Dispose()

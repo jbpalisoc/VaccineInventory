@@ -2,6 +2,7 @@
 using CovidVaccine.Model;
 using CovidVaccine.Repository;
 using MediatR;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +15,7 @@ namespace CovidVaccine.Handlers
     {
         private readonly IRepository _repository;
         private readonly IUnitOfWork _unitOfWork;
-        public PutPatientHandler(IRepository repository, IUnitOfWork unitOfWork)
+        public PutPatientHandler(IRepository repository, IUnitOfWork unitOfWork, ILogger<PutPatientCommand> logger)
         {
             _repository = repository;
             _unitOfWork = unitOfWork;
@@ -41,7 +42,7 @@ namespace CovidVaccine.Handlers
 
 
                 _repository.UpdateAsync<Patient>(model);
-                _unitOfWork.Commit();
+                await _unitOfWork.Commit();   
                 return model;
 
             }
