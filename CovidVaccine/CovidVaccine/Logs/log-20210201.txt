@@ -1,0 +1,58 @@
+2021-02-01 10:48:38.609 +08:00 [INF] Starting web host
+2021-02-01 11:32:00.671 +08:00 [INF] Starting web host
+2021-02-01 11:32:03.744 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-01 11:32:03.747 +08:00 [INF] Hosting environment: Development
+2021-02-01 11:32:03.749 +08:00 [INF] Content root path: C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine
+2021-02-01 11:32:03.940 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/index.html - -
+2021-02-01 11:32:04.610 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/index.html - - - 200 - text/html;charset=utf-8 689.1609ms
+2021-02-01 11:32:04.886 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - -
+2021-02-01 11:32:05.135 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 248.8826ms
+2021-02-01 11:32:22.288 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:16866/api/v1/Patients application/json 173
+2021-02-01 11:32:22.300 +08:00 [INF] Executing endpoint 'CovidVaccine.Controllers.PatientsController.PostPatient (CovidVaccine)'
+2021-02-01 11:32:22.457 +08:00 [INF] Route matched with {action = "PostPatient", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CovidVaccine.Model.Patient]] PostPatient(CovidVaccine.Commands.PostPatientCommand) on controller CovidVaccine.Controllers.PatientsController (CovidVaccine).
+2021-02-01 11:32:22.597 +08:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2021-02-01 11:32:22.618 +08:00 [INF] Executed action CovidVaccine.Controllers.PatientsController.PostPatient (CovidVaccine) in 156.5224ms
+2021-02-01 11:32:22.620 +08:00 [INF] Executed endpoint 'CovidVaccine.Controllers.PatientsController.PostPatient (CovidVaccine)'
+2021-02-01 11:32:22.633 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost:16866/api/v1/Patients application/json 173 - 400 - application/problem+json;+charset=utf-8 344.4627ms
+2021-02-01 11:56:17.616 +08:00 [INF] Starting web host
+2021-02-01 11:56:19.244 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-01 11:56:19.253 +08:00 [INF] Hosting environment: Development
+2021-02-01 11:56:19.256 +08:00 [INF] Content root path: C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine
+2021-02-01 11:56:19.288 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/index.html - -
+2021-02-01 11:56:19.632 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/index.html - - - 200 - text/html;charset=utf-8 347.8589ms
+2021-02-01 11:56:19.904 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - -
+2021-02-01 11:56:20.119 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 215.4023ms
+2021-02-01 11:56:29.706 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v1/Patients/61 - -
+2021-02-01 11:56:29.716 +08:00 [INF] Executing endpoint 'CovidVaccine.Controllers.PatientsController.GetPatient (CovidVaccine)'
+2021-02-01 11:56:29.782 +08:00 [INF] Route matched with {action = "GetPatient", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CovidVaccine.Model.Patient]] GetPatient(Int32) on controller CovidVaccine.Controllers.PatientsController (CovidVaccine).
+2021-02-01 12:36:26.266 +08:00 [INF] Starting web host
+2021-02-01 12:36:29.091 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-01 12:36:29.094 +08:00 [INF] Hosting environment: Development
+2021-02-01 12:36:29.098 +08:00 [INF] Content root path: C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine
+2021-02-01 12:36:29.199 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/index.html - -
+2021-02-01 12:36:29.537 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/index.html - - - 200 - text/html;charset=utf-8 340.5124ms
+2021-02-01 12:36:31.539 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - -
+2021-02-01 12:36:31.694 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 155.4641ms
+2021-02-01 12:36:43.115 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v1/Patients/61 - -
+2021-02-01 12:36:43.130 +08:00 [INF] Executing endpoint 'CovidVaccine.Controllers.PatientsController.GetPatient (CovidVaccine)'
+2021-02-01 12:36:43.181 +08:00 [INF] Route matched with {action = "GetPatient", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CovidVaccine.Model.Patient]] GetPatient(Int32) on controller CovidVaccine.Controllers.PatientsController (CovidVaccine).
+2021-02-01 12:36:45.307 +08:00 [INF] Entity Framework Core 5.0.2 initialized 'CovidVaccineContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: MaxPoolSize=128 ServerVersion 8.0.19-mysql 
+2021-02-01 12:36:45.982 +08:00 [INF] Executed DbCommand (110ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Birthday`, `p`.`ContactNo`, `p`.`FirstName`, `p`.`LastName`, `p`.`MiddleName`, `p`.`Sex`
+FROM `Patients` AS `p`
+WHERE `p`.`Id` = @__p_0
+LIMIT 1
+2021-02-01 12:36:46.095 +08:00 [INF] Executing OkObjectResult, writing value of type 'CovidVaccine.Model.Patient'.
+2021-02-01 12:36:46.121 +08:00 [INF] Executed action CovidVaccine.Controllers.PatientsController.GetPatient (CovidVaccine) in 2934.0486ms
+2021-02-01 12:36:46.123 +08:00 [INF] Executed endpoint 'CovidVaccine.Controllers.PatientsController.GetPatient (CovidVaccine)'
+2021-02-01 12:36:46.137 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v1/Patients/61 - - - 200 - application/json;+charset=utf-8 3027.8757ms
+2021-02-01 13:05:29.683 +08:00 [INF] Starting web host
+2021-02-01 13:12:10.764 +08:00 [INF] Starting web host
+2021-02-01 16:31:54.970 +08:00 [INF] Starting web host
+2021-02-01 16:31:57.159 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-01 16:31:57.167 +08:00 [INF] Hosting environment: Development
+2021-02-01 16:31:57.170 +08:00 [INF] Content root path: C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine
+2021-02-01 16:31:57.202 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/index.html - -
+2021-02-01 16:31:57.519 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/index.html - - - 200 - text/html;charset=utf-8 320.1633ms
+2021-02-01 16:31:57.873 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - -
+2021-02-01 16:31:58.061 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 187.8541ms

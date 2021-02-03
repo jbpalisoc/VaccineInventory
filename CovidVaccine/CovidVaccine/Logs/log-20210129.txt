@@ -176,3 +176,90 @@ SELECT ROW_COUNT();
 2021-01-29 10:42:56.735 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 8.5321ms
 2021-01-29 10:42:58.828 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/v2/swagger.json - -
 2021-01-29 10:42:58.836 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/v2/swagger.json - - - 200 - application/json;charset=utf-8 8.1285ms
+2021-01-29 10:49:52.444 +08:00 [INF] Starting web host
+2021-01-29 10:49:54.125 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-01-29 10:49:54.135 +08:00 [INF] Hosting environment: Development
+2021-01-29 10:49:54.138 +08:00 [INF] Content root path: C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine
+2021-01-29 10:49:54.184 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/index.html - -
+2021-01-29 10:49:54.506 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/index.html - - - 200 - text/html;charset=utf-8 326.8249ms
+2021-01-29 10:49:54.718 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - -
+2021-01-29 10:49:54.903 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 184.6330ms
+2021-01-29 10:49:58.169 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - -
+2021-01-29 10:49:58.180 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 10.3860ms
+2021-01-29 10:49:58.310 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/favicon.ico - -
+2021-01-29 10:49:58.314 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/favicon.ico - - - 404 - - 4.1723ms
+2021-01-29 10:50:04.565 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/v2/swagger.json - -
+2021-01-29 10:50:04.572 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/v2/swagger.json - - - 200 - application/json;charset=utf-8 6.7518ms
+2021-01-29 12:45:30.571 +08:00 [INF] Starting web host
+2021-01-29 12:45:33.352 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-01-29 12:45:33.363 +08:00 [INF] Hosting environment: Development
+2021-01-29 12:45:33.366 +08:00 [INF] Content root path: C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine
+2021-01-29 12:45:33.419 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/index.html - -
+2021-01-29 12:45:33.804 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/index.html - - - 200 - text/html;charset=utf-8 390.4510ms
+2021-01-29 12:45:34.115 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - -
+2021-01-29 12:45:34.431 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 315.6499ms
+2021-01-29 12:47:27.023 +08:00 [INF] Starting web host
+2021-01-29 13:17:23.723 +08:00 [INF] Starting web host
+2021-01-29 13:17:25.826 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-01-29 13:17:25.831 +08:00 [INF] Hosting environment: Development
+2021-01-29 13:17:25.833 +08:00 [INF] Content root path: C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine
+2021-01-29 13:17:25.877 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/index.html - -
+2021-01-29 13:17:26.242 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/index.html - - - 200 - text/html;charset=utf-8 369.5369ms
+2021-01-29 13:17:26.494 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - -
+2021-01-29 13:17:26.715 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 221.1016ms
+2021-01-29 13:22:32.500 +08:00 [INF] Starting web host
+2021-01-29 13:22:34.393 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-01-29 13:22:34.403 +08:00 [INF] Hosting environment: Development
+2021-01-29 13:22:34.405 +08:00 [INF] Content root path: C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine
+2021-01-29 13:22:34.451 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/index.html - -
+2021-01-29 13:22:34.807 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/index.html - - - 200 - text/html;charset=utf-8 369.8670ms
+2021-01-29 13:22:35.031 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - -
+2021-01-29 13:22:35.203 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 172.0555ms
+2021-01-29 13:23:43.645 +08:00 [INF] Starting web host
+2021-01-29 13:23:45.435 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-01-29 13:23:45.444 +08:00 [INF] Hosting environment: Development
+2021-01-29 13:23:45.446 +08:00 [INF] Content root path: C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine
+2021-01-29 13:23:45.485 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/index.html - -
+2021-01-29 14:00:06.854 +08:00 [INF] Starting web host
+2021-01-29 14:27:55.510 +08:00 [INF] Starting web host
+2021-01-29 14:38:56.896 +08:00 [INF] Starting web host
+2021-01-29 14:38:58.701 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-01-29 14:38:58.707 +08:00 [INF] Hosting environment: Development
+2021-01-29 14:38:58.709 +08:00 [INF] Content root path: C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine
+2021-01-29 14:38:58.757 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/index.html - -
+2021-01-29 14:38:59.146 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/index.html - - - 200 - text/html;charset=utf-8 394.1673ms
+2021-01-29 15:23:10.293 +08:00 [INF] Starting web host
+2021-01-29 15:23:11.979 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-01-29 15:23:11.990 +08:00 [INF] Hosting environment: Development
+2021-01-29 15:23:11.992 +08:00 [INF] Content root path: C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine
+2021-01-29 15:23:12.029 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/index.html - -
+2021-01-29 15:23:12.330 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/index.html - - - 200 - text/html;charset=utf-8 304.3975ms
+2021-01-29 15:23:12.540 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - -
+2021-01-29 15:23:12.709 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 168.1352ms
+2021-01-29 15:23:22.151 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v1/Patients/61 - -
+2021-01-29 15:23:22.176 +08:00 [INF] Executing endpoint 'CovidVaccine.Controllers.PatientsController.GetPatient (CovidVaccine)'
+2021-01-29 15:23:22.235 +08:00 [INF] Route matched with {action = "GetPatient", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CovidVaccine.Model.Patient]] GetPatient(Int32) on controller CovidVaccine.Controllers.PatientsController (CovidVaccine).
+2021-01-29 15:23:23.768 +08:00 [INF] Entity Framework Core 5.0.2 initialized 'CovidVaccineContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: MaxPoolSize=128 ServerVersion 8.0.19-mysql 
+2021-01-29 15:23:24.367 +08:00 [INF] Executed DbCommand (73ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Birthday`, `p`.`ContactNo`, `p`.`FirstName`, `p`.`LastName`, `p`.`MiddleName`, `p`.`Sex`
+FROM `Patients` AS `p`
+WHERE `p`.`Id` = @__p_0
+LIMIT 1
+2021-01-29 15:23:24.523 +08:00 [INF] Executing OkObjectResult, writing value of type 'CovidVaccine.Model.Patient'.
+2021-01-29 15:23:24.555 +08:00 [INF] Executed action CovidVaccine.Controllers.PatientsController.GetPatient (CovidVaccine) in 2313.6898ms
+2021-01-29 15:23:24.556 +08:00 [INF] Executed endpoint 'CovidVaccine.Controllers.PatientsController.GetPatient (CovidVaccine)'
+2021-01-29 15:23:24.573 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v1/Patients/61 - - - 200 - application/json;+charset=utf-8 2422.4560ms
+2021-01-29 15:45:09.256 +08:00 [INF] Starting web host
+2021-01-29 15:52:55.437 +08:00 [INF] Starting web host
+2021-01-29 15:58:04.302 +08:00 [INF] Starting web host
+2021-01-29 15:58:10.028 +08:00 [INF] Starting web host
+2021-01-29 15:58:11.869 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-01-29 15:58:11.881 +08:00 [INF] Hosting environment: Development
+2021-01-29 15:58:11.884 +08:00 [INF] Content root path: C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine
+2021-01-29 15:58:11.927 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/index.html - -
+2021-01-29 15:58:12.309 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/index.html - - - 200 - text/html;charset=utf-8 386.8168ms
+2021-01-29 15:58:12.651 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - -
+2021-01-29 15:58:12.859 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 207.1885ms
+2021-01-29 16:00:50.878 +08:00 [INF] Starting web host
+2021-01-29 17:38:46.503 +08:00 [INF] Starting web host
+2021-01-29 17:41:30.438 +08:00 [INF] Starting web host

@@ -42,7 +42,8 @@ namespace CovidVaccine
             services.AddScoped<IRepository, Repository<CovidVaccineContext>>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddMediatR(typeof(Startup));
-
+            //services.AddMvc().AddApplicationPart(typeof(Startup).Assembly);
+            //services.AddMvc().AddApplicationPart(Assembly.Load(new AssemblyName("CustomFactory")));
             services.AddApiVersioning(
                 options =>
                 {

@@ -5,9 +5,13 @@ VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidVaccine", "CovidVaccine\CovidVaccine.csproj", "{569CDB98-357C-471D-B377-8C1B23ECE2B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CovidVaccine.Model", "CovidVaccine.Model\CovidVaccine.Model.csproj", "{3E6E244C-2215-4028-AAA5-87FD69D98C48}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidVaccine.Model", "CovidVaccine.Model\CovidVaccine.Model.csproj", "{3E6E244C-2215-4028-AAA5-87FD69D98C48}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CovidVaccine.Repository", "..\CovidVaccineRepository\CovidVaccine.Repository.csproj", "{EF998958-AB0E-4308-B3FB-4DFF847B2A73}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovidVaccine.Repository", "..\CovidVaccineRepository\CovidVaccine.Repository.csproj", "{EF998958-AB0E-4308-B3FB-4DFF847B2A73}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTestApi", "..\UnitTestApi\UnitTestApi.csproj", "{F66B57BE-7B73-4AC4-B32A-C7AF390EB660}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegrationTest", "..\IntegrationTest\IntegrationTest.csproj", "{8F450AF5-1AB2-49BE-88D0-4552E2CD136D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +31,14 @@ Global
 		{EF998958-AB0E-4308-B3FB-4DFF847B2A73}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF998958-AB0E-4308-B3FB-4DFF847B2A73}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF998958-AB0E-4308-B3FB-4DFF847B2A73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F66B57BE-7B73-4AC4-B32A-C7AF390EB660}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F66B57BE-7B73-4AC4-B32A-C7AF390EB660}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F66B57BE-7B73-4AC4-B32A-C7AF390EB660}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F66B57BE-7B73-4AC4-B32A-C7AF390EB660}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F450AF5-1AB2-49BE-88D0-4552E2CD136D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F450AF5-1AB2-49BE-88D0-4552E2CD136D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F450AF5-1AB2-49BE-88D0-4552E2CD136D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F450AF5-1AB2-49BE-88D0-4552E2CD136D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

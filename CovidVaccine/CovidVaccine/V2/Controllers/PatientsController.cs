@@ -34,7 +34,6 @@ namespace CovidVaccine.V2.Controllers
             var query = new GetPatientsQuery();
             var result = await _mediator.Send(query);
             return Ok(result);
-
         }
 
         // GET: api/Patients/5
@@ -44,7 +43,6 @@ namespace CovidVaccine.V2.Controllers
             var query = new GetPatientQuery(id);
             var result = await _mediator.Send(query);
             return result != null ? (ActionResult)Ok(result) : NotFound();
-
         }
 
         // PUT: api/Patients/5
