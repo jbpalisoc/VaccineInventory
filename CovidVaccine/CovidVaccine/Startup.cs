@@ -20,6 +20,11 @@ using Microsoft.Extensions.Options;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using Microsoft.Extensions.PlatformAbstractions;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
+using FluentValidation;
+using static CovidVaccine.Model.Patient;
+using FluentValidation.AspNetCore;
+using CovidVaccine.Validators;
+using CovidVaccine.PipelineBehaviours;
 
 namespace CovidVaccine
 {
@@ -42,8 +47,10 @@ namespace CovidVaccine
             services.AddScoped<IRepository, Repository<CovidVaccineContext>>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddMediatR(typeof(Startup));
-            //services.AddMvc().AddApplicationPart(typeof(Startup).Assembly);
-            //services.AddMvc().AddApplicationPart(Assembly.Load(new AssemblyName("CustomFactory")));
+            //services.AddValidatorsFromAssembly(typeof(Startup).Assembly);
+            services.AddMvc().AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<PostPatientCommandValidator>());
+            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehaviour<,>));
+
             services.AddApiVersioning(
                 options =>
                 {

@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "lF+xwiMAiTI9qFvlH8uwRl0jhqQNzDNp+UyoyNqCs+OAWfU5qaZrdTCjwtfo/W0gy0dmDU9YYSj4VmrGbCB1zQ==",
+  "dgSpecHash": "t8x6BJmuD1H3D/VpHRlbthnJ+rfbBDioKh0iZgiwLEVMlWoHQ7X+YA9myxCURufmSBIY3/5EMtJXfW6rRlwuVg==",
   "success": true,
   "projectFilePath": "C:\\Users\\your name\\source\\repos\\gitFolder\\CovidVaccine\\CovidVaccine\\CovidVaccine.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\your name\\.nuget\\packages\\fluentvalidation\\9.5.0\\fluentvalidation.9.5.0.nupkg.sha512",
+    "C:\\Users\\your name\\.nuget\\packages\\fluentvalidation.aspnetcore\\9.5.0\\fluentvalidation.aspnetcore.9.5.0.nupkg.sha512",
+    "C:\\Users\\your name\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\9.5.0\\fluentvalidation.dependencyinjectionextensions.9.5.0.nupkg.sha512",
     "C:\\Users\\your name\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\your name\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512",
     "C:\\Users\\your name\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\9.0.0\\mediatr.extensions.microsoft.dependencyinjection.9.0.0.nupkg.sha512",

@@ -17,6 +17,5 @@ namespace CovidVaccine.Commands
         public DateTime Birthday { get; set; }
         public char Sex { get; set; }
 
-
     }
 }

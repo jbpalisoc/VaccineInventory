@@ -1,0 +1,267 @@
+2021-02-05 10:48:00.686 +08:00 [INF] Starting web host
+2021-02-05 10:48:05.385 +08:00 [INF] User profile is available. Using 'C:\Users\your name\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-02-05 10:48:06.771 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-05 10:48:06.771 +08:00 [INF] Hosting environment: Development
+2021-02-05 10:48:06.771 +08:00 [INF] Content root path: C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine
+2021-02-05 10:48:06.939 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/index.html - -
+2021-02-05 10:48:07.467 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/index.html - - - 200 - text/html;charset=utf-8 531.3109ms
+2021-02-05 10:48:07.821 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - -
+2021-02-05 10:48:08.035 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 213.6632ms
+2021-02-05 10:48:23.582 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:16866/api/v1/Patients application/json 139
+2021-02-05 10:48:23.622 +08:00 [INF] Executing endpoint 'CovidVaccine.Controllers.PatientsController.PostPatient (CovidVaccine)'
+2021-02-05 10:48:23.839 +08:00 [INF] Route matched with {action = "PostPatient", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CovidVaccine.Model.Patient]] PostPatient(CovidVaccine.Commands.PostPatientCommand) on controller CovidVaccine.Controllers.PatientsController (CovidVaccine).
+2021-02-05 10:48:23.986 +08:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2021-02-05 10:48:24.017 +08:00 [INF] Executed action CovidVaccine.Controllers.PatientsController.PostPatient (CovidVaccine) in 170.8815ms
+2021-02-05 10:48:24.022 +08:00 [INF] Executed endpoint 'CovidVaccine.Controllers.PatientsController.PostPatient (CovidVaccine)'
+2021-02-05 10:48:24.023 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost:16866/api/v1/Patients application/json 139 - 400 - application/problem+json;+charset=utf-8 440.5346ms
+2021-02-05 10:48:44.296 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:16866/api/v1/Patients application/json 134
+2021-02-05 10:48:44.303 +08:00 [INF] Executing endpoint 'CovidVaccine.Controllers.PatientsController.PostPatient (CovidVaccine)'
+2021-02-05 10:48:44.306 +08:00 [INF] Route matched with {action = "PostPatient", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CovidVaccine.Model.Patient]] PostPatient(CovidVaccine.Commands.PostPatientCommand) on controller CovidVaccine.Controllers.PatientsController (CovidVaccine).
+2021-02-05 10:48:46.528 +08:00 [INF] Entity Framework Core 5.0.2 initialized 'CovidVaccineContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: MaxPoolSize=128 ServerVersion 8.0.19-mysql 
+2021-02-05 10:48:47.141 +08:00 [INF] Executed DbCommand (72ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 1)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `Patients` (`Birthday`, `ContactNo`, `FirstName`, `LastName`, `MiddleName`, `Sex`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT `Id`
+FROM `Patients`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+2021-02-05 10:48:47.236 +08:00 [INF] Executing OkObjectResult, writing value of type 'CovidVaccine.Model.Patient'.
+2021-02-05 10:48:47.252 +08:00 [INF] Executed action CovidVaccine.Controllers.PatientsController.PostPatient (CovidVaccine) in 2945.1254ms
+2021-02-05 10:48:47.253 +08:00 [INF] Executed endpoint 'CovidVaccine.Controllers.PatientsController.PostPatient (CovidVaccine)'
+2021-02-05 10:48:47.269 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost:16866/api/v1/Patients application/json 134 - 200 - application/json;+charset=utf-8 2973.0349ms
+2021-02-05 11:23:52.360 +08:00 [INF] Starting web host
+2021-02-05 11:23:54.358 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-05 11:23:54.366 +08:00 [INF] Hosting environment: Development
+2021-02-05 11:23:54.369 +08:00 [INF] Content root path: C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine
+2021-02-05 11:23:54.395 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/index.html - -
+2021-02-05 11:23:54.679 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/index.html - - - 200 - text/html;charset=utf-8 287.9002ms
+2021-02-05 11:23:54.894 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - -
+2021-02-05 11:23:55.066 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 171.9946ms
+2021-02-05 11:24:50.019 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/v2/swagger.json - -
+2021-02-05 11:24:50.058 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/v2/swagger.json - - - 200 - application/json;charset=utf-8 38.5991ms
+2021-02-05 11:24:56.747 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:16866/api/v2/Patients application/json 145
+2021-02-05 11:24:56.767 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.PatientsController.PostPatient (CovidVaccine)'
+2021-02-05 11:24:56.810 +08:00 [INF] Route matched with {action = "PostPatient", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CovidVaccine.Model.Patient]] PostPatient(CovidVaccine.Commands.PostPatientCommand) on controller CovidVaccine.V2.Controllers.PatientsController (CovidVaccine).
+2021-02-05 11:24:56.849 +08:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2021-02-05 11:24:56.869 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.PatientsController.PostPatient (CovidVaccine) in 53.0264ms
+2021-02-05 11:24:56.871 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.PatientsController.PostPatient (CovidVaccine)'
+2021-02-05 11:24:56.872 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost:16866/api/v2/Patients application/json 145 - 400 - application/problem+json;+charset=utf-8 125.4287ms
+2021-02-05 11:25:06.000 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:16866/api/v2/Patients application/json 140
+2021-02-05 11:25:06.002 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.PatientsController.PostPatient (CovidVaccine)'
+2021-02-05 11:25:06.002 +08:00 [INF] Route matched with {action = "PostPatient", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CovidVaccine.Model.Patient]] PostPatient(CovidVaccine.Commands.PostPatientCommand) on controller CovidVaccine.V2.Controllers.PatientsController (CovidVaccine).
+2021-02-05 11:25:07.183 +08:00 [INF] Entity Framework Core 5.0.2 initialized 'CovidVaccineContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: MaxPoolSize=128 ServerVersion 8.0.19-mysql 
+2021-02-05 11:25:07.634 +08:00 [INF] Executed DbCommand (43ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 1)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `Patients` (`Birthday`, `ContactNo`, `FirstName`, `LastName`, `MiddleName`, `Sex`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT `Id`
+FROM `Patients`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+2021-02-05 11:25:07.729 +08:00 [INF] Executing OkObjectResult, writing value of type 'CovidVaccine.Model.Patient'.
+2021-02-05 11:25:07.738 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.PatientsController.PostPatient (CovidVaccine) in 1735.9033ms
+2021-02-05 11:25:07.740 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.PatientsController.PostPatient (CovidVaccine)'
+2021-02-05 11:25:07.753 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost:16866/api/v2/Patients application/json 140 - 200 - application/json;+charset=utf-8 1752.6048ms
+2021-02-05 11:25:15.254 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:16866/api/v2/Patients application/json 134
+2021-02-05 11:25:15.254 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.PatientsController.PostPatient (CovidVaccine)'
+2021-02-05 11:25:15.255 +08:00 [INF] Route matched with {action = "PostPatient", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CovidVaccine.Model.Patient]] PostPatient(CovidVaccine.Commands.PostPatientCommand) on controller CovidVaccine.V2.Controllers.PatientsController (CovidVaccine).
+2021-02-05 11:25:15.714 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.PatientsController.PostPatient (CovidVaccine) in 457.8838ms
+2021-02-05 11:25:15.714 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.PatientsController.PostPatient (CovidVaccine)'
+2021-02-05 11:25:15.716 +08:00 [ERR] Connection ID "18230571310386249768", Request ID "8000002e-0004-fd00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+FluentValidation.ValidationException: Validation failed: 
+ -- FirstName: 'First Name' must not be empty.
+   at CovidVaccine.PipelineBehaviours.ValidationBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine\PipelineBehaviours\ValidationBehvaviour.cs:line 27
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at CovidVaccine.V2.Controllers.PatientsController.PostPatient(PostPatientCommand command) in C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine\V2\Controllers\PatientsController.cs:line 75
+   at lambda_method5(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+2021-02-05 11:25:15.985 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost:16866/api/v2/Patients application/json 134 - 500 - - 730.4661ms
+2021-02-05 11:33:23.124 +08:00 [INF] Starting web host
+2021-02-05 11:33:24.897 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-05 11:33:24.910 +08:00 [INF] Hosting environment: Development
+2021-02-05 11:33:24.913 +08:00 [INF] Content root path: C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine
+2021-02-05 11:33:24.947 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/index.html - -
+2021-02-05 11:33:25.289 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/index.html - - - 200 - text/html;charset=utf-8 346.9704ms
+2021-02-05 11:33:25.500 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - -
+2021-02-05 11:33:25.651 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 150.9584ms
+2021-02-05 11:33:27.580 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/v2/swagger.json - -
+2021-02-05 11:33:27.597 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/v2/swagger.json - - - 200 - application/json;charset=utf-8 16.6243ms
+2021-02-05 11:33:36.907 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:16866/api/v2/Patients application/json 139
+2021-02-05 11:33:36.924 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.PatientsController.PostPatient (CovidVaccine)'
+2021-02-05 11:33:36.967 +08:00 [INF] Route matched with {action = "PostPatient", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CovidVaccine.Model.Patient]] PostPatient(CovidVaccine.Commands.PostPatientCommand) on controller CovidVaccine.V2.Controllers.PatientsController (CovidVaccine).
+2021-02-05 11:33:37.000 +08:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2021-02-05 11:33:37.021 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.PatientsController.PostPatient (CovidVaccine) in 47.3715ms
+2021-02-05 11:33:37.024 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.PatientsController.PostPatient (CovidVaccine)'
+2021-02-05 11:33:37.024 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost:16866/api/v2/Patients application/json 139 - 400 - application/problem+json;+charset=utf-8 117.0486ms
+2021-02-05 11:33:51.820 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:16866/api/v2/Patients application/json 134
+2021-02-05 11:33:51.821 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.PatientsController.PostPatient (CovidVaccine)'
+2021-02-05 11:33:51.822 +08:00 [INF] Route matched with {action = "PostPatient", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CovidVaccine.Model.Patient]] PostPatient(CovidVaccine.Commands.PostPatientCommand) on controller CovidVaccine.V2.Controllers.PatientsController (CovidVaccine).
+2021-02-05 11:33:52.093 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.PatientsController.PostPatient (CovidVaccine) in 270.5706ms
+2021-02-05 11:33:52.094 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.PatientsController.PostPatient (CovidVaccine)'
+2021-02-05 11:33:52.095 +08:00 [ERR] Connection ID "18086456130900328460", Request ID "80000011-0006-fb00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+FluentValidation.ValidationException: Validation failed: 
+ -- FirstName: 'First Name' must not be empty.
+   at CovidVaccine.PipelineBehaviours.ValidationBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine\PipelineBehaviours\ValidationBehvaviour.cs:line 27
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at CovidVaccine.V2.Controllers.PatientsController.PostPatient(PostPatientCommand command) in C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine\V2\Controllers\PatientsController.cs:line 75
+   at lambda_method5(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+2021-02-05 11:33:52.175 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost:16866/api/v2/Patients application/json 134 - 500 - - 355.4484ms
+2021-02-05 11:55:25.755 +08:00 [INF] Starting web host
+2021-02-05 11:55:27.762 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-05 11:55:27.766 +08:00 [INF] Hosting environment: Development
+2021-02-05 11:55:27.768 +08:00 [INF] Content root path: C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine
+2021-02-05 11:55:27.795 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/index.html - -
+2021-02-05 11:55:28.099 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/index.html - - - 200 - text/html;charset=utf-8 307.9190ms
+2021-02-05 11:55:28.375 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - -
+2021-02-05 11:55:28.581 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 205.0575ms
+2021-02-05 11:55:44.633 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:16866/api/v1/Patients application/json 134
+2021-02-05 11:55:44.651 +08:00 [INF] Executing endpoint 'CovidVaccine.Controllers.PatientsController.PostPatient (CovidVaccine)'
+2021-02-05 11:55:44.700 +08:00 [INF] Route matched with {action = "PostPatient", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CovidVaccine.Model.Patient]] PostPatient(CovidVaccine.Commands.PostPatientCommand) on controller CovidVaccine.Controllers.PatientsController (CovidVaccine).
+2021-02-05 11:55:44.980 +08:00 [INF] Executed action CovidVaccine.Controllers.PatientsController.PostPatient (CovidVaccine) in 275.7053ms
+2021-02-05 11:55:44.983 +08:00 [INF] Executed endpoint 'CovidVaccine.Controllers.PatientsController.PostPatient (CovidVaccine)'
+2021-02-05 11:55:44.987 +08:00 [ERR] Connection ID "17870283348786544659", Request ID "80000016-0006-f800-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+FluentValidation.ValidationException: Validation failed: 
+ -- FirstName: 'First Name' must not be empty.
+   at CovidVaccine.PipelineBehaviours.ValidationBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine\PipelineBehaviours\ValidationBehvaviour.cs:line 27
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at CovidVaccine.Controllers.PatientsController.PostPatient(PostPatientCommand command) in C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine\V1\Controllers\PatientsController.cs:line 80
+   at lambda_method5(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+2021-02-05 11:55:45.128 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost:16866/api/v1/Patients application/json 134 - 500 - - 494.8258ms
+2021-02-05 12:01:40.799 +08:00 [INF] Starting web host
+2021-02-05 12:02:00.661 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-05 12:02:00.664 +08:00 [INF] Hosting environment: Development
+2021-02-05 12:02:00.666 +08:00 [INF] Content root path: C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine
+2021-02-05 12:02:00.685 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/index.html - -
+2021-02-05 12:02:00.955 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/index.html - - - 200 - text/html;charset=utf-8 270.7043ms
+2021-02-05 12:02:01.140 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - -
+2021-02-05 12:02:01.292 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 152.2916ms
+2021-02-05 12:02:14.602 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:16866/api/v1/Patients application/json 139
+2021-02-05 12:02:14.617 +08:00 [INF] Executing endpoint 'CovidVaccine.Controllers.PatientsController.PostPatient (CovidVaccine)'
+2021-02-05 12:02:14.670 +08:00 [INF] Route matched with {action = "PostPatient", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CovidVaccine.Model.Patient]] PostPatient(CovidVaccine.Commands.PostPatientCommand) on controller CovidVaccine.Controllers.PatientsController (CovidVaccine).
+2021-02-05 12:02:14.712 +08:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2021-02-05 12:02:14.742 +08:00 [INF] Executed action CovidVaccine.Controllers.PatientsController.PostPatient (CovidVaccine) in 64.5798ms
+2021-02-05 12:02:14.746 +08:00 [INF] Executed endpoint 'CovidVaccine.Controllers.PatientsController.PostPatient (CovidVaccine)'
+2021-02-05 12:02:14.747 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost:16866/api/v1/Patients application/json 139 - 400 - application/problem+json;+charset=utf-8 144.1702ms
+2021-02-05 12:02:17.543 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:16866/api/v1/Patients application/json 134
+2021-02-05 12:02:17.544 +08:00 [INF] Executing endpoint 'CovidVaccine.Controllers.PatientsController.PostPatient (CovidVaccine)'
+2021-02-05 12:02:17.545 +08:00 [INF] Route matched with {action = "PostPatient", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CovidVaccine.Model.Patient]] PostPatient(CovidVaccine.Commands.PostPatientCommand) on controller CovidVaccine.Controllers.PatientsController (CovidVaccine).
+2021-02-05 12:02:17.809 +08:00 [INF] Executed action CovidVaccine.Controllers.PatientsController.PostPatient (CovidVaccine) in 263.7911ms
+2021-02-05 12:02:17.811 +08:00 [INF] Executed endpoint 'CovidVaccine.Controllers.PatientsController.PostPatient (CovidVaccine)'
+2021-02-05 12:02:17.812 +08:00 [ERR] Connection ID "17870283348786544663", Request ID "8000001b-0006-f800-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+FluentValidation.ValidationException: Validation failed: 
+ -- FirstName: 'First Name' must not be empty.
+   at CovidVaccine.PipelineBehaviours.ValidationBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine\PipelineBehaviours\ValidationBehvaviour.cs:line 27
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at CovidVaccine.Controllers.PatientsController.PostPatient(PostPatientCommand command) in C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine\V1\Controllers\PatientsController.cs:line 80
+   at lambda_method5(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+2021-02-05 12:02:17.904 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost:16866/api/v1/Patients application/json 134 - 500 - - 361.5152ms
+2021-02-05 12:02:57.488 +08:00 [INF] Starting web host
+2021-02-05 12:02:59.184 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-05 12:02:59.188 +08:00 [INF] Hosting environment: Development
+2021-02-05 12:02:59.190 +08:00 [INF] Content root path: C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine
+2021-02-05 12:02:59.217 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/index.html - -
+2021-02-05 12:02:59.553 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/index.html - - - 200 - text/html;charset=utf-8 339.9137ms
+2021-02-05 12:02:59.815 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - -
+2021-02-05 12:03:00.065 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 250.5760ms
+2021-02-05 12:03:12.604 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:16866/api/v1/Patients application/json 134
+2021-02-05 12:03:12.626 +08:00 [INF] Executing endpoint 'CovidVaccine.Controllers.PatientsController.PostPatient (CovidVaccine)'
+2021-02-05 12:03:12.673 +08:00 [INF] Route matched with {action = "PostPatient", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CovidVaccine.Model.Patient]] PostPatient(CovidVaccine.Commands.PostPatientCommand) on controller CovidVaccine.Controllers.PatientsController (CovidVaccine).
+2021-02-05 12:50:15.364 +08:00 [INF] Starting web host
+2021-02-05 12:50:16.938 +08:00 [INF] User profile is available. Using 'C:\Users\your name\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-02-05 12:50:17.305 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-05 12:50:17.306 +08:00 [INF] Hosting environment: Development
+2021-02-05 12:50:17.306 +08:00 [INF] Content root path: C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine
+2021-02-05 12:50:17.367 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/index.html - -
+2021-02-05 12:50:17.657 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/index.html - - - 200 - text/html;charset=utf-8 294.9895ms
+2021-02-05 12:50:17.846 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - -
+2021-02-05 12:50:18.071 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 225.1518ms
+2021-02-05 12:50:41.504 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/v2/swagger.json - -
+2021-02-05 12:50:41.526 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/v2/swagger.json - - - 200 - application/json;charset=utf-8 22.9645ms
+2021-02-05 12:50:57.932 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:16866/api/v2/Patients application/json 134
+2021-02-05 12:50:57.945 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.PatientsController.PostPatient (CovidVaccine)'
+2021-02-05 12:50:58.034 +08:00 [INF] Route matched with {action = "PostPatient", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CovidVaccine.Model.Patient]] PostPatient(CovidVaccine.Commands.PostPatientCommand) on controller CovidVaccine.V2.Controllers.PatientsController (CovidVaccine).
+2021-02-05 12:50:58.164 +08:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2021-02-05 12:50:58.187 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.PatientsController.PostPatient (CovidVaccine) in 144.7557ms
+2021-02-05 12:50:58.190 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.PatientsController.PostPatient (CovidVaccine)'
+2021-02-05 12:50:58.191 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost:16866/api/v2/Patients application/json 134 - 400 - application/problem+json;+charset=utf-8 259.0711ms
+2021-02-05 12:51:44.907 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:16866/api/v2/Patients application/json 137
+2021-02-05 12:51:44.915 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.PatientsController.PostPatient (CovidVaccine)'
+2021-02-05 12:51:44.916 +08:00 [INF] Route matched with {action = "PostPatient", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CovidVaccine.Model.Patient]] PostPatient(CovidVaccine.Commands.PostPatientCommand) on controller CovidVaccine.V2.Controllers.PatientsController (CovidVaccine).
+2021-02-05 12:51:44.927 +08:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2021-02-05 12:51:44.928 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.PatientsController.PostPatient (CovidVaccine) in 11.7305ms
+2021-02-05 12:51:44.928 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.PatientsController.PostPatient (CovidVaccine)'
+2021-02-05 12:51:44.929 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost:16866/api/v2/Patients application/json 137 - 400 - application/problem+json;+charset=utf-8 21.2179ms
+2021-02-05 12:53:52.532 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:16866/api/v2/Patients application/json 98
+2021-02-05 12:53:52.534 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.PatientsController.PostPatient (CovidVaccine)'
+2021-02-05 12:53:52.539 +08:00 [INF] Route matched with {action = "PostPatient", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CovidVaccine.Model.Patient]] PostPatient(CovidVaccine.Commands.PostPatientCommand) on controller CovidVaccine.V2.Controllers.PatientsController (CovidVaccine).
+2021-02-05 12:53:52.624 +08:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2021-02-05 12:53:52.624 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.PatientsController.PostPatient (CovidVaccine) in 84.7917ms
+2021-02-05 12:53:52.627 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.PatientsController.PostPatient (CovidVaccine)'
+2021-02-05 12:53:52.634 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost:16866/api/v2/Patients application/json 98 - 400 - application/problem+json;+charset=utf-8 101.3202ms
+2021-02-05 12:54:34.985 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:16866/api/v2/Patients application/json 106
+2021-02-05 12:54:34.987 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.PatientsController.PostPatient (CovidVaccine)'
+2021-02-05 12:54:34.992 +08:00 [INF] Route matched with {action = "PostPatient", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CovidVaccine.Model.Patient]] PostPatient(CovidVaccine.Commands.PostPatientCommand) on controller CovidVaccine.V2.Controllers.PatientsController (CovidVaccine).
+2021-02-05 12:54:34.994 +08:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2021-02-05 12:54:34.995 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.PatientsController.PostPatient (CovidVaccine) in 2.7018ms
+2021-02-05 12:54:34.995 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.PatientsController.PostPatient (CovidVaccine)'
+2021-02-05 12:54:34.996 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost:16866/api/v2/Patients application/json 106 - 400 - application/problem+json;+charset=utf-8 10.3399ms
