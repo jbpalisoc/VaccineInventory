@@ -22,6 +22,12 @@
     <Compile Update="Views\Vaccine.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\VaccineAddDialog.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\VaccineEditDialog.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\VaccineHistory.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -43,6 +49,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Vaccine.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\VaccineAddDialog.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\VaccineEditDialog.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\VaccineHistory.xaml">

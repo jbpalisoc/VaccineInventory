@@ -25,6 +25,8 @@ namespace VaccineInventory
             containerRegistry.RegisterForNavigation<VaccineHistory>();
             containerRegistry.RegisterDialog<EditDialog, EditDialogViewModel>();
             containerRegistry.RegisterDialog<AddDialog, AddDialogViewModel>();
+            containerRegistry.RegisterDialog<VaccineAddDialog, VaccineAddDialogViewModel>();
+            containerRegistry.RegisterDialog<VaccineEditDialog, VaccineEditDialogViewModel>();
 
             containerRegistry.RegisterSingleton<IRequestHandler, RequestHandler>();
         }

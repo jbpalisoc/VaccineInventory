@@ -1,4 +1,5 @@
-﻿using CovidVaccine.Model;
+﻿using CovidVaccine.Commands;
+using CovidVaccine.Model;
 using CovidVaccine.V2.Controllers;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -46,5 +47,24 @@ namespace UnitTestApi
             Assert.IsType<NotFoundResult>(result.Result);
         }
 
+        [Fact]
+        public async Task PostPatient()
+        {
+            var repo = new Mock<IMediator>().Object;
+            PostPatientCommand commad = new PostPatientCommand()
+            {
+                Id = 0,
+                FirstName = "Jason",
+                MiddleName = "Brace",
+                LastName = "Palisoc",
+                ContactNo = "09662679535",
+                Birthday = new DateTime(),
+                Sex = 'M'
+
+            };
+            var result = await _controller.PostPatient(commad);
+
+            Assert.IsType<OkResult>(result.Result);
+        }
     }
 }

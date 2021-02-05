@@ -17,5 +17,6 @@ namespace CovidVaccine.Repository
         }
 
         public DbSet<Patient> Patients { get; set; }
+        public DbSet<Vaccine> Vaccines { get; set; }
     }
 }

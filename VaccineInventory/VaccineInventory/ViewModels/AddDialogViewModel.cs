@@ -17,6 +17,14 @@ namespace VaccineInventory.ViewModels
         public DelegateCommand<string> CloseDialogCommand =>
             _closeDialogCommand ?? (_closeDialogCommand = new DelegateCommand<string>(CloseDialog));
 
+        private string _title = "Add Patient";
+
+        public string Title
+        {
+            get { return _title; }
+            set { SetProperty(ref _title, value); }
+        }
+
         private string _message;
         public string Message
         {
@@ -67,7 +75,6 @@ namespace VaccineInventory.ViewModels
             set { SetProperty(ref _sex, value); }
         }
 
-        private string _title = "Add Patient";
         private IRequestHandler _requestHandler;
         public DelegateCommand SaveButtonClick { get; private set; }
         public AddDialogViewModel(IRequestHandler requestHandler)
@@ -89,11 +96,10 @@ namespace VaccineInventory.ViewModels
             };
 
             _requestHandler.Execute("http://localhost:16866/");
-            HttpResponseMessage response = await Task.Run(() => _requestHandler.InsertAsync("api/Patients", newPatient));
+            HttpResponseMessage response = await Task.Run(() => _requestHandler.InsertAsync("api/v2/Patients", newPatient));
 
             if (response.IsSuccessStatusCode)
             {
-                Message = "Item Added!!!";
                 FirstName = string.Empty;
                 MiddleName = string.Empty;
                 LastName = string.Empty;
@@ -102,12 +108,6 @@ namespace VaccineInventory.ViewModels
                 Sex = '\0';
                 Message = "Patient Added!!!";
             }
-        }
-
-        public string Title
-        {
-            get { return _title; }
-            set { SetProperty(ref _title, value); }
         }
 
         public event Action<IDialogResult> RequestClose;

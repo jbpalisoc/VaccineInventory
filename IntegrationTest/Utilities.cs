@@ -26,8 +26,8 @@ namespace IntegrationTest
         {
             return new List<Patient>()
             {
-                new Patient(1, "Jason", "Brace", "Palisoc", "09662679535", new DateTime(08/05/1995), 'M'),
-                new Patient(2, "Jason2", "Brace2", "Palisoc2", "09662679535", new DateTime(08/05/1995), 'M')
+                new Patient(1, "Jason", "Brace", "Palisoc", "09662679535", new DateTime(), 'M'),
+                new Patient(2, "Jason2", "Brace2", "Palisoc2", "09662679535", new DateTime(), 'M')
             };
         }
     }

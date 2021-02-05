@@ -89,7 +89,7 @@ namespace VaccineInventory.ViewModels
                 Sex = Sex
             };
             _requestHandler.Execute("http://localhost:16866/");
-            HttpResponseMessage response = await Task.Run(() => _requestHandler.UpdateAsync("api/Patients/" + Id, newPatient));
+            HttpResponseMessage response = await Task.Run(() => _requestHandler.UpdateAsync("api/v2/Patients/" + Id, newPatient));
             if (response.IsSuccessStatusCode)
             {
                 CloseDialog("true");

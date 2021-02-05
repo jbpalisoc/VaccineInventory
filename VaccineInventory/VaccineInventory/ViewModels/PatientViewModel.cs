@@ -112,7 +112,7 @@ namespace VaccineInventory.ViewModels
         private async void GetPatient()
         {
              _requestHandler.Execute("http://localhost:16866/");
-            HttpResponseMessage response = await Task.Run(() => _requestHandler.GetAsync("api/Patients"));
+            HttpResponseMessage response = await Task.Run(() => _requestHandler.GetAsync("api/v2/Patients"));
 
             if (response.IsSuccessStatusCode)
             {
@@ -176,7 +176,7 @@ namespace VaccineInventory.ViewModels
             if (messageBoxResult == MessageBoxResult.Yes)
             {
                 _requestHandler.Execute("http://localhost:16866/");
-                HttpResponseMessage response = await Task.Run(() => _requestHandler.DeleteAsync("api/Patients/" + SelectedPatient.Id));
+                HttpResponseMessage response = await Task.Run(() => _requestHandler.DeleteAsync("api/v2/Patients/" + SelectedPatient.Id));
                 if (response.IsSuccessStatusCode)
                 {
                     GetPatient();

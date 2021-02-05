@@ -33,7 +33,6 @@ namespace CovidVaccine.Repository
             return await this.dbContext.Set<T>().ToListAsync();
         }
 
-
         public async Task<T> SelectById<T>(int id) where T : class
         {
             return await this.dbContext.Set<T>().FindAsync(id);

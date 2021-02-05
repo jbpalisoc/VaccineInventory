@@ -76,3 +76,7 @@ C:\Users\your name\source\repos\gitFolder\VaccineInventory\VaccineInventory\obj\
 C:\Users\your name\source\repos\gitFolder\VaccineInventory\VaccineInventory\obj\Debug\netcoreapp3.1\VaccineInventory.csprojAssemblyReference.cache
 C:\Users\your name\source\repos\gitFolder\VaccineInventory\VaccineInventory\obj\Debug\netcoreapp3.1\Views\AddDialog.baml
 C:\Users\your name\source\repos\gitFolder\VaccineInventory\VaccineInventory\obj\Debug\netcoreapp3.1\Views\AddDialog.g.cs
+C:\Users\your name\source\repos\gitFolder\VaccineInventory\VaccineInventory\obj\Debug\netcoreapp3.1\Views\VaccineAddDialog.baml
+C:\Users\your name\source\repos\gitFolder\VaccineInventory\VaccineInventory\obj\Debug\netcoreapp3.1\Views\VaccineAddDialog.g.cs
+C:\Users\your name\source\repos\gitFolder\VaccineInventory\VaccineInventory\obj\Debug\netcoreapp3.1\Views\VaccineEditDialog.baml
+C:\Users\your name\source\repos\gitFolder\VaccineInventory\VaccineInventory\obj\Debug\netcoreapp3.1\Views\VaccineEditDialog.g.cs

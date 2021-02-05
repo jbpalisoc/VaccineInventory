@@ -12,7 +12,7 @@ namespace CovidVaccine.Repository
         private readonly CovidVaccineContext _databaseContext;
         public UnitOfWork(CovidVaccineContext databaseContext)
         {
-            _databaseContext = databaseContext;          
+            _databaseContext = databaseContext;      
         }
 
         public async Task<int> Commit()
