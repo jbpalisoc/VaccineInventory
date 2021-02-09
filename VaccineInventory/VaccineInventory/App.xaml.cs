@@ -27,6 +27,7 @@ namespace VaccineInventory
             containerRegistry.RegisterDialog<AddDialog, AddDialogViewModel>();
             containerRegistry.RegisterDialog<VaccineAddDialog, VaccineAddDialogViewModel>();
             containerRegistry.RegisterDialog<VaccineEditDialog, VaccineEditDialogViewModel>();
+            containerRegistry.RegisterDialog<InventoryAddDialog, InventoryAddDialogViewModel>();
 
             containerRegistry.RegisterSingleton<IRequestHandler, RequestHandler>();
         }

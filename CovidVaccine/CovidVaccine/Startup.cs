@@ -46,6 +46,7 @@ namespace CovidVaccine
             services.AddControllers();
             services.AddScoped<IRepository, Repository<CovidVaccineContext>>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped<IInventoryRepository, InventoryRepository>();
             services.AddMediatR(typeof(Startup));
             //services.AddValidatorsFromAssembly(typeof(Startup).Assembly);
             services.AddMvc().AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<PostPatientCommandValidator>());

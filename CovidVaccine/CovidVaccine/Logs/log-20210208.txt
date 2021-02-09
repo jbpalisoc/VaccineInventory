@@ -1,0 +1,829 @@
+2021-02-08 09:15:44.996 +08:00 [INF] Starting web host
+2021-02-08 09:16:00.152 +08:00 [INF] User profile is available. Using 'C:\Users\your name\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-02-08 09:16:05.157 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-08 09:16:05.158 +08:00 [INF] Hosting environment: Development
+2021-02-08 09:16:05.158 +08:00 [INF] Content root path: C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine
+2021-02-08 09:16:05.548 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/index.html - -
+2021-02-08 09:16:06.817 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/index.html - - - 200 - text/html;charset=utf-8 1273.8087ms
+2021-02-08 09:16:07.405 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - -
+2021-02-08 09:16:07.984 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 571.7002ms
+2021-02-08 09:16:14.374 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/v2/swagger.json - -
+2021-02-08 09:16:14.393 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/v2/swagger.json - - - 200 - application/json;charset=utf-8 17.8068ms
+2021-02-08 09:16:14.407 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/Patients - -
+2021-02-08 09:16:14.418 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-08 09:16:14.715 +08:00 [INF] Route matched with {action = "GetPatients", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.Patient]]] GetPatients() on controller CovidVaccine.V2.Controllers.PatientsController (CovidVaccine).
+2021-02-08 09:16:18.927 +08:00 [INF] Entity Framework Core 5.0.2 initialized 'CovidVaccineContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: MaxPoolSize=128 ServerVersion 8.0.19-mysql 
+2021-02-08 09:16:19.636 +08:00 [INF] Executed DbCommand (53ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Birthday`, `p`.`ContactNo`, `p`.`FirstName`, `p`.`LastName`, `p`.`MiddleName`, `p`.`Sex`
+FROM `Patients` AS `p`
+2021-02-08 09:16:19.799 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.Patient, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-08 09:16:19.848 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine) in 5124.5378ms
+2021-02-08 09:16:19.849 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-08 09:16:19.863 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/Patients - - - 200 - application/json;+charset=utf-8 5456.0961ms
+2021-02-08 09:26:02.565 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/Patients - -
+2021-02-08 09:26:02.572 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-08 09:26:02.573 +08:00 [INF] Route matched with {action = "GetPatients", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.Patient]]] GetPatients() on controller CovidVaccine.V2.Controllers.PatientsController (CovidVaccine).
+2021-02-08 09:26:02.689 +08:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Birthday`, `p`.`ContactNo`, `p`.`FirstName`, `p`.`LastName`, `p`.`MiddleName`, `p`.`Sex`
+FROM `Patients` AS `p`
+2021-02-08 09:26:02.691 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.Patient, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-08 09:26:02.692 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine) in 119.005ms
+2021-02-08 09:26:02.692 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-08 09:26:02.693 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/Patients - - - 200 - application/json;+charset=utf-8 127.9587ms
+2021-02-08 09:27:16.502 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/Patients - -
+2021-02-08 09:27:16.502 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-08 09:27:16.505 +08:00 [INF] Route matched with {action = "GetPatients", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.Patient]]] GetPatients() on controller CovidVaccine.V2.Controllers.PatientsController (CovidVaccine).
+2021-02-08 09:27:16.546 +08:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Birthday`, `p`.`ContactNo`, `p`.`FirstName`, `p`.`LastName`, `p`.`MiddleName`, `p`.`Sex`
+FROM `Patients` AS `p`
+2021-02-08 09:27:16.548 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.Patient, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-08 09:27:16.548 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine) in 42.9099ms
+2021-02-08 09:27:16.548 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-08 09:27:16.550 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/Patients - - - 200 - application/json;+charset=utf-8 48.4802ms
+2021-02-08 09:27:18.029 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/Vaccines - -
+2021-02-08 09:27:18.029 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.VaccinesController.GetVaccines (CovidVaccine)'
+2021-02-08 09:27:18.058 +08:00 [INF] Route matched with {action = "GetVaccines", controller = "Vaccines"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.Vaccine]]] GetVaccines() on controller CovidVaccine.V2.Controllers.VaccinesController (CovidVaccine).
+2021-02-08 09:27:18.086 +08:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`Description`, `v`.`Name`
+FROM `Vaccines` AS `v`
+2021-02-08 09:27:18.096 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.Vaccine, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-08 09:27:18.098 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.VaccinesController.GetVaccines (CovidVaccine) in 40.3159ms
+2021-02-08 09:27:18.098 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.VaccinesController.GetVaccines (CovidVaccine)'
+2021-02-08 09:27:18.105 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/Vaccines - - - 200 - application/json;+charset=utf-8 71.6107ms
+2021-02-08 09:27:20.947 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/Vaccines - -
+2021-02-08 09:27:20.947 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.VaccinesController.GetVaccines (CovidVaccine)'
+2021-02-08 09:27:20.947 +08:00 [INF] Route matched with {action = "GetVaccines", controller = "Vaccines"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.Vaccine]]] GetVaccines() on controller CovidVaccine.V2.Controllers.VaccinesController (CovidVaccine).
+2021-02-08 09:27:20.954 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`Description`, `v`.`Name`
+FROM `Vaccines` AS `v`
+2021-02-08 09:27:20.955 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.Vaccine, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-08 09:27:20.956 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.VaccinesController.GetVaccines (CovidVaccine) in 8.5181ms
+2021-02-08 09:27:20.956 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.VaccinesController.GetVaccines (CovidVaccine)'
+2021-02-08 09:27:20.957 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/Vaccines - - - 200 - application/json;+charset=utf-8 9.6410ms
+2021-02-08 09:54:11.819 +08:00 [INF] Starting web host
+2021-02-08 09:54:13.477 +08:00 [INF] User profile is available. Using 'C:\Users\your name\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-02-08 09:54:13.951 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-08 09:54:13.951 +08:00 [INF] Hosting environment: Development
+2021-02-08 09:54:13.951 +08:00 [INF] Content root path: C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine
+2021-02-08 09:54:14.007 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/index.html - -
+2021-02-08 09:54:14.306 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/index.html - - - 200 - text/html;charset=utf-8 301.4716ms
+2021-02-08 09:54:14.537 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - -
+2021-02-08 09:54:14.761 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 223.9652ms
+2021-02-08 09:54:21.103 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/v2/swagger.json - -
+2021-02-08 09:54:21.132 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/v2/swagger.json - - - 200 - application/json;charset=utf-8 31.3613ms
+2021-02-08 09:54:25.797 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/VaccineInventories - -
+2021-02-08 09:54:25.848 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.VaccineInventoriesController.GetVaccineInventories (CovidVaccine)'
+2021-02-08 09:54:25.946 +08:00 [INF] Route matched with {action = "GetVaccineInventories", controller = "VaccineInventories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.VaccineInventory]]] GetVaccineInventories() on controller CovidVaccine.V2.Controllers.VaccineInventoriesController (CovidVaccine).
+2021-02-08 09:54:27.594 +08:00 [INF] Entity Framework Core 5.0.2 initialized 'CovidVaccineContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: MaxPoolSize=128 ServerVersion 8.0.19-mysql 
+2021-02-08 09:54:27.958 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/Patients - -
+2021-02-08 09:54:27.960 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-08 09:54:27.974 +08:00 [INF] Route matched with {action = "GetPatients", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.Patient]]] GetPatients() on controller CovidVaccine.V2.Controllers.PatientsController (CovidVaccine).
+2021-02-08 09:54:28.032 +08:00 [INF] Entity Framework Core 5.0.2 initialized 'CovidVaccineContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: MaxPoolSize=128 ServerVersion 8.0.19-mysql 
+2021-02-08 09:54:28.131 +08:00 [INF] Executed DbCommand (98ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`Amount`, `v`.`ExpirationDate`, `v`.`StorageDate`, `v`.`VaccineId`
+FROM `VaccineInventories` AS `v`
+2021-02-08 09:54:28.131 +08:00 [INF] Executed DbCommand (30ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Birthday`, `p`.`ContactNo`, `p`.`FirstName`, `p`.`LastName`, `p`.`MiddleName`, `p`.`Sex`
+FROM `Patients` AS `p`
+2021-02-08 09:54:28.306 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.Patient, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-08 09:54:28.306 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.VaccineInventory, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-08 09:54:28.342 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.VaccineInventoriesController.GetVaccineInventories (CovidVaccine) in 2388.4083ms
+2021-02-08 09:54:28.342 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine) in 361.8437ms
+2021-02-08 09:54:28.343 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-08 09:54:28.343 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.VaccineInventoriesController.GetVaccineInventories (CovidVaccine)'
+2021-02-08 09:54:28.362 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/Patients - - - 200 - application/json;+charset=utf-8 404.6315ms
+2021-02-08 09:54:28.362 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/VaccineInventories - - - 200 - application/json;+charset=utf-8 2565.1015ms
+2021-02-08 09:54:31.602 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/Patients - -
+2021-02-08 09:54:31.603 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-08 09:54:31.603 +08:00 [INF] Route matched with {action = "GetPatients", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.Patient]]] GetPatients() on controller CovidVaccine.V2.Controllers.PatientsController (CovidVaccine).
+2021-02-08 09:54:31.630 +08:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Birthday`, `p`.`ContactNo`, `p`.`FirstName`, `p`.`LastName`, `p`.`MiddleName`, `p`.`Sex`
+FROM `Patients` AS `p`
+2021-02-08 09:54:31.633 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.Patient, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-08 09:54:31.634 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine) in 30.4173ms
+2021-02-08 09:54:31.634 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-08 09:54:31.636 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/Patients - - - 200 - application/json;+charset=utf-8 33.6148ms
+2021-02-08 09:58:39.923 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/Patients - -
+2021-02-08 09:58:39.924 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-08 09:58:39.924 +08:00 [INF] Route matched with {action = "GetPatients", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.Patient]]] GetPatients() on controller CovidVaccine.V2.Controllers.PatientsController (CovidVaccine).
+2021-02-08 09:58:39.980 +08:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Birthday`, `p`.`ContactNo`, `p`.`FirstName`, `p`.`LastName`, `p`.`MiddleName`, `p`.`Sex`
+FROM `Patients` AS `p`
+2021-02-08 09:58:39.981 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.Patient, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-08 09:58:39.982 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine) in 58.1966ms
+2021-02-08 09:58:39.982 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-08 09:58:39.983 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/Patients - - - 200 - application/json;+charset=utf-8 59.6234ms
+2021-02-08 09:58:41.914 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/Patients - -
+2021-02-08 09:58:41.915 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-08 09:58:41.915 +08:00 [INF] Route matched with {action = "GetPatients", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.Patient]]] GetPatients() on controller CovidVaccine.V2.Controllers.PatientsController (CovidVaccine).
+2021-02-08 09:58:41.925 +08:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Birthday`, `p`.`ContactNo`, `p`.`FirstName`, `p`.`LastName`, `p`.`MiddleName`, `p`.`Sex`
+FROM `Patients` AS `p`
+2021-02-08 09:58:41.927 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.Patient, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-08 09:58:41.928 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine) in 12.3967ms
+2021-02-08 09:58:41.928 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-08 09:58:41.928 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/Patients - - - 200 - application/json;+charset=utf-8 13.8823ms
+2021-02-08 09:59:48.028 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/Patients - -
+2021-02-08 09:59:48.029 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-08 09:59:48.030 +08:00 [INF] Route matched with {action = "GetPatients", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.Patient]]] GetPatients() on controller CovidVaccine.V2.Controllers.PatientsController (CovidVaccine).
+2021-02-08 09:59:48.078 +08:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Birthday`, `p`.`ContactNo`, `p`.`FirstName`, `p`.`LastName`, `p`.`MiddleName`, `p`.`Sex`
+FROM `Patients` AS `p`
+2021-02-08 09:59:48.079 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.Patient, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-08 09:59:48.080 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine) in 50.0073ms
+2021-02-08 09:59:48.080 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-08 09:59:48.080 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/Patients - - - 200 - application/json;+charset=utf-8 52.8867ms
+2021-02-08 10:00:04.872 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/VaccineInventories - -
+2021-02-08 10:00:04.872 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.VaccineInventoriesController.GetVaccineInventories (CovidVaccine)'
+2021-02-08 10:00:04.872 +08:00 [INF] Route matched with {action = "GetVaccineInventories", controller = "VaccineInventories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.VaccineInventory]]] GetVaccineInventories() on controller CovidVaccine.V2.Controllers.VaccineInventoriesController (CovidVaccine).
+2021-02-08 10:00:04.920 +08:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`Amount`, `v`.`ExpirationDate`, `v`.`StorageDate`, `v`.`VaccineId`
+FROM `VaccineInventories` AS `v`
+2021-02-08 10:00:04.925 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.VaccineInventory, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-08 10:00:04.926 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.VaccineInventoriesController.GetVaccineInventories (CovidVaccine) in 53.4039ms
+2021-02-08 10:00:04.926 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.VaccineInventoriesController.GetVaccineInventories (CovidVaccine)'
+2021-02-08 10:00:04.926 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/VaccineInventories - - - 200 - application/json;+charset=utf-8 54.5371ms
+2021-02-08 10:08:51.806 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/Patients - -
+2021-02-08 10:08:51.807 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-08 10:08:51.807 +08:00 [INF] Route matched with {action = "GetPatients", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.Patient]]] GetPatients() on controller CovidVaccine.V2.Controllers.PatientsController (CovidVaccine).
+2021-02-08 10:08:51.868 +08:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Birthday`, `p`.`ContactNo`, `p`.`FirstName`, `p`.`LastName`, `p`.`MiddleName`, `p`.`Sex`
+FROM `Patients` AS `p`
+2021-02-08 10:08:51.870 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.Patient, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-08 10:08:51.870 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine) in 61.3175ms
+2021-02-08 10:08:51.872 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-08 10:08:51.876 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/Patients - - - 200 - application/json;+charset=utf-8 70.0328ms
+2021-02-08 10:08:53.347 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/VaccineInventories - -
+2021-02-08 10:08:53.347 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.VaccineInventoriesController.GetVaccineInventories (CovidVaccine)'
+2021-02-08 10:08:53.347 +08:00 [INF] Route matched with {action = "GetVaccineInventories", controller = "VaccineInventories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.VaccineInventory]]] GetVaccineInventories() on controller CovidVaccine.V2.Controllers.VaccineInventoriesController (CovidVaccine).
+2021-02-08 10:08:53.359 +08:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`Amount`, `v`.`ExpirationDate`, `v`.`StorageDate`, `v`.`VaccineId`
+FROM `VaccineInventories` AS `v`
+2021-02-08 10:08:53.359 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.VaccineInventory, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-08 10:08:53.360 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.VaccineInventoriesController.GetVaccineInventories (CovidVaccine) in 12.3142ms
+2021-02-08 10:08:53.360 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.VaccineInventoriesController.GetVaccineInventories (CovidVaccine)'
+2021-02-08 10:08:53.366 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/VaccineInventories - - - 200 - application/json;+charset=utf-8 19.0383ms
+2021-02-08 10:09:42.754 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/Patients - -
+2021-02-08 10:09:42.754 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-08 10:09:42.754 +08:00 [INF] Route matched with {action = "GetPatients", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.Patient]]] GetPatients() on controller CovidVaccine.V2.Controllers.PatientsController (CovidVaccine).
+2021-02-08 10:09:42.765 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Birthday`, `p`.`ContactNo`, `p`.`FirstName`, `p`.`LastName`, `p`.`MiddleName`, `p`.`Sex`
+FROM `Patients` AS `p`
+2021-02-08 10:09:42.768 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.Patient, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-08 10:09:42.768 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine) in 13.7229ms
+2021-02-08 10:09:42.768 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-08 10:09:42.809 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/Patients - - - 200 - application/json;+charset=utf-8 55.3250ms
+2021-02-08 10:09:44.641 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/VaccineInventories - -
+2021-02-08 10:09:44.641 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.VaccineInventoriesController.GetVaccineInventories (CovidVaccine)'
+2021-02-08 10:09:44.642 +08:00 [INF] Route matched with {action = "GetVaccineInventories", controller = "VaccineInventories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.VaccineInventory]]] GetVaccineInventories() on controller CovidVaccine.V2.Controllers.VaccineInventoriesController (CovidVaccine).
+2021-02-08 10:09:44.662 +08:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`Amount`, `v`.`ExpirationDate`, `v`.`StorageDate`, `v`.`VaccineId`
+FROM `VaccineInventories` AS `v`
+2021-02-08 10:09:44.663 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.VaccineInventory, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-08 10:09:44.664 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.VaccineInventoriesController.GetVaccineInventories (CovidVaccine) in 21.9251ms
+2021-02-08 10:09:44.664 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.VaccineInventoriesController.GetVaccineInventories (CovidVaccine)'
+2021-02-08 10:09:44.664 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/VaccineInventories - - - 200 - application/json;+charset=utf-8 23.3095ms
+2021-02-08 10:09:47.208 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/Vaccines - -
+2021-02-08 10:09:47.208 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.VaccinesController.GetVaccines (CovidVaccine)'
+2021-02-08 10:09:47.212 +08:00 [INF] Route matched with {action = "GetVaccines", controller = "Vaccines"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.Vaccine]]] GetVaccines() on controller CovidVaccine.V2.Controllers.VaccinesController (CovidVaccine).
+2021-02-08 10:09:47.231 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`Description`, `v`.`Name`
+FROM `Vaccines` AS `v`
+2021-02-08 10:09:47.245 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.Vaccine, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-08 10:09:47.247 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.VaccinesController.GetVaccines (CovidVaccine) in 35.0037ms
+2021-02-08 10:09:47.247 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.VaccinesController.GetVaccines (CovidVaccine)'
+2021-02-08 10:09:47.248 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/Vaccines - - - 200 - application/json;+charset=utf-8 39.7222ms
+2021-02-08 10:10:21.641 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/Patients - -
+2021-02-08 10:10:21.647 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-08 10:10:21.647 +08:00 [INF] Route matched with {action = "GetPatients", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.Patient]]] GetPatients() on controller CovidVaccine.V2.Controllers.PatientsController (CovidVaccine).
+2021-02-08 10:10:21.678 +08:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Birthday`, `p`.`ContactNo`, `p`.`FirstName`, `p`.`LastName`, `p`.`MiddleName`, `p`.`Sex`
+FROM `Patients` AS `p`
+2021-02-08 10:10:21.679 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.Patient, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-08 10:10:21.680 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine) in 32.85ms
+2021-02-08 10:10:21.680 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-08 10:10:21.691 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/Patients - - - 200 - application/json;+charset=utf-8 49.5497ms
+2021-02-08 10:10:23.501 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/VaccineInventories - -
+2021-02-08 10:10:23.501 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.VaccineInventoriesController.GetVaccineInventories (CovidVaccine)'
+2021-02-08 10:10:23.501 +08:00 [INF] Route matched with {action = "GetVaccineInventories", controller = "VaccineInventories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.VaccineInventory]]] GetVaccineInventories() on controller CovidVaccine.V2.Controllers.VaccineInventoriesController (CovidVaccine).
+2021-02-08 10:10:23.526 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`Amount`, `v`.`ExpirationDate`, `v`.`StorageDate`, `v`.`VaccineId`
+FROM `VaccineInventories` AS `v`
+2021-02-08 10:10:23.529 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.VaccineInventory, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-08 10:10:23.530 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.VaccineInventoriesController.GetVaccineInventories (CovidVaccine) in 28.5767ms
+2021-02-08 10:10:23.530 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.VaccineInventoriesController.GetVaccineInventories (CovidVaccine)'
+2021-02-08 10:10:23.531 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/VaccineInventories - - - 200 - application/json;+charset=utf-8 30.2066ms
+2021-02-08 10:10:53.529 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/Patients - -
+2021-02-08 10:10:53.530 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-08 10:10:53.532 +08:00 [INF] Route matched with {action = "GetPatients", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.Patient]]] GetPatients() on controller CovidVaccine.V2.Controllers.PatientsController (CovidVaccine).
+2021-02-08 10:10:53.559 +08:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Birthday`, `p`.`ContactNo`, `p`.`FirstName`, `p`.`LastName`, `p`.`MiddleName`, `p`.`Sex`
+FROM `Patients` AS `p`
+2021-02-08 10:10:53.561 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.Patient, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-08 10:10:53.562 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine) in 29.6237ms
+2021-02-08 10:10:53.562 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-08 10:10:53.563 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/Patients - - - 200 - application/json;+charset=utf-8 33.5824ms
+2021-02-08 10:12:32.523 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/Patients - -
+2021-02-08 10:12:32.524 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-08 10:12:32.524 +08:00 [INF] Route matched with {action = "GetPatients", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.Patient]]] GetPatients() on controller CovidVaccine.V2.Controllers.PatientsController (CovidVaccine).
+2021-02-08 10:12:32.547 +08:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Birthday`, `p`.`ContactNo`, `p`.`FirstName`, `p`.`LastName`, `p`.`MiddleName`, `p`.`Sex`
+FROM `Patients` AS `p`
+2021-02-08 10:12:32.548 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.Patient, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-08 10:12:32.548 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine) in 24.4137ms
+2021-02-08 10:12:32.548 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-08 10:12:32.550 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/Patients - - - 200 - application/json;+charset=utf-8 26.6857ms
+2021-02-08 10:14:18.133 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/Patients - -
+2021-02-08 10:14:18.133 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-08 10:14:18.133 +08:00 [INF] Route matched with {action = "GetPatients", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.Patient]]] GetPatients() on controller CovidVaccine.V2.Controllers.PatientsController (CovidVaccine).
+2021-02-08 10:14:18.166 +08:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Birthday`, `p`.`ContactNo`, `p`.`FirstName`, `p`.`LastName`, `p`.`MiddleName`, `p`.`Sex`
+FROM `Patients` AS `p`
+2021-02-08 10:14:18.167 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.Patient, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-08 10:14:18.167 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine) in 33.6546ms
+2021-02-08 10:14:18.167 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-08 10:14:18.168 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/Patients - - - 200 - application/json;+charset=utf-8 35.0046ms
+2021-02-08 10:14:33.091 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/Patients - -
+2021-02-08 10:14:33.091 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-08 10:14:33.092 +08:00 [INF] Route matched with {action = "GetPatients", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.Patient]]] GetPatients() on controller CovidVaccine.V2.Controllers.PatientsController (CovidVaccine).
+2021-02-08 10:14:33.136 +08:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Birthday`, `p`.`ContactNo`, `p`.`FirstName`, `p`.`LastName`, `p`.`MiddleName`, `p`.`Sex`
+FROM `Patients` AS `p`
+2021-02-08 10:14:33.139 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.Patient, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-08 10:14:33.142 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine) in 46.1423ms
+2021-02-08 10:14:33.142 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-08 10:14:33.148 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/Patients - - - 200 - application/json;+charset=utf-8 57.1653ms
+2021-02-08 10:14:34.785 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/VaccineInventories - -
+2021-02-08 10:14:34.785 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.VaccineInventoriesController.GetVaccineInventories (CovidVaccine)'
+2021-02-08 10:14:34.785 +08:00 [INF] Route matched with {action = "GetVaccineInventories", controller = "VaccineInventories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.VaccineInventory]]] GetVaccineInventories() on controller CovidVaccine.V2.Controllers.VaccineInventoriesController (CovidVaccine).
+2021-02-08 10:14:34.792 +08:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`Amount`, `v`.`ExpirationDate`, `v`.`StorageDate`, `v`.`VaccineId`
+FROM `VaccineInventories` AS `v`
+2021-02-08 10:14:34.795 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.VaccineInventory, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-08 10:14:34.796 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.VaccineInventoriesController.GetVaccineInventories (CovidVaccine) in 10.3007ms
+2021-02-08 10:14:34.796 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.VaccineInventoriesController.GetVaccineInventories (CovidVaccine)'
+2021-02-08 10:14:34.796 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/VaccineInventories - - - 200 - application/json;+charset=utf-8 11.2511ms
+2021-02-08 10:30:01.245 +08:00 [INF] Starting web host
+2021-02-08 10:30:03.052 +08:00 [INF] User profile is available. Using 'C:\Users\your name\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-02-08 10:30:03.441 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-08 10:30:03.441 +08:00 [INF] Hosting environment: Development
+2021-02-08 10:30:03.441 +08:00 [INF] Content root path: C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine
+2021-02-08 10:30:03.496 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/index.html - -
+2021-02-08 10:30:03.780 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/index.html - - - 200 - text/html;charset=utf-8 285.4259ms
+2021-02-08 10:30:04.066 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - -
+2021-02-08 10:30:04.236 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 170.9906ms
+2021-02-08 10:30:07.746 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/Patients - -
+2021-02-08 10:30:07.757 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-08 10:30:07.828 +08:00 [INF] Route matched with {action = "GetPatients", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.Patient]]] GetPatients() on controller CovidVaccine.V2.Controllers.PatientsController (CovidVaccine).
+2021-02-08 10:30:09.371 +08:00 [INF] Entity Framework Core 5.0.2 initialized 'CovidVaccineContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: MaxPoolSize=128 ServerVersion 8.0.19-mysql 
+2021-02-08 10:30:09.861 +08:00 [INF] Executed DbCommand (64ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Birthday`, `p`.`ContactNo`, `p`.`FirstName`, `p`.`LastName`, `p`.`MiddleName`, `p`.`Sex`
+FROM `Patients` AS `p`
+2021-02-08 10:30:10.013 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.Patient, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-08 10:30:10.046 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine) in 2210.5943ms
+2021-02-08 10:30:10.048 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-08 10:30:10.065 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/Patients - - - 200 - application/json;+charset=utf-8 2319.3095ms
+2021-02-08 10:30:11.339 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/VaccineInventories - -
+2021-02-08 10:30:11.341 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.VaccineInventoriesController.GetVaccineInventories (CovidVaccine)'
+2021-02-08 10:30:11.347 +08:00 [INF] Route matched with {action = "GetVaccineInventories", controller = "VaccineInventories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.VaccineInventory]]] GetVaccineInventories() on controller CovidVaccine.V2.Controllers.VaccineInventoriesController (CovidVaccine).
+2021-02-08 10:30:11.399 +08:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`Amount`, `v`.`ExpirationDate`, `v`.`StorageDate`, `v`.`VaccineId`
+FROM `VaccineInventories` AS `v`
+2021-02-08 10:30:11.420 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.VaccineInventory, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-08 10:30:11.425 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.VaccineInventoriesController.GetVaccineInventories (CovidVaccine) in 78.3376ms
+2021-02-08 10:30:11.426 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.VaccineInventoriesController.GetVaccineInventories (CovidVaccine)'
+2021-02-08 10:30:11.426 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/VaccineInventories - - - 200 - application/json;+charset=utf-8 86.5964ms
+2021-02-08 11:09:48.270 +08:00 [INF] Starting web host
+2021-02-08 11:09:50.197 +08:00 [INF] User profile is available. Using 'C:\Users\your name\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-02-08 11:09:50.634 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-08 11:09:50.634 +08:00 [INF] Hosting environment: Development
+2021-02-08 11:09:50.634 +08:00 [INF] Content root path: C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine
+2021-02-08 11:09:50.700 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/index.html - -
+2021-02-08 11:09:51.046 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/index.html - - - 200 - text/html;charset=utf-8 349.1564ms
+2021-02-08 11:09:51.276 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - -
+2021-02-08 11:09:51.437 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 161.2043ms
+2021-02-08 11:09:54.230 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/v2/swagger.json - -
+2021-02-08 11:09:54.254 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/v2/swagger.json - - - 200 - application/json;charset=utf-8 25.0248ms
+2021-02-08 11:10:04.112 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/VaccineInventories - -
+2021-02-08 11:10:04.133 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.VaccineInventoriesController.GetVaccineInventories (CovidVaccine)'
+2021-02-08 11:10:04.213 +08:00 [INF] Route matched with {action = "GetVaccineInventories", controller = "VaccineInventories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.VaccineInventory]]] GetVaccineInventories() on controller CovidVaccine.V2.Controllers.VaccineInventoriesController (CovidVaccine).
+2021-02-08 11:10:05.721 +08:00 [INF] Entity Framework Core 5.0.2 initialized 'CovidVaccineContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: MaxPoolSize=128 ServerVersion 8.0.19-mysql 
+2021-02-08 11:10:06.154 +08:00 [INF] Executed DbCommand (51ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`Amount`, `v`.`ExpirationDate`, `v`.`StorageDate`, `v`.`VaccineId`
+FROM `VaccineInventories` AS `v`
+2021-02-08 11:10:06.293 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.VaccineInventory, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-08 11:10:06.329 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.VaccineInventoriesController.GetVaccineInventories (CovidVaccine) in 2107.3257ms
+2021-02-08 11:10:06.330 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.VaccineInventoriesController.GetVaccineInventories (CovidVaccine)'
+2021-02-08 11:10:06.345 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/VaccineInventories - - - 200 - application/json;+charset=utf-8 2232.4800ms
+2021-02-08 11:14:03.772 +08:00 [INF] Starting web host
+2021-02-08 11:14:05.446 +08:00 [INF] User profile is available. Using 'C:\Users\your name\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-02-08 11:14:05.821 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-08 11:14:05.822 +08:00 [INF] Hosting environment: Development
+2021-02-08 11:14:05.822 +08:00 [INF] Content root path: C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine
+2021-02-08 11:14:05.881 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/index.html - -
+2021-02-08 11:14:06.154 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/index.html - - - 200 - text/html;charset=utf-8 275.1943ms
+2021-02-08 11:14:06.358 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - -
+2021-02-08 11:14:06.542 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 184.2180ms
+2021-02-08 11:14:12.189 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/v2/swagger.json - -
+2021-02-08 11:14:12.209 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/v2/swagger.json - - - 200 - application/json;charset=utf-8 20.1994ms
+2021-02-08 11:14:16.692 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/Vaccines - -
+2021-02-08 11:14:16.705 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.VaccinesController.GetVaccines (CovidVaccine)'
+2021-02-08 11:14:16.778 +08:00 [INF] Route matched with {action = "GetVaccines", controller = "Vaccines"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.Vaccine]]] GetVaccines() on controller CovidVaccine.V2.Controllers.VaccinesController (CovidVaccine).
+2021-02-08 11:14:18.260 +08:00 [INF] Entity Framework Core 5.0.2 initialized 'CovidVaccineContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: MaxPoolSize=128 ServerVersion 8.0.19-mysql 
+2021-02-08 11:14:18.660 +08:00 [INF] Executed DbCommand (50ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`Description`, `v`.`Name`
+FROM `Vaccines` AS `v`
+2021-02-08 11:14:18.798 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.Vaccine, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-08 11:14:18.830 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.VaccinesController.GetVaccines (CovidVaccine) in 2045.57ms
+2021-02-08 11:14:18.832 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.VaccinesController.GetVaccines (CovidVaccine)'
+2021-02-08 11:14:18.847 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/Vaccines - - - 200 - application/json;+charset=utf-8 2154.2079ms
+2021-02-08 11:14:24.398 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/VaccineInventories - -
+2021-02-08 11:14:24.400 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.VaccineInventoriesController.GetVaccineInventories (CovidVaccine)'
+2021-02-08 11:14:24.405 +08:00 [INF] Route matched with {action = "GetVaccineInventories", controller = "VaccineInventories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.VaccineInventory]]] GetVaccineInventories() on controller CovidVaccine.V2.Controllers.VaccineInventoriesController (CovidVaccine).
+2021-02-08 11:14:24.458 +08:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`Amount`, `v`.`ExpirationDate`, `v`.`StorageDate`, `v`.`VaccineId`
+FROM `VaccineInventories` AS `v`
+2021-02-08 11:14:24.488 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.VaccineInventory, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-08 11:14:24.496 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.VaccineInventoriesController.GetVaccineInventories (CovidVaccine) in 90.4174ms
+2021-02-08 11:14:24.496 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.VaccineInventoriesController.GetVaccineInventories (CovidVaccine)'
+2021-02-08 11:14:24.497 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/VaccineInventories - - - 200 - application/json;+charset=utf-8 98.4367ms
+2021-02-08 11:14:26.024 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/VaccineInventories - -
+2021-02-08 11:14:26.024 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.VaccineInventoriesController.GetVaccineInventories (CovidVaccine)'
+2021-02-08 11:14:26.025 +08:00 [INF] Route matched with {action = "GetVaccineInventories", controller = "VaccineInventories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.VaccineInventory]]] GetVaccineInventories() on controller CovidVaccine.V2.Controllers.VaccineInventoriesController (CovidVaccine).
+2021-02-08 11:14:26.034 +08:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`Amount`, `v`.`ExpirationDate`, `v`.`StorageDate`, `v`.`VaccineId`
+FROM `VaccineInventories` AS `v`
+2021-02-08 11:14:26.036 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.VaccineInventory, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-08 11:14:26.036 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.VaccineInventoriesController.GetVaccineInventories (CovidVaccine) in 11.1991ms
+2021-02-08 11:14:26.036 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.VaccineInventoriesController.GetVaccineInventories (CovidVaccine)'
+2021-02-08 11:14:26.038 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/VaccineInventories - - - 200 - application/json;+charset=utf-8 13.9897ms
+2021-02-08 11:14:58.700 +08:00 [INF] Starting web host
+2021-02-08 11:15:00.765 +08:00 [INF] User profile is available. Using 'C:\Users\your name\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-02-08 11:15:01.323 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-08 11:15:01.324 +08:00 [INF] Hosting environment: Development
+2021-02-08 11:15:01.324 +08:00 [INF] Content root path: C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine
+2021-02-08 11:15:01.391 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/index.html - -
+2021-02-08 11:15:01.774 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/index.html - - - 200 - text/html;charset=utf-8 383.5659ms
+2021-02-08 11:15:02.124 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - -
+2021-02-08 11:15:02.352 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 227.6900ms
+2021-02-08 11:16:11.645 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/v2/swagger.json - -
+2021-02-08 11:16:11.681 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/v2/swagger.json - - - 200 - application/json;charset=utf-8 36.0332ms
+2021-02-08 11:16:16.809 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/VaccineInventories - -
+2021-02-08 11:16:16.829 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.VaccineInventoriesController.GetVaccineInventories (CovidVaccine)'
+2021-02-08 11:16:16.904 +08:00 [INF] Route matched with {action = "GetVaccineInventories", controller = "VaccineInventories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.VaccineInventory]]] GetVaccineInventories() on controller CovidVaccine.V2.Controllers.VaccineInventoriesController (CovidVaccine).
+2021-02-08 11:16:18.340 +08:00 [INF] Entity Framework Core 5.0.2 initialized 'CovidVaccineContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: MaxPoolSize=128 ServerVersion 8.0.19-mysql 
+2021-02-08 11:16:18.754 +08:00 [INF] Executed DbCommand (49ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`Amount`, `v`.`ExpirationDate`, `v`.`StorageDate`, `v`.`VaccineId`
+FROM `VaccineInventories` AS `v`
+2021-02-08 11:16:18.885 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.VaccineInventory, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-08 11:16:18.916 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.VaccineInventoriesController.GetVaccineInventories (CovidVaccine) in 2004.3588ms
+2021-02-08 11:16:18.917 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.VaccineInventoriesController.GetVaccineInventories (CovidVaccine)'
+2021-02-08 11:16:18.935 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/VaccineInventories - - - 200 - application/json;+charset=utf-8 2126.0449ms
+2021-02-08 11:23:49.896 +08:00 [INF] Starting web host
+2021-02-08 11:23:52.067 +08:00 [INF] User profile is available. Using 'C:\Users\your name\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-02-08 11:23:52.464 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-08 11:23:52.465 +08:00 [INF] Hosting environment: Development
+2021-02-08 11:23:52.465 +08:00 [INF] Content root path: C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine
+2021-02-08 11:23:52.523 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/index.html - -
+2021-02-08 11:23:52.809 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/index.html - - - 200 - text/html;charset=utf-8 290.8034ms
+2021-02-08 11:23:53.019 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - -
+2021-02-08 11:23:53.186 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 166.6350ms
+2021-02-08 11:23:55.440 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/v2/swagger.json - -
+2021-02-08 11:23:55.472 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/v2/swagger.json - - - 200 - application/json;charset=utf-8 31.7918ms
+2021-02-08 11:24:02.094 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/VaccineInventories - -
+2021-02-08 11:24:02.108 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.VaccineInventoriesController.GetVaccineInventories (CovidVaccine)'
+2021-02-08 11:24:02.181 +08:00 [INF] Route matched with {action = "GetVaccineInventories", controller = "VaccineInventories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.VaccineInventory]]] GetVaccineInventories() on controller CovidVaccine.V2.Controllers.VaccineInventoriesController (CovidVaccine).
+2021-02-08 11:24:03.661 +08:00 [INF] Entity Framework Core 5.0.2 initialized 'CovidVaccineContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: MaxPoolSize=128 ServerVersion 8.0.19-mysql 
+2021-02-08 11:24:04.078 +08:00 [INF] Executed DbCommand (48ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`Amount`, `v`.`ExpirationDate`, `v`.`StorageDate`, `v`.`VaccineId`
+FROM `VaccineInventories` AS `v`
+2021-02-08 11:24:04.207 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.VaccineInventory, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-08 11:24:04.236 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.VaccineInventoriesController.GetVaccineInventories (CovidVaccine) in 2048.0225ms
+2021-02-08 11:24:04.238 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.VaccineInventoriesController.GetVaccineInventories (CovidVaccine)'
+2021-02-08 11:24:04.254 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/VaccineInventories - - - 200 - application/json;+charset=utf-8 2160.1717ms
+2021-02-08 11:25:21.640 +08:00 [INF] Starting web host
+2021-02-08 11:25:23.412 +08:00 [INF] User profile is available. Using 'C:\Users\your name\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-02-08 11:25:23.884 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-08 11:25:23.884 +08:00 [INF] Hosting environment: Development
+2021-02-08 11:25:23.884 +08:00 [INF] Content root path: C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine
+2021-02-08 11:25:23.949 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/index.html - -
+2021-02-08 11:25:24.233 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/index.html - - - 200 - text/html;charset=utf-8 287.1611ms
+2021-02-08 11:25:24.447 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - -
+2021-02-08 11:25:24.620 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 172.5259ms
+2021-02-08 11:25:26.895 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/v2/swagger.json - -
+2021-02-08 11:25:26.913 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/v2/swagger.json - - - 200 - application/json;charset=utf-8 18.5357ms
+2021-02-08 11:25:33.380 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/Vaccines - -
+2021-02-08 11:25:33.408 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.VaccinesController.GetVaccines (CovidVaccine)'
+2021-02-08 11:25:33.475 +08:00 [INF] Route matched with {action = "GetVaccines", controller = "Vaccines"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.Vaccine]]] GetVaccines() on controller CovidVaccine.V2.Controllers.VaccinesController (CovidVaccine).
+2021-02-08 11:25:34.987 +08:00 [INF] Entity Framework Core 5.0.2 initialized 'CovidVaccineContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: MaxPoolSize=128 ServerVersion 8.0.19-mysql 
+2021-02-08 11:25:35.450 +08:00 [INF] Executed DbCommand (57ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`Description`, `v`.`Name`
+FROM `Vaccines` AS `v`
+2021-02-08 11:25:35.605 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.Vaccine, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-08 11:25:35.634 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.VaccinesController.GetVaccines (CovidVaccine) in 2153.3795ms
+2021-02-08 11:25:35.636 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.VaccinesController.GetVaccines (CovidVaccine)'
+2021-02-08 11:25:35.654 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/Vaccines - - - 200 - application/json;+charset=utf-8 2273.9867ms
+2021-02-08 11:45:54.956 +08:00 [INF] Starting web host
+2021-02-08 11:45:56.848 +08:00 [INF] User profile is available. Using 'C:\Users\your name\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-02-08 11:45:57.270 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-08 11:45:57.270 +08:00 [INF] Hosting environment: Development
+2021-02-08 11:45:57.271 +08:00 [INF] Content root path: C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine
+2021-02-08 11:45:57.340 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/index.html - -
+2021-02-08 11:45:57.724 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/index.html - - - 200 - text/html;charset=utf-8 386.6431ms
+2021-02-08 11:45:57.954 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - -
+2021-02-08 11:45:58.117 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 163.0199ms
+2021-02-08 11:52:29.844 +08:00 [INF] Starting web host
+2021-02-08 11:52:31.489 +08:00 [INF] User profile is available. Using 'C:\Users\your name\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-02-08 11:52:31.900 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-08 11:52:31.900 +08:00 [INF] Hosting environment: Development
+2021-02-08 11:52:31.901 +08:00 [INF] Content root path: C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine
+2021-02-08 11:52:31.969 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/index.html - -
+2021-02-08 11:52:32.274 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/index.html - - - 200 - text/html;charset=utf-8 308.0869ms
+2021-02-08 11:52:32.494 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - -
+2021-02-08 11:52:32.654 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 159.7995ms
+2021-02-08 11:52:35.596 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/v2/swagger.json - -
+2021-02-08 11:52:35.618 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/v2/swagger.json - - - 200 - application/json;charset=utf-8 24.1532ms
+2021-02-08 11:52:41.194 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/VaccineInventories - -
+2021-02-08 11:52:41.207 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.VaccineInventoriesController.GetVaccineInventories (CovidVaccine)'
+2021-02-08 11:52:41.282 +08:00 [INF] Route matched with {action = "GetVaccineInventories", controller = "VaccineInventories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.VaccineInventory]]] GetVaccineInventories() on controller CovidVaccine.V2.Controllers.VaccineInventoriesController (CovidVaccine).
+2021-02-08 11:52:42.778 +08:00 [INF] Entity Framework Core 5.0.2 initialized 'CovidVaccineContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: MaxPoolSize=128 ServerVersion 8.0.19-mysql 
+2021-02-08 11:52:43.233 +08:00 [INF] Executed DbCommand (65ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`Amount`, `v`.`ExpirationDate`, `v`.`StorageDate`, `v`.`VaccineId`
+FROM `VaccineInventories` AS `v`
+2021-02-08 11:52:43.396 +08:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`Description`, `v`.`Name`
+FROM `Vaccines` AS `v`
+2021-02-08 11:52:44.137 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.VaccineInventoriesController.GetVaccineInventories (CovidVaccine) in 2849.3168ms
+2021-02-08 11:52:44.151 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.VaccineInventoriesController.GetVaccineInventories (CovidVaccine)'
+2021-02-08 11:52:44.197 +08:00 [ERR] Connection ID "18302628917309079583", Request ID "80000023-0007-fe00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+System.InvalidCastException: Unable to cast object of type '<GroupJoinIterator>d__98`4[CovidVaccine.Model.VaccineInventory,CovidVaccine.Model.Vaccine,System.Int32,<>f__AnonymousType0`2[System.Int32,System.Collections.Generic.IEnumerable`1[System.String]]]' to type 'System.Collections.Generic.List`1[CovidVaccine.Model.VaccineInventory]'.
+   at CovidVaccine.Handlers.GetVaccineInventoriesHandler.Handle(GetVaccineInventoriesQuery request, CancellationToken cancellationToken) in C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine\Handlers\GetVaccineInventoriesHandler.cs:line 26
+   at CovidVaccine.PipelineBehaviours.ValidationBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine\PipelineBehaviours\ValidationBehvaviour.cs:line 29
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at CovidVaccine.V2.Controllers.VaccineInventoriesController.GetVaccineInventories() in C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine\V2\Controllers\VaccineInventoriesController.cs:line 35
+   at lambda_method6(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+2021-02-08 11:52:44.538 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/VaccineInventories - - - 500 - - 3344.5365ms
+2021-02-08 11:57:48.419 +08:00 [INF] Starting web host
+2021-02-08 11:57:50.103 +08:00 [INF] User profile is available. Using 'C:\Users\your name\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-02-08 11:57:50.462 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-08 11:57:50.462 +08:00 [INF] Hosting environment: Development
+2021-02-08 11:57:50.463 +08:00 [INF] Content root path: C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine
+2021-02-08 11:57:50.521 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/index.html - -
+2021-02-08 11:57:50.813 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/index.html - - - 200 - text/html;charset=utf-8 296.1969ms
+2021-02-08 11:57:51.017 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - -
+2021-02-08 11:57:51.189 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 171.4507ms
+2021-02-08 11:57:53.943 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/v2/swagger.json - -
+2021-02-08 11:57:53.962 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/v2/swagger.json - - - 200 - application/json;charset=utf-8 19.5405ms
+2021-02-08 11:57:58.912 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/VaccineInventories - -
+2021-02-08 11:57:58.938 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.VaccineInventoriesController.GetVaccineInventories (CovidVaccine)'
+2021-02-08 11:57:59.025 +08:00 [INF] Route matched with {action = "GetVaccineInventories", controller = "VaccineInventories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.VaccineInventory]]] GetVaccineInventories() on controller CovidVaccine.V2.Controllers.VaccineInventoriesController (CovidVaccine).
+2021-02-08 11:58:00.552 +08:00 [INF] Entity Framework Core 5.0.2 initialized 'CovidVaccineContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: MaxPoolSize=128 ServerVersion 8.0.19-mysql 
+2021-02-08 11:58:00.975 +08:00 [INF] Executed DbCommand (52ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`Amount`, `v`.`ExpirationDate`, `v`.`StorageDate`, `v`.`VaccineId`
+FROM `VaccineInventories` AS `v`
+2021-02-08 11:58:01.121 +08:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`Description`, `v`.`Name`
+FROM `Vaccines` AS `v`
+2021-02-08 11:58:01.458 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.VaccineInventoriesController.GetVaccineInventories (CovidVaccine) in 2426.0232ms
+2021-02-08 11:58:01.460 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.VaccineInventoriesController.GetVaccineInventories (CovidVaccine)'
+2021-02-08 11:58:01.464 +08:00 [ERR] Connection ID "17870283348786544717", Request ID "80000051-0006-f800-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+System.InvalidCastException: Unable to cast object of type '<GroupJoinIterator>d__98`4[CovidVaccine.Model.VaccineInventory,CovidVaccine.Model.Vaccine,System.Int32,<>f__AnonymousType0`6[System.Int32,System.Int32,System.Decimal,System.DateTime,System.DateTime,System.Collections.Generic.IEnumerable`1[System.String]]]' to type 'System.Collections.Generic.List`1[CovidVaccine.Model.VaccineInventory]'.
+   at CovidVaccine.Handlers.GetVaccineInventoriesHandler.Handle(GetVaccineInventoriesQuery request, CancellationToken cancellationToken) in C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine\Handlers\GetVaccineInventoriesHandler.cs:line 26
+   at CovidVaccine.PipelineBehaviours.ValidationBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine\PipelineBehaviours\ValidationBehvaviour.cs:line 29
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at CovidVaccine.V2.Controllers.VaccineInventoriesController.GetVaccineInventories() in C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine\V2\Controllers\VaccineInventoriesController.cs:line 35
+   at lambda_method6(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+2021-02-08 11:58:01.553 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/VaccineInventories - - - 500 - - 2641.2883ms
+2021-02-08 14:37:13.620 +08:00 [INF] Starting web host
+2021-02-08 14:37:16.218 +08:00 [INF] User profile is available. Using 'C:\Users\your name\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-02-08 14:37:16.685 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-08 14:37:16.685 +08:00 [INF] Hosting environment: Development
+2021-02-08 14:37:16.686 +08:00 [INF] Content root path: C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine
+2021-02-08 14:37:16.750 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/index.html - -
+2021-02-08 14:37:17.182 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/index.html - - - 200 - text/html;charset=utf-8 434.6412ms
+2021-02-08 14:37:17.428 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - -
+2021-02-08 14:37:17.606 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 178.0102ms
+2021-02-08 14:37:23.070 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/v2/swagger.json - -
+2021-02-08 14:37:23.096 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/v2/swagger.json - - - 200 - application/json;charset=utf-8 25.1039ms
+2021-02-08 14:38:42.727 +08:00 [INF] Starting web host
+2021-02-08 14:38:44.651 +08:00 [INF] User profile is available. Using 'C:\Users\your name\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-02-08 14:38:45.106 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-08 14:38:45.106 +08:00 [INF] Hosting environment: Development
+2021-02-08 14:38:45.106 +08:00 [INF] Content root path: C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine
+2021-02-08 14:38:45.167 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/index.html - -
+2021-02-08 14:38:45.489 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/index.html - - - 200 - text/html;charset=utf-8 326.6354ms
+2021-02-08 14:38:45.756 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - -
+2021-02-08 14:38:45.983 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 226.5485ms
+2021-02-08 14:38:47.466 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/v2/swagger.json - -
+2021-02-08 14:38:47.485 +08:00 [ERR] Connection ID "18374686502757072960", Request ID "80000043-0005-ff00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "GET api/v2/VaccineInventories" for actions - CovidVaccine.V2.Controllers.VaccineInventoriesController.GetVaccineInventories (CovidVaccine),CovidVaccine.V2.Controllers.VaccineInventoriesController.GetAllInventoryJoinVaccine (CovidVaccine). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+2021-02-08 14:38:47.567 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/v2/swagger.json - - - 500 - - 100.8920ms
+2021-02-08 14:39:42.856 +08:00 [INF] Starting web host
+2021-02-08 14:39:44.494 +08:00 [INF] User profile is available. Using 'C:\Users\your name\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-02-08 14:39:44.986 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-08 14:39:44.987 +08:00 [INF] Hosting environment: Development
+2021-02-08 14:39:44.987 +08:00 [INF] Content root path: C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine
+2021-02-08 14:39:45.053 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/index.html - -
+2021-02-08 14:39:45.366 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/index.html - - - 200 - text/html;charset=utf-8 317.0399ms
+2021-02-08 14:39:45.596 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - -
+2021-02-08 14:39:45.787 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 190.1188ms
+2021-02-08 14:39:48.011 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/v2/swagger.json - -
+2021-02-08 14:39:48.023 +08:00 [ERR] Connection ID "18374686502757072964", Request ID "80000047-0005-ff00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "GET api/v2/VaccineInventories" for actions - CovidVaccine.V2.Controllers.VaccineInventoriesController.GetVaccineInventories (CovidVaccine),CovidVaccine.V2.Controllers.VaccineInventoriesController.GetAllInventoryJoinVaccine (CovidVaccine). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+2021-02-08 14:39:48.087 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/v2/swagger.json - - - 500 - - 75.9513ms
+2021-02-08 14:41:12.135 +08:00 [INF] Starting web host
+2021-02-08 14:41:13.944 +08:00 [INF] User profile is available. Using 'C:\Users\your name\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-02-08 14:41:14.437 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-08 14:41:14.437 +08:00 [INF] Hosting environment: Development
+2021-02-08 14:41:14.438 +08:00 [INF] Content root path: C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine
+2021-02-08 14:41:14.499 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/index.html - -
+2021-02-08 14:41:14.839 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/index.html - - - 200 - text/html;charset=utf-8 342.4702ms
+2021-02-08 14:41:15.134 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - -
+2021-02-08 14:41:15.367 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 232.7263ms
+2021-02-08 14:41:18.733 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/v2/swagger.json - -
+2021-02-08 14:41:18.744 +08:00 [ERR] Connection ID "18374686502757072968", Request ID "8000004b-0005-ff00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - CovidVaccine.V2.Controllers.VaccineInventoriesController.GetVaccineInventories (CovidVaccine). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+2021-02-08 14:41:18.808 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/v2/swagger.json - - - 500 - - 74.7372ms
+2021-02-08 14:41:54.197 +08:00 [INF] Starting web host
+2021-02-08 14:41:56.592 +08:00 [INF] User profile is available. Using 'C:\Users\your name\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-02-08 14:41:57.102 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-08 14:41:57.102 +08:00 [INF] Hosting environment: Development
+2021-02-08 14:41:57.102 +08:00 [INF] Content root path: C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine
+2021-02-08 14:41:57.173 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/index.html - -
+2021-02-08 14:41:57.523 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/index.html - - - 200 - text/html;charset=utf-8 351.5737ms
+2021-02-08 14:41:57.772 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - -
+2021-02-08 14:41:57.970 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 197.7527ms
+2021-02-08 14:42:05.405 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/v2/swagger.json - -
+2021-02-08 14:42:05.432 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/v2/swagger.json - - - 200 - application/json;charset=utf-8 26.4899ms
+2021-02-08 14:42:10.086 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/VaccineInventories - -
+2021-02-08 14:42:10.098 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.VaccineInventoriesController.GetVaccineInventories (CovidVaccine)'
+2021-02-08 14:42:10.168 +08:00 [INF] Route matched with {action = "GetVaccineInventories", controller = "VaccineInventories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.VaccineInventory]]] GetVaccineInventories() on controller CovidVaccine.V2.Controllers.VaccineInventoriesController (CovidVaccine).
+2021-02-08 14:42:11.630 +08:00 [INF] Entity Framework Core 5.0.2 initialized 'CovidVaccineContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: MaxPoolSize=128 ServerVersion 8.0.19-mysql 
+2021-02-08 14:42:12.035 +08:00 [INF] Executed DbCommand (48ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`Amount`, `v`.`ExpirationDate`, `v`.`StorageDate`, `v`.`VaccineId`
+FROM `VaccineInventories` AS `v`
+2021-02-08 14:42:12.163 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.VaccineInventory, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-08 14:42:12.188 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.VaccineInventoriesController.GetVaccineInventories (CovidVaccine) in 2013.9617ms
+2021-02-08 14:42:12.189 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.VaccineInventoriesController.GetVaccineInventories (CovidVaccine)'
+2021-02-08 14:42:12.202 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/VaccineInventories - - - 200 - application/json;+charset=utf-8 2116.9816ms
+2021-02-08 15:27:22.877 +08:00 [INF] Starting web host
+2021-02-08 15:27:24.857 +08:00 [INF] User profile is available. Using 'C:\Users\your name\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-02-08 15:27:25.284 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-08 15:27:25.285 +08:00 [INF] Hosting environment: Development
+2021-02-08 15:27:25.285 +08:00 [INF] Content root path: C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine
+2021-02-08 15:27:25.342 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/index.html - -
+2021-02-08 15:27:25.652 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/index.html - - - 200 - text/html;charset=utf-8 312.1004ms
+2021-02-08 15:27:25.897 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - -
+2021-02-08 15:27:26.086 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 189.1178ms
+2021-02-08 15:27:30.629 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/v2/swagger.json - -
+2021-02-08 15:27:30.649 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/v2/swagger.json - - - 200 - application/json;charset=utf-8 19.4979ms
+2021-02-08 15:27:35.096 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/VaccineInventories - -
+2021-02-08 15:27:35.117 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.VaccineInventoriesController.GetVaccineInventories (CovidVaccine)'
+2021-02-08 15:27:35.173 +08:00 [INF] Route matched with {action = "GetVaccineInventories", controller = "VaccineInventories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.VaccineInventory]]] GetVaccineInventories() on controller CovidVaccine.V2.Controllers.VaccineInventoriesController (CovidVaccine).
+2021-02-08 15:27:36.653 +08:00 [INF] Entity Framework Core 5.0.2 initialized 'CovidVaccineContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: MaxPoolSize=128 ServerVersion 8.0.19-mysql 
+2021-02-08 15:27:37.094 +08:00 [INF] Executed DbCommand (57ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`Amount`, `v`.`ExpirationDate`, `v`.`StorageDate`, `v`.`VaccineId`
+FROM `VaccineInventories` AS `v`
+2021-02-08 15:27:37.223 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.VaccineInventory, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-08 15:27:37.252 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.VaccineInventoriesController.GetVaccineInventories (CovidVaccine) in 2070.9666ms
+2021-02-08 15:27:37.254 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.VaccineInventoriesController.GetVaccineInventories (CovidVaccine)'
+2021-02-08 15:27:37.271 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/VaccineInventories - - - 200 - application/json;+charset=utf-8 2174.8500ms
+2021-02-08 15:30:11.057 +08:00 [INF] Starting web host
+2021-02-08 15:30:12.745 +08:00 [INF] User profile is available. Using 'C:\Users\your name\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-02-08 15:30:13.208 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-08 15:30:13.208 +08:00 [INF] Hosting environment: Development
+2021-02-08 15:30:13.208 +08:00 [INF] Content root path: C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine
+2021-02-08 15:30:13.267 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/index.html - -
+2021-02-08 15:30:13.600 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/index.html - - - 200 - text/html;charset=utf-8 333.7952ms
+2021-02-08 15:30:13.848 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - -
+2021-02-08 15:30:14.034 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 186.1295ms
+2021-02-08 15:30:17.433 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/v2/swagger.json - -
+2021-02-08 15:30:17.454 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/v2/swagger.json - - - 200 - application/json;charset=utf-8 20.9296ms
+2021-02-08 15:30:22.412 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/VaccineInventories - -
+2021-02-08 15:30:22.433 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.VaccineInventoriesController.GetVaccineInventories (CovidVaccine)'
+2021-02-08 15:30:22.498 +08:00 [INF] Route matched with {action = "GetVaccineInventories", controller = "VaccineInventories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.VaccineInventory]]] GetVaccineInventories() on controller CovidVaccine.V2.Controllers.VaccineInventoriesController (CovidVaccine).
+2021-02-08 15:30:23.967 +08:00 [INF] Entity Framework Core 5.0.2 initialized 'CovidVaccineContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: MaxPoolSize=128 ServerVersion 8.0.19-mysql 
+2021-02-08 15:30:24.363 +08:00 [INF] Executed DbCommand (48ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`Amount`, `v`.`ExpirationDate`, `v`.`StorageDate`, `v`.`VaccineId`
+FROM `VaccineInventories` AS `v`
+2021-02-08 15:30:24.492 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.VaccineInventory, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-08 15:30:24.520 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.VaccineInventoriesController.GetVaccineInventories (CovidVaccine) in 2015.0903ms
+2021-02-08 15:30:24.521 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.VaccineInventoriesController.GetVaccineInventories (CovidVaccine)'
+2021-02-08 15:30:24.534 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/VaccineInventories - - - 200 - application/json;+charset=utf-8 2122.2573ms
+2021-02-08 15:34:50.208 +08:00 [INF] Starting web host
+2021-02-08 15:34:51.984 +08:00 [INF] User profile is available. Using 'C:\Users\your name\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-02-08 15:34:52.395 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-08 15:34:52.395 +08:00 [INF] Hosting environment: Development
+2021-02-08 15:34:52.395 +08:00 [INF] Content root path: C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine
+2021-02-08 15:34:52.458 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/index.html - -
+2021-02-08 15:34:52.769 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/index.html - - - 200 - text/html;charset=utf-8 313.3992ms
+2021-02-08 15:34:52.999 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - -
+2021-02-08 15:34:53.195 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 196.4682ms
+2021-02-08 15:34:55.497 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/v2/swagger.json - -
+2021-02-08 15:34:55.520 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/v2/swagger.json - - - 200 - application/json;charset=utf-8 23.7432ms
+2021-02-08 15:34:59.803 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/VaccineInventories - -
+2021-02-08 15:34:59.835 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.VaccineInventoriesController.GetVaccineInventories (CovidVaccine)'
+2021-02-08 15:34:59.907 +08:00 [INF] Route matched with {action = "GetVaccineInventories", controller = "VaccineInventories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.VaccineInventory]]] GetVaccineInventories() on controller CovidVaccine.V2.Controllers.VaccineInventoriesController (CovidVaccine).
+2021-02-08 15:35:01.315 +08:00 [INF] Entity Framework Core 5.0.2 initialized 'CovidVaccineContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: MaxPoolSize=128 ServerVersion 8.0.19-mysql 
+2021-02-08 15:35:01.865 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.VaccineInventoriesController.GetVaccineInventories (CovidVaccine) in 1952.2845ms
+2021-02-08 15:35:01.869 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.VaccineInventoriesController.GetVaccineInventories (CovidVaccine)'
+2021-02-08 15:35:01.875 +08:00 [ERR] Connection ID "18158513716348321833", Request ID "8000002d-0004-fc00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+System.InvalidOperationException: The expression 'b' is invalid inside an 'Include' operation, since it does not represent a property access: 't => t.MyProperty'. To target navigations declared on derived types, use casting ('t => ((Derived)t).MyProperty') or the 'as' operator ('t => (t as Derived).MyProperty'). Collection navigation access can be filtered by composing Where, OrderBy(Descending), ThenBy(Descending), Skip or Take operations. For more information on including related data, see http://go.microsoft.com/fwlink/?LinkID=746393.
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.<ProcessInclude>g__ExtractIncludeFilter|31_0(Expression currentExpression, Expression includeExpression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.ProcessInclude(NavigationExpansionExpression source, Expression expression, Boolean thenInclude, Boolean setLoaded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at System.Linq.Expressions.MethodCallExpression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.Expand(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.QueryTranslationPreprocessor.Process(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryTranslationPreprocessor.Process(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Storage.Database.CompileQuery[TResult](Expression query, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](IDatabase database, Expression query, IModel model, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass12_0`1.<ExecuteAsync>b__0()
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.IncludableQueryable`2.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.ConfiguredCancelableAsyncEnumerable`1.GetAsyncEnumerator()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at CovidVaccine.Repository.Repository`1.SelectAll[T]() in C:\Users\your name\source\repos\gitFolder\CovidVaccineRepository\Repository.cs:line 33
+   at CovidVaccine.Handlers.GetVaccineInventoriesHandler.Handle(GetVaccineInventoriesQuery request, CancellationToken cancellationToken) in C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine\Handlers\GetVaccineInventoriesHandler.cs:line 23
+   at CovidVaccine.PipelineBehaviours.ValidationBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine\PipelineBehaviours\ValidationBehvaviour.cs:line 29
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at CovidVaccine.V2.Controllers.VaccineInventoriesController.GetVaccineInventories() in C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine\V2\Controllers\VaccineInventoriesController.cs:line 35
+   at lambda_method6(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+2021-02-08 15:35:02.016 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/VaccineInventories - - - 500 - - 2212.6707ms
+2021-02-08 17:24:40.019 +08:00 [INF] Starting web host
+2021-02-08 17:24:41.788 +08:00 [FTL] Host terminated unexpectedly
+System.AggregateException: Some services are not able to be constructed (Error while validating the service descriptor 'ServiceType: MediatR.IRequestHandler`2[CovidVaccine.Queries.GetVaccineInventoriesQuery,System.Collections.Generic.List`1[CovidVaccine.Model.VaccineInventory]] Lifetime: Transient ImplementationType: CovidVaccine.Handlers.GetVaccineInventoriesHandler': Unable to resolve service for type 'CovidVaccine.Model.IInventoryRepository' while attempting to activate 'CovidVaccine.Handlers.GetVaccineInventoriesHandler'.)
+ ---> System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: MediatR.IRequestHandler`2[CovidVaccine.Queries.GetVaccineInventoriesQuery,System.Collections.Generic.List`1[CovidVaccine.Model.VaccineInventory]] Lifetime: Transient ImplementationType: CovidVaccine.Handlers.GetVaccineInventoriesHandler': Unable to resolve service for type 'CovidVaccine.Model.IInventoryRepository' while attempting to activate 'CovidVaccine.Handlers.GetVaccineInventoriesHandler'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'CovidVaccine.Model.IInventoryRepository' while attempting to activate 'CovidVaccine.Handlers.GetVaccineInventoriesHandler'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type serviceType, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, IServiceProviderEngine engine, ServiceProviderOptions options)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, IServiceProviderEngine engine, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.DefaultServiceProviderFactory.CreateServiceProvider(IServiceCollection containerBuilder)
+   at Microsoft.Extensions.Hosting.Internal.ServiceFactoryAdapter`1.CreateServiceProvider(Object containerBuilder)
+   at Microsoft.Extensions.Hosting.HostBuilder.CreateServiceProvider()
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at CovidVaccine.Program.Main(String[] args) in C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine\Program.cs:line 30
+2021-02-08 17:25:39.875 +08:00 [INF] Starting web host
+2021-02-08 17:25:41.504 +08:00 [FTL] Host terminated unexpectedly
+System.AggregateException: Some services are not able to be constructed (Error while validating the service descriptor 'ServiceType: CovidVaccine.Model.IInventoryRepository Lifetime: Scoped ImplementationType: CovidVaccine.Repository.InventoryRepository': Unable to resolve service for type 'Microsoft.EntityFrameworkCore.DbContext' while attempting to activate 'CovidVaccine.Repository.InventoryRepository'.) (Error while validating the service descriptor 'ServiceType: MediatR.IRequestHandler`2[CovidVaccine.Queries.GetVaccineInventoriesQuery,System.Collections.Generic.List`1[CovidVaccine.Model.VaccineInventory]] Lifetime: Transient ImplementationType: CovidVaccine.Handlers.GetVaccineInventoriesHandler': Unable to resolve service for type 'Microsoft.EntityFrameworkCore.DbContext' while attempting to activate 'CovidVaccine.Repository.InventoryRepository'.)
+ ---> System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: CovidVaccine.Model.IInventoryRepository Lifetime: Scoped ImplementationType: CovidVaccine.Repository.InventoryRepository': Unable to resolve service for type 'Microsoft.EntityFrameworkCore.DbContext' while attempting to activate 'CovidVaccine.Repository.InventoryRepository'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'Microsoft.EntityFrameworkCore.DbContext' while attempting to activate 'CovidVaccine.Repository.InventoryRepository'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type serviceType, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, IServiceProviderEngine engine, ServiceProviderOptions options)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, IServiceProviderEngine engine, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.DefaultServiceProviderFactory.CreateServiceProvider(IServiceCollection containerBuilder)
+   at Microsoft.Extensions.Hosting.Internal.ServiceFactoryAdapter`1.CreateServiceProvider(Object containerBuilder)
+   at Microsoft.Extensions.Hosting.HostBuilder.CreateServiceProvider()
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at CovidVaccine.Program.Main(String[] args) in C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine\Program.cs:line 30
+ ---> (Inner Exception #1) System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: MediatR.IRequestHandler`2[CovidVaccine.Queries.GetVaccineInventoriesQuery,System.Collections.Generic.List`1[CovidVaccine.Model.VaccineInventory]] Lifetime: Transient ImplementationType: CovidVaccine.Handlers.GetVaccineInventoriesHandler': Unable to resolve service for type 'Microsoft.EntityFrameworkCore.DbContext' while attempting to activate 'CovidVaccine.Repository.InventoryRepository'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'Microsoft.EntityFrameworkCore.DbContext' while attempting to activate 'CovidVaccine.Repository.InventoryRepository'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type serviceType, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateCallSite(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.<>c__DisplayClass7_0.<GetCallSite>b__0(Type type)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type serviceType, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, IServiceProviderEngine engine, ServiceProviderOptions options)<---
+
+2021-02-08 17:30:09.976 +08:00 [INF] Starting web host
+2021-02-08 17:30:11.852 +08:00 [FTL] Host terminated unexpectedly
+System.AggregateException: Some services are not able to be constructed (Error while validating the service descriptor 'ServiceType: CovidVaccine.Model.IInventoryRepository Lifetime: Scoped ImplementationType: CovidVaccine.Repository.InventoryRepository': Unable to resolve service for type 'Microsoft.EntityFrameworkCore.DbContext' while attempting to activate 'CovidVaccine.Repository.InventoryRepository'.) (Error while validating the service descriptor 'ServiceType: MediatR.IRequestHandler`2[CovidVaccine.Queries.GetVaccineInventoriesQuery,System.Collections.Generic.List`1[CovidVaccine.Model.VaccineInventory]] Lifetime: Transient ImplementationType: CovidVaccine.Handlers.GetVaccineInventoriesHandler': Unable to resolve service for type 'Microsoft.EntityFrameworkCore.DbContext' while attempting to activate 'CovidVaccine.Repository.InventoryRepository'.)
+ ---> System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: CovidVaccine.Model.IInventoryRepository Lifetime: Scoped ImplementationType: CovidVaccine.Repository.InventoryRepository': Unable to resolve service for type 'Microsoft.EntityFrameworkCore.DbContext' while attempting to activate 'CovidVaccine.Repository.InventoryRepository'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'Microsoft.EntityFrameworkCore.DbContext' while attempting to activate 'CovidVaccine.Repository.InventoryRepository'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type serviceType, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, IServiceProviderEngine engine, ServiceProviderOptions options)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, IServiceProviderEngine engine, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.DefaultServiceProviderFactory.CreateServiceProvider(IServiceCollection containerBuilder)
+   at Microsoft.Extensions.Hosting.Internal.ServiceFactoryAdapter`1.CreateServiceProvider(Object containerBuilder)
+   at Microsoft.Extensions.Hosting.HostBuilder.CreateServiceProvider()
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at CovidVaccine.Program.Main(String[] args) in C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine\Program.cs:line 30
+ ---> (Inner Exception #1) System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: MediatR.IRequestHandler`2[CovidVaccine.Queries.GetVaccineInventoriesQuery,System.Collections.Generic.List`1[CovidVaccine.Model.VaccineInventory]] Lifetime: Transient ImplementationType: CovidVaccine.Handlers.GetVaccineInventoriesHandler': Unable to resolve service for type 'Microsoft.EntityFrameworkCore.DbContext' while attempting to activate 'CovidVaccine.Repository.InventoryRepository'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'Microsoft.EntityFrameworkCore.DbContext' while attempting to activate 'CovidVaccine.Repository.InventoryRepository'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type serviceType, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateCallSite(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.<>c__DisplayClass7_0.<GetCallSite>b__0(Type type)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type serviceType, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, IServiceProviderEngine engine, ServiceProviderOptions options)<---
+

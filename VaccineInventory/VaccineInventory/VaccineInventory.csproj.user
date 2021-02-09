@@ -16,6 +16,9 @@
     <Compile Update="Views\Inventory.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\InventoryAddDialog.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\Patient.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -40,6 +43,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Inventory.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\InventoryAddDialog.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\MainWindow.xaml">

@@ -11,12 +11,12 @@ namespace CovidVaccine.Repository
     public class CovidVaccineContext : DbContext
     {
         private readonly DbContextOptions _options;
+        public DbSet<Patient> Patients { get; set; }
+        public DbSet<Vaccine> Vaccines { get; set; }
+        public DbSet<VaccineInventory> VaccineInventories { get; set; }
         public CovidVaccineContext(DbContextOptions<CovidVaccineContext> options) : base(options)
         {
             _options = options;
         }
-
-        public DbSet<Patient> Patients { get; set; }
-        public DbSet<Vaccine> Vaccines { get; set; }
     }
 }

@@ -59,7 +59,7 @@ namespace VaccineInventory.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/VaccineInventory;V1.0.0.0;component/views/vaccine.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/VaccineInventory;component/views/vaccine.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\Vaccine.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
