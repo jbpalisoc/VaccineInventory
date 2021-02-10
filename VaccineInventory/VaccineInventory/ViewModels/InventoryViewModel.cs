@@ -62,12 +62,14 @@ namespace VaccineInventory.ViewModels
             set { SetProperty(ref _inventoryList, value); }
         }
         public DelegateCommand SaveButtonClick { get; private set; }
+        public DelegateCommand RefreshClick { get; private set; }
 
         public InventoryViewModel(IRequestHandler requestHandler, IDialogService dialogService)
         {
             _requestHandler = requestHandler;
             _dialogService = dialogService;
             SaveButtonClick = new DelegateCommand(Insert);
+            RefreshClick = new DelegateCommand(Refresh);
             GetInventory();
         }
 
@@ -81,6 +83,10 @@ namespace VaccineInventory.ViewModels
             {
                 InventoryList = response.Content.ReadAsAsync<IEnumerable<Inventory>>().Result;
             }
+        }
+        private void Refresh()
+        {
+            GetInventory();
         }
         private void Insert()
         {

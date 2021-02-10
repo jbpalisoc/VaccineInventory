@@ -21,6 +21,7 @@ namespace CovidVaccine.Model
         public int VaccineId { get; private set; }
         public decimal Amount { get; private set; }
         public DateTime StorageDate { get; private set; }
+
         public DateTime ExpirationDate { get; private set; }
         public virtual Vaccine Vaccine { get; set; }
     }

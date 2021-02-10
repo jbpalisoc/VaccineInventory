@@ -34,6 +34,9 @@
     <Compile Update="Views\VaccineHistory.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\VaccineHistoryAddDialog.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Views\AddDialog.xaml">
@@ -64,6 +67,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\VaccineHistory.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\VaccineHistoryAddDialog.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

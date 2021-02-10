@@ -95,3 +95,5 @@ C:\Users\your name\source\repos\gitFolder\VaccineInventory\VaccineInventory\bin\
 C:\Users\your name\source\repos\gitFolder\VaccineInventory\VaccineInventory\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
 C:\Users\your name\source\repos\gitFolder\VaccineInventory\VaccineInventory\obj\Debug\netcoreapp3.1\Views\InventoryAddDialog.baml
 C:\Users\your name\source\repos\gitFolder\VaccineInventory\VaccineInventory\obj\Debug\netcoreapp3.1\Views\InventoryAddDialog.g.cs
+C:\Users\your name\source\repos\gitFolder\VaccineInventory\VaccineInventory\obj\Debug\netcoreapp3.1\Views\VaccineHistoryAddDialog.baml
+C:\Users\your name\source\repos\gitFolder\VaccineInventory\VaccineInventory\obj\Debug\netcoreapp3.1\Views\VaccineHistoryAddDialog.g.cs

@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 C:\Users\your name\source\repos\gitFolder\VaccineInventory\VaccineInventory\App.xaml
-10-159112197
+11-2004370474
 
-292054749523
+321483324007
 210164971979
-Views\AddDialog.xaml;Views\EditDialog.xaml;Views\Inventory.xaml;Views\InventoryAddDialog.xaml;Views\MainWindow.xaml;Views\Patient.xaml;Views\Vaccine.xaml;Views\VaccineAddDialog.xaml;Views\VaccineEditDialog.xaml;Views\VaccineHistory.xaml;
+Views\AddDialog.xaml;Views\EditDialog.xaml;Views\Inventory.xaml;Views\InventoryAddDialog.xaml;Views\MainWindow.xaml;Views\Patient.xaml;Views\Vaccine.xaml;Views\VaccineAddDialog.xaml;Views\VaccineEditDialog.xaml;Views\VaccineHistory.xaml;Views\VaccineHistoryAddDialog.xaml;
 
 False
 

@@ -14,6 +14,7 @@ namespace CovidVaccine.Repository
         public DbSet<Patient> Patients { get; set; }
         public DbSet<Vaccine> Vaccines { get; set; }
         public DbSet<VaccineInventory> VaccineInventories { get; set; }
+        public DbSet<VaccineHistory> VaccineHistories { get; set; }
         public CovidVaccineContext(DbContextOptions<CovidVaccineContext> options) : base(options)
         {
             _options = options;
