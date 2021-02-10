@@ -1843,3 +1843,781 @@ INNER JOIN `Vaccines` AS `v1` ON `v0`.`VaccineId` = `v1`.`Id`
 2021-02-10 11:37:08.053 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/VaccineHistories/GetAllHistoryJoinPatientJoinInventory - - - 200 - application/json;+charset=utf-8 6439.4156ms
 2021-02-10 11:37:08.053 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/VaccineInventories/GetAllInventoryJoinVaccine - - - 200 - application/json;+charset=utf-8 6439.3657ms
 2021-02-10 11:37:08.053 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/Patients - - - 200 - application/json;+charset=utf-8 6439.4219ms
+2021-02-10 13:06:01.387 +08:00 [INF] Starting web host
+2021-02-10 13:06:03.554 +08:00 [INF] User profile is available. Using 'C:\Users\your name\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-02-10 13:06:04.063 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-10 13:06:04.063 +08:00 [INF] Hosting environment: Development
+2021-02-10 13:06:04.063 +08:00 [INF] Content root path: C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine
+2021-02-10 13:06:04.119 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/index.html - -
+2021-02-10 13:06:04.385 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/index.html - - - 200 - text/html;charset=utf-8 268.1059ms
+2021-02-10 13:06:04.580 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - -
+2021-02-10 13:06:04.734 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 154.3100ms
+2021-02-10 13:06:11.823 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/Patients - -
+2021-02-10 13:06:11.840 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-10 13:06:11.910 +08:00 [INF] Route matched with {action = "GetPatients", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.Patient]]] GetPatients() on controller CovidVaccine.V2.Controllers.PatientsController (CovidVaccine).
+2021-02-10 13:06:13.707 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/VaccineHistories/GetAllHistoryJoinPatientJoinInventory - -
+2021-02-10 13:06:13.709 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.VaccineHistoriesController.GetAllHistoryJoinPatientJoinInventory (CovidVaccine)'
+2021-02-10 13:06:13.716 +08:00 [INF] Route matched with {action = "GetAllHistoryJoinPatientJoinInventory", controller = "VaccineHistories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.VaccineHistory]]] GetAllHistoryJoinPatientJoinInventory() on controller CovidVaccine.V2.Controllers.VaccineHistoriesController (CovidVaccine).
+2021-02-10 13:06:13.894 +08:00 [INF] Entity Framework Core 5.0.2 initialized 'CovidVaccineContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: MaxPoolSize=128 ServerVersion 8.0.19-mysql 
+2021-02-10 13:06:13.894 +08:00 [INF] Entity Framework Core 5.0.2 initialized 'CovidVaccineContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: MaxPoolSize=128 ServerVersion 8.0.19-mysql 
+2021-02-10 13:06:14.367 +08:00 [INF] Executed DbCommand (54ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Birthday`, `p`.`ContactNo`, `p`.`FirstName`, `p`.`LastName`, `p`.`MiddleName`, `p`.`Sex`
+FROM `Patients` AS `p`
+2021-02-10 13:06:14.367 +08:00 [INF] Executed DbCommand (54ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`DateVaccinated`, `v`.`Dosage`, `v`.`InventoryId`, `v`.`PatientId`, `p`.`Id`, `p`.`Birthday`, `p`.`ContactNo`, `p`.`FirstName`, `p`.`LastName`, `p`.`MiddleName`, `p`.`Sex`, `v0`.`Id`, `v0`.`Amount`, `v0`.`ExpirationDate`, `v0`.`StorageDate`, `v0`.`VaccineId`, `v1`.`Id`, `v1`.`Description`, `v1`.`Name`
+FROM `VaccineHistories` AS `v`
+INNER JOIN `Patients` AS `p` ON `v`.`PatientId` = `p`.`Id`
+INNER JOIN `VaccineInventories` AS `v0` ON `v`.`InventoryId` = `v0`.`Id`
+INNER JOIN `Vaccines` AS `v1` ON `v0`.`VaccineId` = `v1`.`Id`
+2021-02-10 13:06:14.524 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.Patient, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-10 13:06:14.524 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.VaccineHistory, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-10 13:06:14.559 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine) in 2642.7154ms
+2021-02-10 13:06:14.559 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.VaccineHistoriesController.GetAllHistoryJoinPatientJoinInventory (CovidVaccine) in 836.9235ms
+2021-02-10 13:06:14.561 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-10 13:06:14.561 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.VaccineHistoriesController.GetAllHistoryJoinPatientJoinInventory (CovidVaccine)'
+2021-02-10 13:06:14.581 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/Patients - - - 200 - application/json;+charset=utf-8 2758.3882ms
+2021-02-10 13:06:14.581 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/VaccineHistories/GetAllHistoryJoinPatientJoinInventory - - - 200 - application/json;+charset=utf-8 874.0130ms
+2021-02-10 13:06:27.368 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/VaccineHistories/GetAllHistoryJoinPatientJoinInventory - -
+2021-02-10 13:06:27.368 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.VaccineHistoriesController.GetAllHistoryJoinPatientJoinInventory (CovidVaccine)'
+2021-02-10 13:06:27.369 +08:00 [INF] Route matched with {action = "GetAllHistoryJoinPatientJoinInventory", controller = "VaccineHistories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.VaccineHistory]]] GetAllHistoryJoinPatientJoinInventory() on controller CovidVaccine.V2.Controllers.VaccineHistoriesController (CovidVaccine).
+2021-02-10 13:06:27.405 +08:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`DateVaccinated`, `v`.`Dosage`, `v`.`InventoryId`, `v`.`PatientId`, `p`.`Id`, `p`.`Birthday`, `p`.`ContactNo`, `p`.`FirstName`, `p`.`LastName`, `p`.`MiddleName`, `p`.`Sex`, `v0`.`Id`, `v0`.`Amount`, `v0`.`ExpirationDate`, `v0`.`StorageDate`, `v0`.`VaccineId`, `v1`.`Id`, `v1`.`Description`, `v1`.`Name`
+FROM `VaccineHistories` AS `v`
+INNER JOIN `Patients` AS `p` ON `v`.`PatientId` = `p`.`Id`
+INNER JOIN `VaccineInventories` AS `v0` ON `v`.`InventoryId` = `v0`.`Id`
+INNER JOIN `Vaccines` AS `v1` ON `v0`.`VaccineId` = `v1`.`Id`
+2021-02-10 13:06:27.407 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.VaccineHistory, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-10 13:06:27.408 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.VaccineHistoriesController.GetAllHistoryJoinPatientJoinInventory (CovidVaccine) in 38.654ms
+2021-02-10 13:06:27.408 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.VaccineHistoriesController.GetAllHistoryJoinPatientJoinInventory (CovidVaccine)'
+2021-02-10 13:06:27.409 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/VaccineHistories/GetAllHistoryJoinPatientJoinInventory - - - 200 - application/json;+charset=utf-8 41.2416ms
+2021-02-10 13:15:22.859 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/Patients - -
+2021-02-10 13:15:22.861 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-10 13:15:22.861 +08:00 [INF] Route matched with {action = "GetPatients", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.Patient]]] GetPatients() on controller CovidVaccine.V2.Controllers.PatientsController (CovidVaccine).
+2021-02-10 13:15:22.939 +08:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Birthday`, `p`.`ContactNo`, `p`.`FirstName`, `p`.`LastName`, `p`.`MiddleName`, `p`.`Sex`
+FROM `Patients` AS `p`
+2021-02-10 13:15:22.941 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.Patient, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-10 13:15:22.942 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine) in 80.4572ms
+2021-02-10 13:15:22.942 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-10 13:15:22.943 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/Patients - - - 200 - application/json;+charset=utf-8 83.7577ms
+2021-02-10 13:15:39.237 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/VaccineHistories/GetAllHistoryJoinPatientJoinInventory - -
+2021-02-10 13:15:39.237 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.VaccineHistoriesController.GetAllHistoryJoinPatientJoinInventory (CovidVaccine)'
+2021-02-10 13:15:39.237 +08:00 [INF] Route matched with {action = "GetAllHistoryJoinPatientJoinInventory", controller = "VaccineHistories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.VaccineHistory]]] GetAllHistoryJoinPatientJoinInventory() on controller CovidVaccine.V2.Controllers.VaccineHistoriesController (CovidVaccine).
+2021-02-10 13:15:39.254 +08:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`DateVaccinated`, `v`.`Dosage`, `v`.`InventoryId`, `v`.`PatientId`, `p`.`Id`, `p`.`Birthday`, `p`.`ContactNo`, `p`.`FirstName`, `p`.`LastName`, `p`.`MiddleName`, `p`.`Sex`, `v0`.`Id`, `v0`.`Amount`, `v0`.`ExpirationDate`, `v0`.`StorageDate`, `v0`.`VaccineId`, `v1`.`Id`, `v1`.`Description`, `v1`.`Name`
+FROM `VaccineHistories` AS `v`
+INNER JOIN `Patients` AS `p` ON `v`.`PatientId` = `p`.`Id`
+INNER JOIN `VaccineInventories` AS `v0` ON `v`.`InventoryId` = `v0`.`Id`
+INNER JOIN `Vaccines` AS `v1` ON `v0`.`VaccineId` = `v1`.`Id`
+2021-02-10 13:15:39.255 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.VaccineHistory, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-10 13:15:39.256 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.VaccineHistoriesController.GetAllHistoryJoinPatientJoinInventory (CovidVaccine) in 18.4019ms
+2021-02-10 13:15:39.256 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.VaccineHistoriesController.GetAllHistoryJoinPatientJoinInventory (CovidVaccine)'
+2021-02-10 13:15:39.256 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/VaccineHistories/GetAllHistoryJoinPatientJoinInventory - - - 200 - application/json;+charset=utf-8 19.5505ms
+2021-02-10 13:15:40.712 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/Patients - -
+2021-02-10 13:15:40.712 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-10 13:15:40.712 +08:00 [INF] Route matched with {action = "GetPatients", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.Patient]]] GetPatients() on controller CovidVaccine.V2.Controllers.PatientsController (CovidVaccine).
+2021-02-10 13:15:40.729 +08:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Birthday`, `p`.`ContactNo`, `p`.`FirstName`, `p`.`LastName`, `p`.`MiddleName`, `p`.`Sex`
+FROM `Patients` AS `p`
+2021-02-10 13:15:40.730 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.Patient, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-10 13:15:40.731 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine) in 18.7115ms
+2021-02-10 13:15:40.731 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-10 13:15:40.733 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/Patients - - - 200 - application/json;+charset=utf-8 20.8293ms
+2021-02-10 13:15:57.524 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/VaccineHistories/GetAllHistoryJoinPatientJoinInventory - -
+2021-02-10 13:15:57.525 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.VaccineHistoriesController.GetAllHistoryJoinPatientJoinInventory (CovidVaccine)'
+2021-02-10 13:15:57.525 +08:00 [INF] Route matched with {action = "GetAllHistoryJoinPatientJoinInventory", controller = "VaccineHistories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.VaccineHistory]]] GetAllHistoryJoinPatientJoinInventory() on controller CovidVaccine.V2.Controllers.VaccineHistoriesController (CovidVaccine).
+2021-02-10 13:15:57.542 +08:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`DateVaccinated`, `v`.`Dosage`, `v`.`InventoryId`, `v`.`PatientId`, `p`.`Id`, `p`.`Birthday`, `p`.`ContactNo`, `p`.`FirstName`, `p`.`LastName`, `p`.`MiddleName`, `p`.`Sex`, `v0`.`Id`, `v0`.`Amount`, `v0`.`ExpirationDate`, `v0`.`StorageDate`, `v0`.`VaccineId`, `v1`.`Id`, `v1`.`Description`, `v1`.`Name`
+FROM `VaccineHistories` AS `v`
+INNER JOIN `Patients` AS `p` ON `v`.`PatientId` = `p`.`Id`
+INNER JOIN `VaccineInventories` AS `v0` ON `v`.`InventoryId` = `v0`.`Id`
+INNER JOIN `Vaccines` AS `v1` ON `v0`.`VaccineId` = `v1`.`Id`
+2021-02-10 13:15:57.544 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.VaccineHistory, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-10 13:15:57.544 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.VaccineHistoriesController.GetAllHistoryJoinPatientJoinInventory (CovidVaccine) in 18.7356ms
+2021-02-10 13:15:57.544 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.VaccineHistoriesController.GetAllHistoryJoinPatientJoinInventory (CovidVaccine)'
+2021-02-10 13:15:57.545 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/VaccineHistories/GetAllHistoryJoinPatientJoinInventory - - - 200 - application/json;+charset=utf-8 20.3362ms
+2021-02-10 13:16:19.729 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/Patients - -
+2021-02-10 13:16:19.729 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-10 13:16:19.730 +08:00 [INF] Route matched with {action = "GetPatients", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.Patient]]] GetPatients() on controller CovidVaccine.V2.Controllers.PatientsController (CovidVaccine).
+2021-02-10 13:16:19.753 +08:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Birthday`, `p`.`ContactNo`, `p`.`FirstName`, `p`.`LastName`, `p`.`MiddleName`, `p`.`Sex`
+FROM `Patients` AS `p`
+2021-02-10 13:16:19.754 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.Patient, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-10 13:16:19.755 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine) in 25.2505ms
+2021-02-10 13:16:19.755 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-10 13:16:19.756 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/Patients - - - 200 - application/json;+charset=utf-8 27.0847ms
+2021-02-10 13:16:21.825 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/VaccineHistories/GetAllHistoryJoinPatientJoinInventory - -
+2021-02-10 13:16:21.825 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.VaccineHistoriesController.GetAllHistoryJoinPatientJoinInventory (CovidVaccine)'
+2021-02-10 13:16:21.826 +08:00 [INF] Route matched with {action = "GetAllHistoryJoinPatientJoinInventory", controller = "VaccineHistories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.VaccineHistory]]] GetAllHistoryJoinPatientJoinInventory() on controller CovidVaccine.V2.Controllers.VaccineHistoriesController (CovidVaccine).
+2021-02-10 13:16:21.843 +08:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`DateVaccinated`, `v`.`Dosage`, `v`.`InventoryId`, `v`.`PatientId`, `p`.`Id`, `p`.`Birthday`, `p`.`ContactNo`, `p`.`FirstName`, `p`.`LastName`, `p`.`MiddleName`, `p`.`Sex`, `v0`.`Id`, `v0`.`Amount`, `v0`.`ExpirationDate`, `v0`.`StorageDate`, `v0`.`VaccineId`, `v1`.`Id`, `v1`.`Description`, `v1`.`Name`
+FROM `VaccineHistories` AS `v`
+INNER JOIN `Patients` AS `p` ON `v`.`PatientId` = `p`.`Id`
+INNER JOIN `VaccineInventories` AS `v0` ON `v`.`InventoryId` = `v0`.`Id`
+INNER JOIN `Vaccines` AS `v1` ON `v0`.`VaccineId` = `v1`.`Id`
+2021-02-10 13:16:21.844 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.VaccineHistory, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-10 13:16:21.845 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.VaccineHistoriesController.GetAllHistoryJoinPatientJoinInventory (CovidVaccine) in 19.1706ms
+2021-02-10 13:16:21.845 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.VaccineHistoriesController.GetAllHistoryJoinPatientJoinInventory (CovidVaccine)'
+2021-02-10 13:16:21.851 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/VaccineHistories/GetAllHistoryJoinPatientJoinInventory - - - 200 - application/json;+charset=utf-8 22.2071ms
+2021-02-10 13:16:22.957 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/Patients - -
+2021-02-10 13:16:22.957 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-10 13:16:22.957 +08:00 [INF] Route matched with {action = "GetPatients", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.Patient]]] GetPatients() on controller CovidVaccine.V2.Controllers.PatientsController (CovidVaccine).
+2021-02-10 13:16:22.961 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/VaccineInventories/GetAllInventoryJoinVaccine - -
+2021-02-10 13:16:22.965 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.VaccineInventoriesController.GetAllInventoryJoinVaccine (CovidVaccine)'
+2021-02-10 13:16:22.968 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Birthday`, `p`.`ContactNo`, `p`.`FirstName`, `p`.`LastName`, `p`.`MiddleName`, `p`.`Sex`
+FROM `Patients` AS `p`
+2021-02-10 13:16:22.977 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.Patient, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-10 13:16:22.977 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine) in 19.772ms
+2021-02-10 13:16:22.977 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-10 13:16:22.978 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/Patients - - - 200 - application/json;+charset=utf-8 21.1791ms
+2021-02-10 13:16:22.981 +08:00 [INF] Route matched with {action = "GetAllInventoryJoinVaccine", controller = "VaccineInventories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.VaccineInventory]]] GetAllInventoryJoinVaccine() on controller CovidVaccine.V2.Controllers.VaccineInventoriesController (CovidVaccine).
+2021-02-10 13:16:23.007 +08:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`Amount`, `v`.`ExpirationDate`, `v`.`StorageDate`, `v`.`VaccineId`, `v0`.`Id`, `v0`.`Description`, `v0`.`Name`
+FROM `VaccineInventories` AS `v`
+INNER JOIN `Vaccines` AS `v0` ON `v`.`VaccineId` = `v0`.`Id`
+2021-02-10 13:16:23.010 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.VaccineInventory, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-10 13:16:23.011 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.VaccineInventoriesController.GetAllInventoryJoinVaccine (CovidVaccine) in 30.3087ms
+2021-02-10 13:16:23.012 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.VaccineInventoriesController.GetAllInventoryJoinVaccine (CovidVaccine)'
+2021-02-10 13:16:23.012 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/VaccineInventories/GetAllInventoryJoinVaccine - - - 200 - application/json;+charset=utf-8 51.2833ms
+2021-02-10 13:17:43.279 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/VaccineHistories/GetAllHistoryJoinPatientJoinInventory - -
+2021-02-10 13:17:43.280 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.VaccineHistoriesController.GetAllHistoryJoinPatientJoinInventory (CovidVaccine)'
+2021-02-10 13:17:43.280 +08:00 [INF] Route matched with {action = "GetAllHistoryJoinPatientJoinInventory", controller = "VaccineHistories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.VaccineHistory]]] GetAllHistoryJoinPatientJoinInventory() on controller CovidVaccine.V2.Controllers.VaccineHistoriesController (CovidVaccine).
+2021-02-10 13:17:43.307 +08:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`DateVaccinated`, `v`.`Dosage`, `v`.`InventoryId`, `v`.`PatientId`, `p`.`Id`, `p`.`Birthday`, `p`.`ContactNo`, `p`.`FirstName`, `p`.`LastName`, `p`.`MiddleName`, `p`.`Sex`, `v0`.`Id`, `v0`.`Amount`, `v0`.`ExpirationDate`, `v0`.`StorageDate`, `v0`.`VaccineId`, `v1`.`Id`, `v1`.`Description`, `v1`.`Name`
+FROM `VaccineHistories` AS `v`
+INNER JOIN `Patients` AS `p` ON `v`.`PatientId` = `p`.`Id`
+INNER JOIN `VaccineInventories` AS `v0` ON `v`.`InventoryId` = `v0`.`Id`
+INNER JOIN `Vaccines` AS `v1` ON `v0`.`VaccineId` = `v1`.`Id`
+2021-02-10 13:17:43.308 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.VaccineHistory, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-10 13:17:43.309 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.VaccineHistoriesController.GetAllHistoryJoinPatientJoinInventory (CovidVaccine) in 27.6101ms
+2021-02-10 13:17:43.309 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.VaccineHistoriesController.GetAllHistoryJoinPatientJoinInventory (CovidVaccine)'
+2021-02-10 13:17:43.310 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/VaccineHistories/GetAllHistoryJoinPatientJoinInventory - - - 200 - application/json;+charset=utf-8 30.6029ms
+2021-02-10 13:26:35.142 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/Patients - -
+2021-02-10 13:26:35.142 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-10 13:26:35.142 +08:00 [INF] Route matched with {action = "GetPatients", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.Patient]]] GetPatients() on controller CovidVaccine.V2.Controllers.PatientsController (CovidVaccine).
+2021-02-10 13:26:35.217 +08:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Birthday`, `p`.`ContactNo`, `p`.`FirstName`, `p`.`LastName`, `p`.`MiddleName`, `p`.`Sex`
+FROM `Patients` AS `p`
+2021-02-10 13:26:35.219 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.Patient, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-10 13:26:35.223 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine) in 80.4861ms
+2021-02-10 13:26:35.226 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-10 13:26:35.260 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/Patients - - - 200 - application/json;+charset=utf-8 118.3428ms
+2021-02-10 13:26:37.332 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/VaccineHistories/GetAllHistoryJoinPatientJoinInventory - -
+2021-02-10 13:26:37.334 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.VaccineHistoriesController.GetAllHistoryJoinPatientJoinInventory (CovidVaccine)'
+2021-02-10 13:26:37.339 +08:00 [INF] Route matched with {action = "GetAllHistoryJoinPatientJoinInventory", controller = "VaccineHistories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.VaccineHistory]]] GetAllHistoryJoinPatientJoinInventory() on controller CovidVaccine.V2.Controllers.VaccineHistoriesController (CovidVaccine).
+2021-02-10 13:26:37.351 +08:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`DateVaccinated`, `v`.`Dosage`, `v`.`InventoryId`, `v`.`PatientId`, `p`.`Id`, `p`.`Birthday`, `p`.`ContactNo`, `p`.`FirstName`, `p`.`LastName`, `p`.`MiddleName`, `p`.`Sex`, `v0`.`Id`, `v0`.`Amount`, `v0`.`ExpirationDate`, `v0`.`StorageDate`, `v0`.`VaccineId`, `v1`.`Id`, `v1`.`Description`, `v1`.`Name`
+FROM `VaccineHistories` AS `v`
+INNER JOIN `Patients` AS `p` ON `v`.`PatientId` = `p`.`Id`
+INNER JOIN `VaccineInventories` AS `v0` ON `v`.`InventoryId` = `v0`.`Id`
+INNER JOIN `Vaccines` AS `v1` ON `v0`.`VaccineId` = `v1`.`Id`
+2021-02-10 13:26:37.353 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.VaccineHistory, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-10 13:26:37.354 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.VaccineHistoriesController.GetAllHistoryJoinPatientJoinInventory (CovidVaccine) in 14.9735ms
+2021-02-10 13:26:37.354 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.VaccineHistoriesController.GetAllHistoryJoinPatientJoinInventory (CovidVaccine)'
+2021-02-10 13:26:37.354 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/VaccineHistories/GetAllHistoryJoinPatientJoinInventory - - - 200 - application/json;+charset=utf-8 22.1604ms
+2021-02-10 13:26:38.829 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/Patients - -
+2021-02-10 13:26:38.829 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-10 13:26:38.830 +08:00 [INF] Route matched with {action = "GetPatients", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.Patient]]] GetPatients() on controller CovidVaccine.V2.Controllers.PatientsController (CovidVaccine).
+2021-02-10 13:26:38.840 +08:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Birthday`, `p`.`ContactNo`, `p`.`FirstName`, `p`.`LastName`, `p`.`MiddleName`, `p`.`Sex`
+FROM `Patients` AS `p`
+2021-02-10 13:26:38.841 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/VaccineInventories/GetAllInventoryJoinVaccine - -
+2021-02-10 13:26:38.842 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.VaccineInventoriesController.GetAllInventoryJoinVaccine (CovidVaccine)'
+2021-02-10 13:26:38.843 +08:00 [INF] Route matched with {action = "GetAllInventoryJoinVaccine", controller = "VaccineInventories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.VaccineInventory]]] GetAllInventoryJoinVaccine() on controller CovidVaccine.V2.Controllers.VaccineInventoriesController (CovidVaccine).
+2021-02-10 13:26:38.843 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.Patient, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-10 13:26:38.847 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine) in 17.3136ms
+2021-02-10 13:26:38.847 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-10 13:26:38.848 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/Patients - - - 200 - application/json;+charset=utf-8 19.0330ms
+2021-02-10 13:26:38.855 +08:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`Amount`, `v`.`ExpirationDate`, `v`.`StorageDate`, `v`.`VaccineId`, `v0`.`Id`, `v0`.`Description`, `v0`.`Name`
+FROM `VaccineInventories` AS `v`
+INNER JOIN `Vaccines` AS `v0` ON `v`.`VaccineId` = `v0`.`Id`
+2021-02-10 13:26:38.856 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.VaccineInventory, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-10 13:26:38.857 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.VaccineInventoriesController.GetAllInventoryJoinVaccine (CovidVaccine) in 14.0947ms
+2021-02-10 13:26:38.857 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.VaccineInventoriesController.GetAllInventoryJoinVaccine (CovidVaccine)'
+2021-02-10 13:26:38.858 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/VaccineInventories/GetAllInventoryJoinVaccine - - - 200 - application/json;+charset=utf-8 17.0321ms
+2021-02-10 13:27:37.059 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/Patients - -
+2021-02-10 13:27:37.061 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-10 13:27:37.061 +08:00 [INF] Route matched with {action = "GetPatients", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.Patient]]] GetPatients() on controller CovidVaccine.V2.Controllers.PatientsController (CovidVaccine).
+2021-02-10 13:27:37.082 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Birthday`, `p`.`ContactNo`, `p`.`FirstName`, `p`.`LastName`, `p`.`MiddleName`, `p`.`Sex`
+FROM `Patients` AS `p`
+2021-02-10 13:27:37.083 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.Patient, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-10 13:27:37.084 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine) in 22.7299ms
+2021-02-10 13:27:37.084 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-10 13:27:37.085 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/Patients - - - 200 - application/json;+charset=utf-8 25.8588ms
+2021-02-10 13:27:38.696 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/VaccineHistories/GetAllHistoryJoinPatientJoinInventory - -
+2021-02-10 13:27:38.696 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.VaccineHistoriesController.GetAllHistoryJoinPatientJoinInventory (CovidVaccine)'
+2021-02-10 13:27:38.696 +08:00 [INF] Route matched with {action = "GetAllHistoryJoinPatientJoinInventory", controller = "VaccineHistories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.VaccineHistory]]] GetAllHistoryJoinPatientJoinInventory() on controller CovidVaccine.V2.Controllers.VaccineHistoriesController (CovidVaccine).
+2021-02-10 13:27:38.721 +08:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`DateVaccinated`, `v`.`Dosage`, `v`.`InventoryId`, `v`.`PatientId`, `p`.`Id`, `p`.`Birthday`, `p`.`ContactNo`, `p`.`FirstName`, `p`.`LastName`, `p`.`MiddleName`, `p`.`Sex`, `v0`.`Id`, `v0`.`Amount`, `v0`.`ExpirationDate`, `v0`.`StorageDate`, `v0`.`VaccineId`, `v1`.`Id`, `v1`.`Description`, `v1`.`Name`
+FROM `VaccineHistories` AS `v`
+INNER JOIN `Patients` AS `p` ON `v`.`PatientId` = `p`.`Id`
+INNER JOIN `VaccineInventories` AS `v0` ON `v`.`InventoryId` = `v0`.`Id`
+INNER JOIN `Vaccines` AS `v1` ON `v0`.`VaccineId` = `v1`.`Id`
+2021-02-10 13:27:38.722 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.VaccineHistory, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-10 13:27:38.722 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.VaccineHistoriesController.GetAllHistoryJoinPatientJoinInventory (CovidVaccine) in 25.9606ms
+2021-02-10 13:27:38.722 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.VaccineHistoriesController.GetAllHistoryJoinPatientJoinInventory (CovidVaccine)'
+2021-02-10 13:27:38.723 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/VaccineHistories/GetAllHistoryJoinPatientJoinInventory - - - 200 - application/json;+charset=utf-8 27.1893ms
+2021-02-10 13:27:39.769 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/Patients - -
+2021-02-10 13:27:39.769 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-10 13:27:39.769 +08:00 [INF] Route matched with {action = "GetPatients", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.Patient]]] GetPatients() on controller CovidVaccine.V2.Controllers.PatientsController (CovidVaccine).
+2021-02-10 13:27:39.777 +08:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Birthday`, `p`.`ContactNo`, `p`.`FirstName`, `p`.`LastName`, `p`.`MiddleName`, `p`.`Sex`
+FROM `Patients` AS `p`
+2021-02-10 13:27:39.781 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/VaccineInventories/GetAllInventoryJoinVaccine - -
+2021-02-10 13:27:39.781 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.VaccineInventoriesController.GetAllInventoryJoinVaccine (CovidVaccine)'
+2021-02-10 13:27:39.781 +08:00 [INF] Route matched with {action = "GetAllInventoryJoinVaccine", controller = "VaccineInventories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.VaccineInventory]]] GetAllInventoryJoinVaccine() on controller CovidVaccine.V2.Controllers.VaccineInventoriesController (CovidVaccine).
+2021-02-10 13:27:39.781 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.Patient, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-10 13:27:39.791 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine) in 21.4021ms
+2021-02-10 13:27:39.791 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-10 13:27:39.791 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/Patients - - - 200 - application/json;+charset=utf-8 22.3701ms
+2021-02-10 13:27:39.803 +08:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`Amount`, `v`.`ExpirationDate`, `v`.`StorageDate`, `v`.`VaccineId`, `v0`.`Id`, `v0`.`Description`, `v0`.`Name`
+FROM `VaccineInventories` AS `v`
+INNER JOIN `Vaccines` AS `v0` ON `v`.`VaccineId` = `v0`.`Id`
+2021-02-10 13:27:39.804 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.VaccineInventory, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-10 13:27:39.804 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.VaccineInventoriesController.GetAllInventoryJoinVaccine (CovidVaccine) in 22.9096ms
+2021-02-10 13:27:39.804 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.VaccineInventoriesController.GetAllInventoryJoinVaccine (CovidVaccine)'
+2021-02-10 13:27:39.804 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/VaccineInventories/GetAllInventoryJoinVaccine - - - 200 - application/json;+charset=utf-8 24.4532ms
+2021-02-10 13:27:46.074 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:16866/api/v2/VaccineHistories application/json;+charset=utf-8 123
+2021-02-10 13:27:46.074 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.VaccineHistoriesController.PostVaccineHistory (CovidVaccine)'
+2021-02-10 13:27:46.088 +08:00 [INF] Route matched with {action = "PostVaccineHistory", controller = "VaccineHistories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CovidVaccine.Model.VaccineHistory]] PostVaccineHistory(CovidVaccine.Commands.PostVaccineHistoryCommand) on controller CovidVaccine.V2.Controllers.VaccineHistoriesController (CovidVaccine).
+2021-02-10 13:27:46.366 +08:00 [INF] Executed DbCommand (43ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = Decimal), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `VaccineHistories` (`DateVaccinated`, `Dosage`, `InventoryId`, `PatientId`)
+VALUES (@p0, @p1, @p2, @p3);
+SELECT `Id`
+FROM `VaccineHistories`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+2021-02-10 13:27:46.438 +08:00 [INF] Executing OkObjectResult, writing value of type 'CovidVaccine.Model.VaccineHistory'.
+2021-02-10 13:27:46.439 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.VaccineHistoriesController.PostVaccineHistory (CovidVaccine) in 350.7299ms
+2021-02-10 13:27:46.439 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.VaccineHistoriesController.PostVaccineHistory (CovidVaccine)'
+2021-02-10 13:27:46.440 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost:16866/api/v2/VaccineHistories application/json;+charset=utf-8 123 - 200 - application/json;+charset=utf-8 366.5956ms
+2021-02-10 13:27:51.185 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/VaccineHistories/GetAllHistoryJoinPatientJoinInventory - -
+2021-02-10 13:27:51.185 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.VaccineHistoriesController.GetAllHistoryJoinPatientJoinInventory (CovidVaccine)'
+2021-02-10 13:27:51.185 +08:00 [INF] Route matched with {action = "GetAllHistoryJoinPatientJoinInventory", controller = "VaccineHistories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.VaccineHistory]]] GetAllHistoryJoinPatientJoinInventory() on controller CovidVaccine.V2.Controllers.VaccineHistoriesController (CovidVaccine).
+2021-02-10 13:27:51.196 +08:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`DateVaccinated`, `v`.`Dosage`, `v`.`InventoryId`, `v`.`PatientId`, `p`.`Id`, `p`.`Birthday`, `p`.`ContactNo`, `p`.`FirstName`, `p`.`LastName`, `p`.`MiddleName`, `p`.`Sex`, `v0`.`Id`, `v0`.`Amount`, `v0`.`ExpirationDate`, `v0`.`StorageDate`, `v0`.`VaccineId`, `v1`.`Id`, `v1`.`Description`, `v1`.`Name`
+FROM `VaccineHistories` AS `v`
+INNER JOIN `Patients` AS `p` ON `v`.`PatientId` = `p`.`Id`
+INNER JOIN `VaccineInventories` AS `v0` ON `v`.`InventoryId` = `v0`.`Id`
+INNER JOIN `Vaccines` AS `v1` ON `v0`.`VaccineId` = `v1`.`Id`
+2021-02-10 13:27:51.198 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.VaccineHistory, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-10 13:27:51.198 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.VaccineHistoriesController.GetAllHistoryJoinPatientJoinInventory (CovidVaccine) in 12.6583ms
+2021-02-10 13:27:51.198 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.VaccineHistoriesController.GetAllHistoryJoinPatientJoinInventory (CovidVaccine)'
+2021-02-10 13:27:51.199 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/VaccineHistories/GetAllHistoryJoinPatientJoinInventory - - - 200 - application/json;+charset=utf-8 13.7306ms
+2021-02-10 13:29:42.230 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/Patients - -
+2021-02-10 13:29:42.231 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-10 13:29:42.232 +08:00 [INF] Route matched with {action = "GetPatients", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.Patient]]] GetPatients() on controller CovidVaccine.V2.Controllers.PatientsController (CovidVaccine).
+2021-02-10 13:29:42.265 +08:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Birthday`, `p`.`ContactNo`, `p`.`FirstName`, `p`.`LastName`, `p`.`MiddleName`, `p`.`Sex`
+FROM `Patients` AS `p`
+2021-02-10 13:29:42.272 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.Patient, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-10 13:29:42.273 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine) in 41.1945ms
+2021-02-10 13:29:42.273 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-10 13:29:42.274 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/Patients - - - 200 - application/json;+charset=utf-8 43.4867ms
+2021-02-10 13:29:44.673 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/VaccineInventories/GetAllInventoryJoinVaccine - -
+2021-02-10 13:29:44.674 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.VaccineInventoriesController.GetAllInventoryJoinVaccine (CovidVaccine)'
+2021-02-10 13:29:44.674 +08:00 [INF] Route matched with {action = "GetAllInventoryJoinVaccine", controller = "VaccineInventories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.VaccineInventory]]] GetAllInventoryJoinVaccine() on controller CovidVaccine.V2.Controllers.VaccineInventoriesController (CovidVaccine).
+2021-02-10 13:29:44.698 +08:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`Amount`, `v`.`ExpirationDate`, `v`.`StorageDate`, `v`.`VaccineId`, `v0`.`Id`, `v0`.`Description`, `v0`.`Name`
+FROM `VaccineInventories` AS `v`
+INNER JOIN `Vaccines` AS `v0` ON `v`.`VaccineId` = `v0`.`Id`
+2021-02-10 13:29:44.699 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.VaccineInventory, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-10 13:29:44.699 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.VaccineInventoriesController.GetAllInventoryJoinVaccine (CovidVaccine) in 24.7819ms
+2021-02-10 13:29:44.699 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.VaccineInventoriesController.GetAllInventoryJoinVaccine (CovidVaccine)'
+2021-02-10 13:29:44.700 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/VaccineInventories/GetAllInventoryJoinVaccine - - - 200 - application/json;+charset=utf-8 26.7671ms
+2021-02-10 13:29:46.060 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/Vaccines - -
+2021-02-10 13:29:46.060 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.VaccinesController.GetVaccines (CovidVaccine)'
+2021-02-10 13:29:46.067 +08:00 [INF] Route matched with {action = "GetVaccines", controller = "Vaccines"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.Vaccine]]] GetVaccines() on controller CovidVaccine.V2.Controllers.VaccinesController (CovidVaccine).
+2021-02-10 13:29:46.090 +08:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`Description`, `v`.`Name`
+FROM `Vaccines` AS `v`
+2021-02-10 13:29:46.092 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.Vaccine, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-10 13:29:46.093 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.VaccinesController.GetVaccines (CovidVaccine) in 26.084ms
+2021-02-10 13:29:46.093 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.VaccinesController.GetVaccines (CovidVaccine)'
+2021-02-10 13:29:46.094 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/Vaccines - - - 200 - application/json;+charset=utf-8 33.7463ms
+2021-02-10 13:29:47.159 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/VaccineInventories/GetAllInventoryJoinVaccine - -
+2021-02-10 13:29:47.159 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.VaccineInventoriesController.GetAllInventoryJoinVaccine (CovidVaccine)'
+2021-02-10 13:29:47.160 +08:00 [INF] Route matched with {action = "GetAllInventoryJoinVaccine", controller = "VaccineInventories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.VaccineInventory]]] GetAllInventoryJoinVaccine() on controller CovidVaccine.V2.Controllers.VaccineInventoriesController (CovidVaccine).
+2021-02-10 13:29:47.168 +08:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`Amount`, `v`.`ExpirationDate`, `v`.`StorageDate`, `v`.`VaccineId`, `v0`.`Id`, `v0`.`Description`, `v0`.`Name`
+FROM `VaccineInventories` AS `v`
+INNER JOIN `Vaccines` AS `v0` ON `v`.`VaccineId` = `v0`.`Id`
+2021-02-10 13:29:47.170 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.VaccineInventory, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-10 13:29:47.170 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.VaccineInventoriesController.GetAllInventoryJoinVaccine (CovidVaccine) in 10.3144ms
+2021-02-10 13:29:47.170 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.VaccineInventoriesController.GetAllInventoryJoinVaccine (CovidVaccine)'
+2021-02-10 13:29:47.171 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/VaccineInventories/GetAllInventoryJoinVaccine - - - 200 - application/json;+charset=utf-8 11.6370ms
+2021-02-10 13:29:48.700 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/VaccineHistories/GetAllHistoryJoinPatientJoinInventory - -
+2021-02-10 13:29:48.700 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.VaccineHistoriesController.GetAllHistoryJoinPatientJoinInventory (CovidVaccine)'
+2021-02-10 13:29:48.700 +08:00 [INF] Route matched with {action = "GetAllHistoryJoinPatientJoinInventory", controller = "VaccineHistories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.VaccineHistory]]] GetAllHistoryJoinPatientJoinInventory() on controller CovidVaccine.V2.Controllers.VaccineHistoriesController (CovidVaccine).
+2021-02-10 13:29:48.709 +08:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`DateVaccinated`, `v`.`Dosage`, `v`.`InventoryId`, `v`.`PatientId`, `p`.`Id`, `p`.`Birthday`, `p`.`ContactNo`, `p`.`FirstName`, `p`.`LastName`, `p`.`MiddleName`, `p`.`Sex`, `v0`.`Id`, `v0`.`Amount`, `v0`.`ExpirationDate`, `v0`.`StorageDate`, `v0`.`VaccineId`, `v1`.`Id`, `v1`.`Description`, `v1`.`Name`
+FROM `VaccineHistories` AS `v`
+INNER JOIN `Patients` AS `p` ON `v`.`PatientId` = `p`.`Id`
+INNER JOIN `VaccineInventories` AS `v0` ON `v`.`InventoryId` = `v0`.`Id`
+INNER JOIN `Vaccines` AS `v1` ON `v0`.`VaccineId` = `v1`.`Id`
+2021-02-10 13:29:48.711 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.VaccineHistory, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-10 13:29:48.712 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.VaccineHistoriesController.GetAllHistoryJoinPatientJoinInventory (CovidVaccine) in 10.9898ms
+2021-02-10 13:29:48.712 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.VaccineHistoriesController.GetAllHistoryJoinPatientJoinInventory (CovidVaccine)'
+2021-02-10 13:29:48.712 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/VaccineHistories/GetAllHistoryJoinPatientJoinInventory - - - 200 - application/json;+charset=utf-8 12.1175ms
+2021-02-10 13:29:50.118 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/Patients - -
+2021-02-10 13:29:50.119 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-10 13:29:50.119 +08:00 [INF] Route matched with {action = "GetPatients", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.Patient]]] GetPatients() on controller CovidVaccine.V2.Controllers.PatientsController (CovidVaccine).
+2021-02-10 13:29:50.126 +08:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Birthday`, `p`.`ContactNo`, `p`.`FirstName`, `p`.`LastName`, `p`.`MiddleName`, `p`.`Sex`
+FROM `Patients` AS `p`
+2021-02-10 13:29:50.126 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/VaccineInventories/GetAllInventoryJoinVaccine - -
+2021-02-10 13:29:50.126 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.VaccineInventoriesController.GetAllInventoryJoinVaccine (CovidVaccine)'
+2021-02-10 13:29:50.126 +08:00 [INF] Route matched with {action = "GetAllInventoryJoinVaccine", controller = "VaccineInventories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.VaccineInventory]]] GetAllInventoryJoinVaccine() on controller CovidVaccine.V2.Controllers.VaccineInventoriesController (CovidVaccine).
+2021-02-10 13:29:50.129 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.Patient, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-10 13:29:50.130 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine) in 10.7852ms
+2021-02-10 13:29:50.130 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-10 13:29:50.131 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/Patients - - - 200 - application/json;+charset=utf-8 12.5749ms
+2021-02-10 13:29:50.131 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`Amount`, `v`.`ExpirationDate`, `v`.`StorageDate`, `v`.`VaccineId`, `v0`.`Id`, `v0`.`Description`, `v0`.`Name`
+FROM `VaccineInventories` AS `v`
+INNER JOIN `Vaccines` AS `v0` ON `v`.`VaccineId` = `v0`.`Id`
+2021-02-10 13:29:50.135 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.VaccineInventory, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-10 13:29:50.135 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.VaccineInventoriesController.GetAllInventoryJoinVaccine (CovidVaccine) in 9.2366ms
+2021-02-10 13:29:50.136 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.VaccineInventoriesController.GetAllInventoryJoinVaccine (CovidVaccine)'
+2021-02-10 13:29:50.136 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/VaccineInventories/GetAllInventoryJoinVaccine - - - 200 - application/json;+charset=utf-8 10.2995ms
+2021-02-10 13:30:03.375 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/VaccineHistories/GetAllHistoryJoinPatientJoinInventory - -
+2021-02-10 13:30:03.375 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.VaccineHistoriesController.GetAllHistoryJoinPatientJoinInventory (CovidVaccine)'
+2021-02-10 13:30:03.376 +08:00 [INF] Route matched with {action = "GetAllHistoryJoinPatientJoinInventory", controller = "VaccineHistories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.VaccineHistory]]] GetAllHistoryJoinPatientJoinInventory() on controller CovidVaccine.V2.Controllers.VaccineHistoriesController (CovidVaccine).
+2021-02-10 13:30:03.386 +08:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`DateVaccinated`, `v`.`Dosage`, `v`.`InventoryId`, `v`.`PatientId`, `p`.`Id`, `p`.`Birthday`, `p`.`ContactNo`, `p`.`FirstName`, `p`.`LastName`, `p`.`MiddleName`, `p`.`Sex`, `v0`.`Id`, `v0`.`Amount`, `v0`.`ExpirationDate`, `v0`.`StorageDate`, `v0`.`VaccineId`, `v1`.`Id`, `v1`.`Description`, `v1`.`Name`
+FROM `VaccineHistories` AS `v`
+INNER JOIN `Patients` AS `p` ON `v`.`PatientId` = `p`.`Id`
+INNER JOIN `VaccineInventories` AS `v0` ON `v`.`InventoryId` = `v0`.`Id`
+INNER JOIN `Vaccines` AS `v1` ON `v0`.`VaccineId` = `v1`.`Id`
+2021-02-10 13:30:03.387 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.VaccineHistory, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-10 13:30:03.388 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.VaccineHistoriesController.GetAllHistoryJoinPatientJoinInventory (CovidVaccine) in 11.8293ms
+2021-02-10 13:30:03.388 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.VaccineHistoriesController.GetAllHistoryJoinPatientJoinInventory (CovidVaccine)'
+2021-02-10 13:30:03.388 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/VaccineHistories/GetAllHistoryJoinPatientJoinInventory - - - 200 - application/json;+charset=utf-8 13.3192ms
+2021-02-10 13:32:38.365 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/Patients - -
+2021-02-10 13:32:38.366 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-10 13:32:38.366 +08:00 [INF] Route matched with {action = "GetPatients", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.Patient]]] GetPatients() on controller CovidVaccine.V2.Controllers.PatientsController (CovidVaccine).
+2021-02-10 13:32:38.407 +08:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Birthday`, `p`.`ContactNo`, `p`.`FirstName`, `p`.`LastName`, `p`.`MiddleName`, `p`.`Sex`
+FROM `Patients` AS `p`
+2021-02-10 13:32:38.410 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.Patient, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-10 13:32:38.410 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine) in 43.8924ms
+2021-02-10 13:32:38.411 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-10 13:32:38.411 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/Patients - - - 200 - application/json;+charset=utf-8 45.8496ms
+2021-02-10 13:32:41.912 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/VaccineHistories/GetAllHistoryJoinPatientJoinInventory - -
+2021-02-10 13:32:41.913 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.VaccineHistoriesController.GetAllHistoryJoinPatientJoinInventory (CovidVaccine)'
+2021-02-10 13:32:41.914 +08:00 [INF] Route matched with {action = "GetAllHistoryJoinPatientJoinInventory", controller = "VaccineHistories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.VaccineHistory]]] GetAllHistoryJoinPatientJoinInventory() on controller CovidVaccine.V2.Controllers.VaccineHistoriesController (CovidVaccine).
+2021-02-10 13:32:41.926 +08:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`DateVaccinated`, `v`.`Dosage`, `v`.`InventoryId`, `v`.`PatientId`, `p`.`Id`, `p`.`Birthday`, `p`.`ContactNo`, `p`.`FirstName`, `p`.`LastName`, `p`.`MiddleName`, `p`.`Sex`, `v0`.`Id`, `v0`.`Amount`, `v0`.`ExpirationDate`, `v0`.`StorageDate`, `v0`.`VaccineId`, `v1`.`Id`, `v1`.`Description`, `v1`.`Name`
+FROM `VaccineHistories` AS `v`
+INNER JOIN `Patients` AS `p` ON `v`.`PatientId` = `p`.`Id`
+INNER JOIN `VaccineInventories` AS `v0` ON `v`.`InventoryId` = `v0`.`Id`
+INNER JOIN `Vaccines` AS `v1` ON `v0`.`VaccineId` = `v1`.`Id`
+2021-02-10 13:32:41.928 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.VaccineHistory, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-10 13:32:41.930 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.VaccineHistoriesController.GetAllHistoryJoinPatientJoinInventory (CovidVaccine) in 15.8244ms
+2021-02-10 13:32:41.930 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.VaccineHistoriesController.GetAllHistoryJoinPatientJoinInventory (CovidVaccine)'
+2021-02-10 13:32:41.930 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/VaccineHistories/GetAllHistoryJoinPatientJoinInventory - - - 200 - application/json;+charset=utf-8 18.7931ms
+2021-02-10 13:32:43.066 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/VaccineInventories/GetAllInventoryJoinVaccine - -
+2021-02-10 13:32:43.066 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/Patients - -
+2021-02-10 13:32:43.067 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.VaccineInventoriesController.GetAllInventoryJoinVaccine (CovidVaccine)'
+2021-02-10 13:32:43.067 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-10 13:32:43.067 +08:00 [INF] Route matched with {action = "GetAllInventoryJoinVaccine", controller = "VaccineInventories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.VaccineInventory]]] GetAllInventoryJoinVaccine() on controller CovidVaccine.V2.Controllers.VaccineInventoriesController (CovidVaccine).
+2021-02-10 13:32:43.067 +08:00 [INF] Route matched with {action = "GetPatients", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.Patient]]] GetPatients() on controller CovidVaccine.V2.Controllers.PatientsController (CovidVaccine).
+2021-02-10 13:32:43.088 +08:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Birthday`, `p`.`ContactNo`, `p`.`FirstName`, `p`.`LastName`, `p`.`MiddleName`, `p`.`Sex`
+FROM `Patients` AS `p`
+2021-02-10 13:32:43.089 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.Patient, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-10 13:32:43.090 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine) in 22.6818ms
+2021-02-10 13:32:43.090 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-10 13:32:43.090 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/Patients - - - 200 - application/json;+charset=utf-8 23.4606ms
+2021-02-10 13:32:43.106 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`Amount`, `v`.`ExpirationDate`, `v`.`StorageDate`, `v`.`VaccineId`, `v0`.`Id`, `v0`.`Description`, `v0`.`Name`
+FROM `VaccineInventories` AS `v`
+INNER JOIN `Vaccines` AS `v0` ON `v`.`VaccineId` = `v0`.`Id`
+2021-02-10 13:32:43.107 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.VaccineInventory, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-10 13:32:43.107 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.VaccineInventoriesController.GetAllInventoryJoinVaccine (CovidVaccine) in 40.4244ms
+2021-02-10 13:32:43.107 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.VaccineInventoriesController.GetAllInventoryJoinVaccine (CovidVaccine)'
+2021-02-10 13:32:43.108 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/VaccineInventories/GetAllInventoryJoinVaccine - - - 200 - application/json;+charset=utf-8 41.3705ms
+2021-02-10 13:32:49.541 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/VaccineHistories/GetAllHistoryJoinPatientJoinInventory - -
+2021-02-10 13:32:49.541 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.VaccineHistoriesController.GetAllHistoryJoinPatientJoinInventory (CovidVaccine)'
+2021-02-10 13:32:49.541 +08:00 [INF] Route matched with {action = "GetAllHistoryJoinPatientJoinInventory", controller = "VaccineHistories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.VaccineHistory]]] GetAllHistoryJoinPatientJoinInventory() on controller CovidVaccine.V2.Controllers.VaccineHistoriesController (CovidVaccine).
+2021-02-10 13:32:49.547 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`DateVaccinated`, `v`.`Dosage`, `v`.`InventoryId`, `v`.`PatientId`, `p`.`Id`, `p`.`Birthday`, `p`.`ContactNo`, `p`.`FirstName`, `p`.`LastName`, `p`.`MiddleName`, `p`.`Sex`, `v0`.`Id`, `v0`.`Amount`, `v0`.`ExpirationDate`, `v0`.`StorageDate`, `v0`.`VaccineId`, `v1`.`Id`, `v1`.`Description`, `v1`.`Name`
+FROM `VaccineHistories` AS `v`
+INNER JOIN `Patients` AS `p` ON `v`.`PatientId` = `p`.`Id`
+INNER JOIN `VaccineInventories` AS `v0` ON `v`.`InventoryId` = `v0`.`Id`
+INNER JOIN `Vaccines` AS `v1` ON `v0`.`VaccineId` = `v1`.`Id`
+2021-02-10 13:32:49.548 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.VaccineHistory, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-10 13:32:49.549 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.VaccineHistoriesController.GetAllHistoryJoinPatientJoinInventory (CovidVaccine) in 7.8035ms
+2021-02-10 13:32:49.549 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.VaccineHistoriesController.GetAllHistoryJoinPatientJoinInventory (CovidVaccine)'
+2021-02-10 13:32:49.549 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/VaccineHistories/GetAllHistoryJoinPatientJoinInventory - - - 200 - application/json;+charset=utf-8 8.6496ms
+2021-02-10 13:33:33.221 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/Patients - -
+2021-02-10 13:33:33.221 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-10 13:33:33.221 +08:00 [INF] Route matched with {action = "GetPatients", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.Patient]]] GetPatients() on controller CovidVaccine.V2.Controllers.PatientsController (CovidVaccine).
+2021-02-10 13:33:33.243 +08:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Birthday`, `p`.`ContactNo`, `p`.`FirstName`, `p`.`LastName`, `p`.`MiddleName`, `p`.`Sex`
+FROM `Patients` AS `p`
+2021-02-10 13:33:33.244 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.Patient, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-10 13:33:33.245 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine) in 21.6359ms
+2021-02-10 13:33:33.245 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-10 13:33:33.245 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/Patients - - - 200 - application/json;+charset=utf-8 24.4214ms
+2021-02-10 13:33:41.414 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/VaccineHistories/GetAllHistoryJoinPatientJoinInventory - -
+2021-02-10 13:33:41.414 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.VaccineHistoriesController.GetAllHistoryJoinPatientJoinInventory (CovidVaccine)'
+2021-02-10 13:33:41.414 +08:00 [INF] Route matched with {action = "GetAllHistoryJoinPatientJoinInventory", controller = "VaccineHistories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.VaccineHistory]]] GetAllHistoryJoinPatientJoinInventory() on controller CovidVaccine.V2.Controllers.VaccineHistoriesController (CovidVaccine).
+2021-02-10 13:33:41.432 +08:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`DateVaccinated`, `v`.`Dosage`, `v`.`InventoryId`, `v`.`PatientId`, `p`.`Id`, `p`.`Birthday`, `p`.`ContactNo`, `p`.`FirstName`, `p`.`LastName`, `p`.`MiddleName`, `p`.`Sex`, `v0`.`Id`, `v0`.`Amount`, `v0`.`ExpirationDate`, `v0`.`StorageDate`, `v0`.`VaccineId`, `v1`.`Id`, `v1`.`Description`, `v1`.`Name`
+FROM `VaccineHistories` AS `v`
+INNER JOIN `Patients` AS `p` ON `v`.`PatientId` = `p`.`Id`
+INNER JOIN `VaccineInventories` AS `v0` ON `v`.`InventoryId` = `v0`.`Id`
+INNER JOIN `Vaccines` AS `v1` ON `v0`.`VaccineId` = `v1`.`Id`
+2021-02-10 13:33:41.434 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.VaccineHistory, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-10 13:33:41.434 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.VaccineHistoriesController.GetAllHistoryJoinPatientJoinInventory (CovidVaccine) in 20.0459ms
+2021-02-10 13:33:41.434 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.VaccineHistoriesController.GetAllHistoryJoinPatientJoinInventory (CovidVaccine)'
+2021-02-10 13:33:41.434 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/VaccineHistories/GetAllHistoryJoinPatientJoinInventory - - - 200 - application/json;+charset=utf-8 20.8741ms
+2021-02-10 13:33:42.570 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/VaccineInventories/GetAllInventoryJoinVaccine - -
+2021-02-10 13:33:42.570 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/Patients - -
+2021-02-10 13:33:42.570 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.VaccineInventoriesController.GetAllInventoryJoinVaccine (CovidVaccine)'
+2021-02-10 13:33:42.570 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-10 13:33:42.570 +08:00 [INF] Route matched with {action = "GetAllInventoryJoinVaccine", controller = "VaccineInventories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.VaccineInventory]]] GetAllInventoryJoinVaccine() on controller CovidVaccine.V2.Controllers.VaccineInventoriesController (CovidVaccine).
+2021-02-10 13:33:42.570 +08:00 [INF] Route matched with {action = "GetPatients", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.Patient]]] GetPatients() on controller CovidVaccine.V2.Controllers.PatientsController (CovidVaccine).
+2021-02-10 13:33:42.615 +08:00 [INF] Executed DbCommand (36ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Birthday`, `p`.`ContactNo`, `p`.`FirstName`, `p`.`LastName`, `p`.`MiddleName`, `p`.`Sex`
+FROM `Patients` AS `p`
+2021-02-10 13:33:42.616 +08:00 [INF] Executed DbCommand (34ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`Amount`, `v`.`ExpirationDate`, `v`.`StorageDate`, `v`.`VaccineId`, `v0`.`Id`, `v0`.`Description`, `v0`.`Name`
+FROM `VaccineInventories` AS `v`
+INNER JOIN `Vaccines` AS `v0` ON `v`.`VaccineId` = `v0`.`Id`
+2021-02-10 13:33:42.617 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.VaccineInventory, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-10 13:33:42.617 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.Patient, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-10 13:33:42.617 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.VaccineInventoriesController.GetAllInventoryJoinVaccine (CovidVaccine) in 47.3646ms
+2021-02-10 13:33:42.618 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.VaccineInventoriesController.GetAllInventoryJoinVaccine (CovidVaccine)'
+2021-02-10 13:33:42.618 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine) in 47.7376ms
+2021-02-10 13:33:42.618 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-10 13:33:42.618 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/Patients - - - 200 - application/json;+charset=utf-8 48.4974ms
+2021-02-10 13:33:42.618 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/VaccineInventories/GetAllInventoryJoinVaccine - - - 200 - application/json;+charset=utf-8 48.4699ms
+2021-02-10 13:35:09.583 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/Patients - -
+2021-02-10 13:35:09.584 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-10 13:35:09.585 +08:00 [INF] Route matched with {action = "GetPatients", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.Patient]]] GetPatients() on controller CovidVaccine.V2.Controllers.PatientsController (CovidVaccine).
+2021-02-10 13:35:09.607 +08:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Birthday`, `p`.`ContactNo`, `p`.`FirstName`, `p`.`LastName`, `p`.`MiddleName`, `p`.`Sex`
+FROM `Patients` AS `p`
+2021-02-10 13:35:09.613 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.Patient, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-10 13:35:09.613 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine) in 27.8279ms
+2021-02-10 13:35:09.613 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-10 13:35:09.615 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/Patients - - - 200 - application/json;+charset=utf-8 31.5968ms
+2021-02-10 13:35:11.248 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/Vaccines - -
+2021-02-10 13:35:11.248 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.VaccinesController.GetVaccines (CovidVaccine)'
+2021-02-10 13:35:11.249 +08:00 [INF] Route matched with {action = "GetVaccines", controller = "Vaccines"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.Vaccine]]] GetVaccines() on controller CovidVaccine.V2.Controllers.VaccinesController (CovidVaccine).
+2021-02-10 13:35:11.275 +08:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`Description`, `v`.`Name`
+FROM `Vaccines` AS `v`
+2021-02-10 13:35:11.276 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.Vaccine, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-10 13:35:11.276 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.VaccinesController.GetVaccines (CovidVaccine) in 26.786ms
+2021-02-10 13:35:11.276 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.VaccinesController.GetVaccines (CovidVaccine)'
+2021-02-10 13:35:11.277 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/Vaccines - - - 200 - application/json;+charset=utf-8 28.5009ms
+2021-02-10 13:35:19.899 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:16866/api/v2/Patients application/json;+charset=utf-8 144
+2021-02-10 13:35:19.899 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.PatientsController.PostPatient (CovidVaccine)'
+2021-02-10 13:35:19.904 +08:00 [INF] Route matched with {action = "PostPatient", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CovidVaccine.Model.Patient]] PostPatient(CovidVaccine.Commands.PostPatientCommand) on controller CovidVaccine.V2.Controllers.PatientsController (CovidVaccine).
+2021-02-10 13:35:20.009 +08:00 [INF] Executed DbCommand (23ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 1)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `Patients` (`Birthday`, `ContactNo`, `FirstName`, `LastName`, `MiddleName`, `Sex`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT `Id`
+FROM `Patients`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+2021-02-10 13:35:20.051 +08:00 [INF] Executing OkObjectResult, writing value of type 'CovidVaccine.Model.Patient'.
+2021-02-10 13:35:20.051 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.PatientsController.PostPatient (CovidVaccine) in 146.8969ms
+2021-02-10 13:35:20.051 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.PatientsController.PostPatient (CovidVaccine)'
+2021-02-10 13:35:20.052 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost:16866/api/v2/Patients application/json;+charset=utf-8 144 - 200 - application/json;+charset=utf-8 152.9183ms
+2021-02-10 13:35:21.594 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/Patients - -
+2021-02-10 13:35:21.594 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-10 13:35:21.595 +08:00 [INF] Route matched with {action = "GetPatients", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.Patient]]] GetPatients() on controller CovidVaccine.V2.Controllers.PatientsController (CovidVaccine).
+2021-02-10 13:35:21.605 +08:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Birthday`, `p`.`ContactNo`, `p`.`FirstName`, `p`.`LastName`, `p`.`MiddleName`, `p`.`Sex`
+FROM `Patients` AS `p`
+2021-02-10 13:35:21.606 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.Patient, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-10 13:35:21.607 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine) in 11.9118ms
+2021-02-10 13:35:21.607 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-10 13:35:21.607 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/Patients - - - 200 - application/json;+charset=utf-8 13.2870ms
+2021-02-10 13:35:23.229 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/VaccineInventories/GetAllInventoryJoinVaccine - -
+2021-02-10 13:35:23.229 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.VaccineInventoriesController.GetAllInventoryJoinVaccine (CovidVaccine)'
+2021-02-10 13:35:23.229 +08:00 [INF] Route matched with {action = "GetAllInventoryJoinVaccine", controller = "VaccineInventories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.VaccineInventory]]] GetAllInventoryJoinVaccine() on controller CovidVaccine.V2.Controllers.VaccineInventoriesController (CovidVaccine).
+2021-02-10 13:35:23.240 +08:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`Amount`, `v`.`ExpirationDate`, `v`.`StorageDate`, `v`.`VaccineId`, `v0`.`Id`, `v0`.`Description`, `v0`.`Name`
+FROM `VaccineInventories` AS `v`
+INNER JOIN `Vaccines` AS `v0` ON `v`.`VaccineId` = `v0`.`Id`
+2021-02-10 13:35:23.241 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.VaccineInventory, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-10 13:35:23.241 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.VaccineInventoriesController.GetAllInventoryJoinVaccine (CovidVaccine) in 11.8391ms
+2021-02-10 13:35:23.241 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.VaccineInventoriesController.GetAllInventoryJoinVaccine (CovidVaccine)'
+2021-02-10 13:35:23.241 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/VaccineInventories/GetAllInventoryJoinVaccine - - - 200 - application/json;+charset=utf-8 12.8547ms
+2021-02-10 13:35:24.237 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/Vaccines - -
+2021-02-10 13:35:24.237 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.VaccinesController.GetVaccines (CovidVaccine)'
+2021-02-10 13:35:24.237 +08:00 [INF] Route matched with {action = "GetVaccines", controller = "Vaccines"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.Vaccine]]] GetVaccines() on controller CovidVaccine.V2.Controllers.VaccinesController (CovidVaccine).
+2021-02-10 13:35:24.247 +08:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`Description`, `v`.`Name`
+FROM `Vaccines` AS `v`
+2021-02-10 13:35:24.248 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.Vaccine, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-10 13:35:24.248 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.VaccinesController.GetVaccines (CovidVaccine) in 10.9065ms
+2021-02-10 13:35:24.248 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.VaccinesController.GetVaccines (CovidVaccine)'
+2021-02-10 13:35:24.249 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/Vaccines - - - 200 - application/json;+charset=utf-8 11.9754ms
+2021-02-10 13:35:29.459 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/VaccineInventories/GetAllInventoryJoinVaccine - -
+2021-02-10 13:35:29.459 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.VaccineInventoriesController.GetAllInventoryJoinVaccine (CovidVaccine)'
+2021-02-10 13:35:29.460 +08:00 [INF] Route matched with {action = "GetAllInventoryJoinVaccine", controller = "VaccineInventories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.VaccineInventory]]] GetAllInventoryJoinVaccine() on controller CovidVaccine.V2.Controllers.VaccineInventoriesController (CovidVaccine).
+2021-02-10 13:35:29.469 +08:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`Amount`, `v`.`ExpirationDate`, `v`.`StorageDate`, `v`.`VaccineId`, `v0`.`Id`, `v0`.`Description`, `v0`.`Name`
+FROM `VaccineInventories` AS `v`
+INNER JOIN `Vaccines` AS `v0` ON `v`.`VaccineId` = `v0`.`Id`
+2021-02-10 13:35:29.470 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.VaccineInventory, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-10 13:35:29.470 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.VaccineInventoriesController.GetAllInventoryJoinVaccine (CovidVaccine) in 10.5682ms
+2021-02-10 13:35:29.471 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.VaccineInventoriesController.GetAllInventoryJoinVaccine (CovidVaccine)'
+2021-02-10 13:35:29.471 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/VaccineInventories/GetAllInventoryJoinVaccine - - - 200 - application/json;+charset=utf-8 12.0269ms
+2021-02-10 13:36:51.131 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/Patients - -
+2021-02-10 13:36:51.131 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-10 13:36:51.131 +08:00 [INF] Route matched with {action = "GetPatients", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.Patient]]] GetPatients() on controller CovidVaccine.V2.Controllers.PatientsController (CovidVaccine).
+2021-02-10 13:36:51.171 +08:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Birthday`, `p`.`ContactNo`, `p`.`FirstName`, `p`.`LastName`, `p`.`MiddleName`, `p`.`Sex`
+FROM `Patients` AS `p`
+2021-02-10 13:36:51.172 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.Patient, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-10 13:36:51.174 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine) in 42.7377ms
+2021-02-10 13:36:51.174 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-10 13:36:51.185 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/Patients - - - 200 - application/json;+charset=utf-8 54.4986ms
+2021-02-10 13:36:52.760 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/VaccineHistories/GetAllHistoryJoinPatientJoinInventory - -
+2021-02-10 13:36:52.760 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.VaccineHistoriesController.GetAllHistoryJoinPatientJoinInventory (CovidVaccine)'
+2021-02-10 13:36:52.761 +08:00 [INF] Route matched with {action = "GetAllHistoryJoinPatientJoinInventory", controller = "VaccineHistories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.VaccineHistory]]] GetAllHistoryJoinPatientJoinInventory() on controller CovidVaccine.V2.Controllers.VaccineHistoriesController (CovidVaccine).
+2021-02-10 13:36:52.771 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`DateVaccinated`, `v`.`Dosage`, `v`.`InventoryId`, `v`.`PatientId`, `p`.`Id`, `p`.`Birthday`, `p`.`ContactNo`, `p`.`FirstName`, `p`.`LastName`, `p`.`MiddleName`, `p`.`Sex`, `v0`.`Id`, `v0`.`Amount`, `v0`.`ExpirationDate`, `v0`.`StorageDate`, `v0`.`VaccineId`, `v1`.`Id`, `v1`.`Description`, `v1`.`Name`
+FROM `VaccineHistories` AS `v`
+INNER JOIN `Patients` AS `p` ON `v`.`PatientId` = `p`.`Id`
+INNER JOIN `VaccineInventories` AS `v0` ON `v`.`InventoryId` = `v0`.`Id`
+INNER JOIN `Vaccines` AS `v1` ON `v0`.`VaccineId` = `v1`.`Id`
+2021-02-10 13:36:52.772 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.VaccineHistory, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-10 13:36:52.772 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.VaccineHistoriesController.GetAllHistoryJoinPatientJoinInventory (CovidVaccine) in 11.437ms
+2021-02-10 13:36:52.772 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.VaccineHistoriesController.GetAllHistoryJoinPatientJoinInventory (CovidVaccine)'
+2021-02-10 13:36:52.773 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/VaccineHistories/GetAllHistoryJoinPatientJoinInventory - - - 200 - application/json;+charset=utf-8 12.9366ms
+2021-02-10 13:36:54.837 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/Patients - -
+2021-02-10 13:36:54.837 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-10 13:36:54.837 +08:00 [INF] Route matched with {action = "GetPatients", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.Patient]]] GetPatients() on controller CovidVaccine.V2.Controllers.PatientsController (CovidVaccine).
+2021-02-10 13:36:54.838 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/VaccineInventories/GetAllInventoryJoinVaccine - -
+2021-02-10 13:36:54.838 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.VaccineInventoriesController.GetAllInventoryJoinVaccine (CovidVaccine)'
+2021-02-10 13:36:54.838 +08:00 [INF] Route matched with {action = "GetAllInventoryJoinVaccine", controller = "VaccineInventories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.VaccineInventory]]] GetAllInventoryJoinVaccine() on controller CovidVaccine.V2.Controllers.VaccineInventoriesController (CovidVaccine).
+2021-02-10 13:36:54.856 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`Amount`, `v`.`ExpirationDate`, `v`.`StorageDate`, `v`.`VaccineId`, `v0`.`Id`, `v0`.`Description`, `v0`.`Name`
+FROM `VaccineInventories` AS `v`
+INNER JOIN `Vaccines` AS `v0` ON `v`.`VaccineId` = `v0`.`Id`
+2021-02-10 13:36:54.875 +08:00 [INF] Executed DbCommand (24ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Birthday`, `p`.`ContactNo`, `p`.`FirstName`, `p`.`LastName`, `p`.`MiddleName`, `p`.`Sex`
+FROM `Patients` AS `p`
+2021-02-10 13:36:54.878 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.VaccineInventory, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-10 13:36:54.879 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.VaccineInventoriesController.GetAllInventoryJoinVaccine (CovidVaccine) in 40.5428ms
+2021-02-10 13:36:54.879 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.VaccineInventoriesController.GetAllInventoryJoinVaccine (CovidVaccine)'
+2021-02-10 13:36:54.879 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.Patient, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-10 13:36:54.879 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/VaccineInventories/GetAllInventoryJoinVaccine - - - 200 - application/json;+charset=utf-8 41.7104ms
+2021-02-10 13:36:54.880 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine) in 42.2649ms
+2021-02-10 13:36:54.880 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-10 13:36:54.880 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/Patients - - - 200 - application/json;+charset=utf-8 43.1928ms
+2021-02-10 13:37:23.742 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/Patients - -
+2021-02-10 13:37:23.742 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-10 13:37:23.743 +08:00 [INF] Route matched with {action = "GetPatients", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.Patient]]] GetPatients() on controller CovidVaccine.V2.Controllers.PatientsController (CovidVaccine).
+2021-02-10 13:37:23.762 +08:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Birthday`, `p`.`ContactNo`, `p`.`FirstName`, `p`.`LastName`, `p`.`MiddleName`, `p`.`Sex`
+FROM `Patients` AS `p`
+2021-02-10 13:37:23.764 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.Patient, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-10 13:37:23.765 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine) in 22.2737ms
+2021-02-10 13:37:23.765 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-10 13:37:23.772 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/Patients - - - 200 - application/json;+charset=utf-8 29.8963ms
+2021-02-10 13:37:30.429 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/VaccineHistories/GetAllHistoryJoinPatientJoinInventory - -
+2021-02-10 13:37:30.429 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.VaccineHistoriesController.GetAllHistoryJoinPatientJoinInventory (CovidVaccine)'
+2021-02-10 13:37:30.430 +08:00 [INF] Route matched with {action = "GetAllHistoryJoinPatientJoinInventory", controller = "VaccineHistories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.VaccineHistory]]] GetAllHistoryJoinPatientJoinInventory() on controller CovidVaccine.V2.Controllers.VaccineHistoriesController (CovidVaccine).
+2021-02-10 13:37:30.448 +08:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`DateVaccinated`, `v`.`Dosage`, `v`.`InventoryId`, `v`.`PatientId`, `p`.`Id`, `p`.`Birthday`, `p`.`ContactNo`, `p`.`FirstName`, `p`.`LastName`, `p`.`MiddleName`, `p`.`Sex`, `v0`.`Id`, `v0`.`Amount`, `v0`.`ExpirationDate`, `v0`.`StorageDate`, `v0`.`VaccineId`, `v1`.`Id`, `v1`.`Description`, `v1`.`Name`
+FROM `VaccineHistories` AS `v`
+INNER JOIN `Patients` AS `p` ON `v`.`PatientId` = `p`.`Id`
+INNER JOIN `VaccineInventories` AS `v0` ON `v`.`InventoryId` = `v0`.`Id`
+INNER JOIN `Vaccines` AS `v1` ON `v0`.`VaccineId` = `v1`.`Id`
+2021-02-10 13:37:30.450 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.VaccineHistory, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-10 13:37:30.450 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.VaccineHistoriesController.GetAllHistoryJoinPatientJoinInventory (CovidVaccine) in 20.5628ms
+2021-02-10 13:37:30.450 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.VaccineHistoriesController.GetAllHistoryJoinPatientJoinInventory (CovidVaccine)'
+2021-02-10 13:37:30.450 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/VaccineHistories/GetAllHistoryJoinPatientJoinInventory - - - 200 - application/json;+charset=utf-8 21.2792ms
+2021-02-10 13:37:31.191 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/Patients - -
+2021-02-10 13:37:31.192 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-10 13:37:31.192 +08:00 [INF] Route matched with {action = "GetPatients", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.Patient]]] GetPatients() on controller CovidVaccine.V2.Controllers.PatientsController (CovidVaccine).
+2021-02-10 13:37:31.192 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/VaccineInventories/GetAllInventoryJoinVaccine - -
+2021-02-10 13:37:31.193 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.VaccineInventoriesController.GetAllInventoryJoinVaccine (CovidVaccine)'
+2021-02-10 13:37:31.194 +08:00 [INF] Route matched with {action = "GetAllInventoryJoinVaccine", controller = "VaccineInventories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.VaccineInventory]]] GetAllInventoryJoinVaccine() on controller CovidVaccine.V2.Controllers.VaccineInventoriesController (CovidVaccine).
+2021-02-10 13:37:31.206 +08:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Birthday`, `p`.`ContactNo`, `p`.`FirstName`, `p`.`LastName`, `p`.`MiddleName`, `p`.`Sex`
+FROM `Patients` AS `p`
+2021-02-10 13:37:31.212 +08:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`Amount`, `v`.`ExpirationDate`, `v`.`StorageDate`, `v`.`VaccineId`, `v0`.`Id`, `v0`.`Description`, `v0`.`Name`
+FROM `VaccineInventories` AS `v`
+INNER JOIN `Vaccines` AS `v0` ON `v`.`VaccineId` = `v0`.`Id`
+2021-02-10 13:37:31.217 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.Patient, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-10 13:37:31.217 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.VaccineInventory, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-10 13:37:31.217 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine) in 25.3266ms
+2021-02-10 13:37:31.218 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-10 13:37:31.218 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/Patients - - - 200 - application/json;+charset=utf-8 27.3776ms
+2021-02-10 13:37:31.218 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.VaccineInventoriesController.GetAllInventoryJoinVaccine (CovidVaccine) in 23.4976ms
+2021-02-10 13:37:31.219 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.VaccineInventoriesController.GetAllInventoryJoinVaccine (CovidVaccine)'
+2021-02-10 13:37:31.219 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/VaccineInventories/GetAllInventoryJoinVaccine - - - 200 - application/json;+charset=utf-8 26.2317ms
+2021-02-10 13:37:42.125 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:16866/api/v2/VaccineHistories application/json;+charset=utf-8 124
+2021-02-10 13:37:42.125 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.VaccineHistoriesController.PostVaccineHistory (CovidVaccine)'
+2021-02-10 13:37:42.125 +08:00 [INF] Route matched with {action = "PostVaccineHistory", controller = "VaccineHistories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CovidVaccine.Model.VaccineHistory]] PostVaccineHistory(CovidVaccine.Commands.PostVaccineHistoryCommand) on controller CovidVaccine.V2.Controllers.VaccineHistoriesController (CovidVaccine).
+2021-02-10 13:37:42.173 +08:00 [INF] Executed DbCommand (32ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = Decimal), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `VaccineHistories` (`DateVaccinated`, `Dosage`, `InventoryId`, `PatientId`)
+VALUES (@p0, @p1, @p2, @p3);
+SELECT `Id`
+FROM `VaccineHistories`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+2021-02-10 13:37:42.195 +08:00 [INF] Executing OkObjectResult, writing value of type 'CovidVaccine.Model.VaccineHistory'.
+2021-02-10 13:37:42.196 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.VaccineHistoriesController.PostVaccineHistory (CovidVaccine) in 70.5276ms
+2021-02-10 13:37:42.196 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.VaccineHistoriesController.PostVaccineHistory (CovidVaccine)'
+2021-02-10 13:37:42.196 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost:16866/api/v2/VaccineHistories application/json;+charset=utf-8 124 - 200 - application/json;+charset=utf-8 71.5186ms
+2021-02-10 13:37:43.628 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/VaccineHistories/GetAllHistoryJoinPatientJoinInventory - -
+2021-02-10 13:37:43.628 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.VaccineHistoriesController.GetAllHistoryJoinPatientJoinInventory (CovidVaccine)'
+2021-02-10 13:37:43.629 +08:00 [INF] Route matched with {action = "GetAllHistoryJoinPatientJoinInventory", controller = "VaccineHistories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.VaccineHistory]]] GetAllHistoryJoinPatientJoinInventory() on controller CovidVaccine.V2.Controllers.VaccineHistoriesController (CovidVaccine).
+2021-02-10 13:37:43.636 +08:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`DateVaccinated`, `v`.`Dosage`, `v`.`InventoryId`, `v`.`PatientId`, `p`.`Id`, `p`.`Birthday`, `p`.`ContactNo`, `p`.`FirstName`, `p`.`LastName`, `p`.`MiddleName`, `p`.`Sex`, `v0`.`Id`, `v0`.`Amount`, `v0`.`ExpirationDate`, `v0`.`StorageDate`, `v0`.`VaccineId`, `v1`.`Id`, `v1`.`Description`, `v1`.`Name`
+FROM `VaccineHistories` AS `v`
+INNER JOIN `Patients` AS `p` ON `v`.`PatientId` = `p`.`Id`
+INNER JOIN `VaccineInventories` AS `v0` ON `v`.`InventoryId` = `v0`.`Id`
+INNER JOIN `Vaccines` AS `v1` ON `v0`.`VaccineId` = `v1`.`Id`
+2021-02-10 13:37:43.638 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.VaccineHistory, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-10 13:37:43.638 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.VaccineHistoriesController.GetAllHistoryJoinPatientJoinInventory (CovidVaccine) in 9.718ms
+2021-02-10 13:37:43.639 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.VaccineHistoriesController.GetAllHistoryJoinPatientJoinInventory (CovidVaccine)'
+2021-02-10 13:37:43.639 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/VaccineHistories/GetAllHistoryJoinPatientJoinInventory - - - 200 - application/json;+charset=utf-8 10.6884ms
+2021-02-10 13:39:36.976 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/Patients - -
+2021-02-10 13:39:36.977 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-10 13:39:36.977 +08:00 [INF] Route matched with {action = "GetPatients", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.Patient]]] GetPatients() on controller CovidVaccine.V2.Controllers.PatientsController (CovidVaccine).
+2021-02-10 13:39:37.005 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Birthday`, `p`.`ContactNo`, `p`.`FirstName`, `p`.`LastName`, `p`.`MiddleName`, `p`.`Sex`
+FROM `Patients` AS `p`
+2021-02-10 13:39:37.007 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.Patient, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-10 13:39:37.008 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine) in 30.5927ms
+2021-02-10 13:39:37.008 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-10 13:39:37.009 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/Patients - - - 200 - application/json;+charset=utf-8 32.6123ms
+2021-02-10 13:39:38.539 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/VaccineInventories/GetAllInventoryJoinVaccine - -
+2021-02-10 13:39:38.540 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.VaccineInventoriesController.GetAllInventoryJoinVaccine (CovidVaccine)'
+2021-02-10 13:39:38.540 +08:00 [INF] Route matched with {action = "GetAllInventoryJoinVaccine", controller = "VaccineInventories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.VaccineInventory]]] GetAllInventoryJoinVaccine() on controller CovidVaccine.V2.Controllers.VaccineInventoriesController (CovidVaccine).
+2021-02-10 13:39:38.560 +08:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`Amount`, `v`.`ExpirationDate`, `v`.`StorageDate`, `v`.`VaccineId`, `v0`.`Id`, `v0`.`Description`, `v0`.`Name`
+FROM `VaccineInventories` AS `v`
+INNER JOIN `Vaccines` AS `v0` ON `v`.`VaccineId` = `v0`.`Id`
+2021-02-10 13:39:38.561 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.VaccineInventory, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-10 13:39:38.561 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.VaccineInventoriesController.GetAllInventoryJoinVaccine (CovidVaccine) in 21.0106ms
+2021-02-10 13:39:38.561 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.VaccineInventoriesController.GetAllInventoryJoinVaccine (CovidVaccine)'
+2021-02-10 13:39:38.562 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/VaccineInventories/GetAllInventoryJoinVaccine - - - 200 - application/json;+charset=utf-8 22.5552ms
+2021-02-10 13:39:39.545 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/VaccineHistories/GetAllHistoryJoinPatientJoinInventory - -
+2021-02-10 13:39:39.545 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.VaccineHistoriesController.GetAllHistoryJoinPatientJoinInventory (CovidVaccine)'
+2021-02-10 13:39:39.545 +08:00 [INF] Route matched with {action = "GetAllHistoryJoinPatientJoinInventory", controller = "VaccineHistories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.VaccineHistory]]] GetAllHistoryJoinPatientJoinInventory() on controller CovidVaccine.V2.Controllers.VaccineHistoriesController (CovidVaccine).
+2021-02-10 13:39:39.559 +08:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`DateVaccinated`, `v`.`Dosage`, `v`.`InventoryId`, `v`.`PatientId`, `p`.`Id`, `p`.`Birthday`, `p`.`ContactNo`, `p`.`FirstName`, `p`.`LastName`, `p`.`MiddleName`, `p`.`Sex`, `v0`.`Id`, `v0`.`Amount`, `v0`.`ExpirationDate`, `v0`.`StorageDate`, `v0`.`VaccineId`, `v1`.`Id`, `v1`.`Description`, `v1`.`Name`
+FROM `VaccineHistories` AS `v`
+INNER JOIN `Patients` AS `p` ON `v`.`PatientId` = `p`.`Id`
+INNER JOIN `VaccineInventories` AS `v0` ON `v`.`InventoryId` = `v0`.`Id`
+INNER JOIN `Vaccines` AS `v1` ON `v0`.`VaccineId` = `v1`.`Id`
+2021-02-10 13:39:39.560 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.VaccineHistory, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-10 13:39:39.561 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.VaccineHistoriesController.GetAllHistoryJoinPatientJoinInventory (CovidVaccine) in 15.539ms
+2021-02-10 13:39:39.561 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.VaccineHistoriesController.GetAllHistoryJoinPatientJoinInventory (CovidVaccine)'
+2021-02-10 13:39:39.561 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/VaccineHistories/GetAllHistoryJoinPatientJoinInventory - - - 200 - application/json;+charset=utf-8 16.3566ms
+2021-02-10 13:40:15.306 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/Patients - -
+2021-02-10 13:40:15.306 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-10 13:40:15.306 +08:00 [INF] Route matched with {action = "GetPatients", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.Patient]]] GetPatients() on controller CovidVaccine.V2.Controllers.PatientsController (CovidVaccine).
+2021-02-10 13:40:15.351 +08:00 [INF] Executed DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Birthday`, `p`.`ContactNo`, `p`.`FirstName`, `p`.`LastName`, `p`.`MiddleName`, `p`.`Sex`
+FROM `Patients` AS `p`
+2021-02-10 13:40:15.360 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.Patient, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-10 13:40:15.375 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine) in 69.1002ms
+2021-02-10 13:40:15.375 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-10 13:40:15.376 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/Patients - - - 200 - application/json;+charset=utf-8 70.1660ms
+2021-02-10 13:40:18.142 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/VaccineHistories/GetAllHistoryJoinPatientJoinInventory - -
+2021-02-10 13:40:18.142 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.VaccineHistoriesController.GetAllHistoryJoinPatientJoinInventory (CovidVaccine)'
+2021-02-10 13:40:18.142 +08:00 [INF] Route matched with {action = "GetAllHistoryJoinPatientJoinInventory", controller = "VaccineHistories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.VaccineHistory]]] GetAllHistoryJoinPatientJoinInventory() on controller CovidVaccine.V2.Controllers.VaccineHistoriesController (CovidVaccine).
+2021-02-10 13:40:18.159 +08:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`DateVaccinated`, `v`.`Dosage`, `v`.`InventoryId`, `v`.`PatientId`, `p`.`Id`, `p`.`Birthday`, `p`.`ContactNo`, `p`.`FirstName`, `p`.`LastName`, `p`.`MiddleName`, `p`.`Sex`, `v0`.`Id`, `v0`.`Amount`, `v0`.`ExpirationDate`, `v0`.`StorageDate`, `v0`.`VaccineId`, `v1`.`Id`, `v1`.`Description`, `v1`.`Name`
+FROM `VaccineHistories` AS `v`
+INNER JOIN `Patients` AS `p` ON `v`.`PatientId` = `p`.`Id`
+INNER JOIN `VaccineInventories` AS `v0` ON `v`.`InventoryId` = `v0`.`Id`
+INNER JOIN `Vaccines` AS `v1` ON `v0`.`VaccineId` = `v1`.`Id`
+2021-02-10 13:40:18.160 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.VaccineHistory, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-10 13:40:18.160 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.VaccineHistoriesController.GetAllHistoryJoinPatientJoinInventory (CovidVaccine) in 18.1246ms
+2021-02-10 13:40:18.160 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.VaccineHistoriesController.GetAllHistoryJoinPatientJoinInventory (CovidVaccine)'
+2021-02-10 13:40:18.161 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/VaccineHistories/GetAllHistoryJoinPatientJoinInventory - - - 200 - application/json;+charset=utf-8 18.9876ms
+2021-02-10 13:42:54.038 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/Patients - -
+2021-02-10 13:42:54.038 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-10 13:42:54.039 +08:00 [INF] Route matched with {action = "GetPatients", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.Patient]]] GetPatients() on controller CovidVaccine.V2.Controllers.PatientsController (CovidVaccine).
+2021-02-10 13:42:54.067 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Birthday`, `p`.`ContactNo`, `p`.`FirstName`, `p`.`LastName`, `p`.`MiddleName`, `p`.`Sex`
+FROM `Patients` AS `p`
+2021-02-10 13:42:54.068 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.Patient, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-10 13:42:54.068 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine) in 27.7655ms
+2021-02-10 13:42:54.068 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-10 13:42:54.068 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/Patients - - - 200 - application/json;+charset=utf-8 30.3932ms
+2021-02-10 13:42:55.796 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/Vaccines - -
+2021-02-10 13:42:55.796 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.VaccinesController.GetVaccines (CovidVaccine)'
+2021-02-10 13:42:55.796 +08:00 [INF] Route matched with {action = "GetVaccines", controller = "Vaccines"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.Vaccine]]] GetVaccines() on controller CovidVaccine.V2.Controllers.VaccinesController (CovidVaccine).
+2021-02-10 13:42:55.815 +08:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`Description`, `v`.`Name`
+FROM `Vaccines` AS `v`
+2021-02-10 13:42:55.816 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.Vaccine, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-10 13:42:55.816 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.VaccinesController.GetVaccines (CovidVaccine) in 20.3528ms
+2021-02-10 13:42:55.816 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.VaccinesController.GetVaccines (CovidVaccine)'
+2021-02-10 13:42:55.817 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/Vaccines - - - 200 - application/json;+charset=utf-8 21.1315ms
+2021-02-10 13:42:56.624 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/VaccineInventories/GetAllInventoryJoinVaccine - -
+2021-02-10 13:42:56.624 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.VaccineInventoriesController.GetAllInventoryJoinVaccine (CovidVaccine)'
+2021-02-10 13:42:56.624 +08:00 [INF] Route matched with {action = "GetAllInventoryJoinVaccine", controller = "VaccineInventories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.VaccineInventory]]] GetAllInventoryJoinVaccine() on controller CovidVaccine.V2.Controllers.VaccineInventoriesController (CovidVaccine).
+2021-02-10 13:42:56.635 +08:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`Amount`, `v`.`ExpirationDate`, `v`.`StorageDate`, `v`.`VaccineId`, `v0`.`Id`, `v0`.`Description`, `v0`.`Name`
+FROM `VaccineInventories` AS `v`
+INNER JOIN `Vaccines` AS `v0` ON `v`.`VaccineId` = `v0`.`Id`
+2021-02-10 13:42:56.636 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.VaccineInventory, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-10 13:42:56.636 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.VaccineInventoriesController.GetAllInventoryJoinVaccine (CovidVaccine) in 12.1589ms
+2021-02-10 13:42:56.637 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.VaccineInventoriesController.GetAllInventoryJoinVaccine (CovidVaccine)'
+2021-02-10 13:42:56.637 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/VaccineInventories/GetAllInventoryJoinVaccine - - - 200 - application/json;+charset=utf-8 13.3022ms
+2021-02-10 13:42:57.769 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/VaccineHistories/GetAllHistoryJoinPatientJoinInventory - -
+2021-02-10 13:42:57.769 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.VaccineHistoriesController.GetAllHistoryJoinPatientJoinInventory (CovidVaccine)'
+2021-02-10 13:42:57.769 +08:00 [INF] Route matched with {action = "GetAllHistoryJoinPatientJoinInventory", controller = "VaccineHistories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.VaccineHistory]]] GetAllHistoryJoinPatientJoinInventory() on controller CovidVaccine.V2.Controllers.VaccineHistoriesController (CovidVaccine).
+2021-02-10 13:42:57.779 +08:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`DateVaccinated`, `v`.`Dosage`, `v`.`InventoryId`, `v`.`PatientId`, `p`.`Id`, `p`.`Birthday`, `p`.`ContactNo`, `p`.`FirstName`, `p`.`LastName`, `p`.`MiddleName`, `p`.`Sex`, `v0`.`Id`, `v0`.`Amount`, `v0`.`ExpirationDate`, `v0`.`StorageDate`, `v0`.`VaccineId`, `v1`.`Id`, `v1`.`Description`, `v1`.`Name`
+FROM `VaccineHistories` AS `v`
+INNER JOIN `Patients` AS `p` ON `v`.`PatientId` = `p`.`Id`
+INNER JOIN `VaccineInventories` AS `v0` ON `v`.`InventoryId` = `v0`.`Id`
+INNER JOIN `Vaccines` AS `v1` ON `v0`.`VaccineId` = `v1`.`Id`
+2021-02-10 13:42:57.780 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.VaccineHistory, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-10 13:42:57.780 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.VaccineHistoriesController.GetAllHistoryJoinPatientJoinInventory (CovidVaccine) in 10.7646ms
+2021-02-10 13:42:57.780 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.VaccineHistoriesController.GetAllHistoryJoinPatientJoinInventory (CovidVaccine)'
+2021-02-10 13:42:57.781 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/VaccineHistories/GetAllHistoryJoinPatientJoinInventory - - - 200 - application/json;+charset=utf-8 11.4987ms
+2021-02-10 13:43:03.901 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/Patients - -
+2021-02-10 13:43:03.901 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/VaccineInventories/GetAllInventoryJoinVaccine - -
+2021-02-10 13:43:03.901 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-10 13:43:03.901 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.VaccineInventoriesController.GetAllInventoryJoinVaccine (CovidVaccine)'
+2021-02-10 13:43:03.902 +08:00 [INF] Route matched with {action = "GetPatients", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.Patient]]] GetPatients() on controller CovidVaccine.V2.Controllers.PatientsController (CovidVaccine).
+2021-02-10 13:43:03.902 +08:00 [INF] Route matched with {action = "GetAllInventoryJoinVaccine", controller = "VaccineInventories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.VaccineInventory]]] GetAllInventoryJoinVaccine() on controller CovidVaccine.V2.Controllers.VaccineInventoriesController (CovidVaccine).
+2021-02-10 13:43:03.913 +08:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Birthday`, `p`.`ContactNo`, `p`.`FirstName`, `p`.`LastName`, `p`.`MiddleName`, `p`.`Sex`
+FROM `Patients` AS `p`
+2021-02-10 13:43:03.917 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.Patient, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-10 13:43:03.917 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine) in 15.4147ms
+2021-02-10 13:43:03.917 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.PatientsController.GetPatients (CovidVaccine)'
+2021-02-10 13:43:03.917 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/Patients - - - 200 - application/json;+charset=utf-8 16.2722ms
+2021-02-10 13:43:03.938 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`Amount`, `v`.`ExpirationDate`, `v`.`StorageDate`, `v`.`VaccineId`, `v0`.`Id`, `v0`.`Description`, `v0`.`Name`
+FROM `VaccineInventories` AS `v`
+INNER JOIN `Vaccines` AS `v0` ON `v`.`VaccineId` = `v0`.`Id`
+2021-02-10 13:43:03.939 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.VaccineInventory, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-10 13:43:03.939 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.VaccineInventoriesController.GetAllInventoryJoinVaccine (CovidVaccine) in 37.347ms
+2021-02-10 13:43:03.939 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.VaccineInventoriesController.GetAllInventoryJoinVaccine (CovidVaccine)'
+2021-02-10 13:43:03.940 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/VaccineInventories/GetAllInventoryJoinVaccine - - - 200 - application/json;+charset=utf-8 38.4989ms
+2021-02-10 13:43:33.935 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/api/v2/VaccineHistories/GetAllHistoryJoinPatientJoinInventory - -
+2021-02-10 13:43:33.935 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.VaccineHistoriesController.GetAllHistoryJoinPatientJoinInventory (CovidVaccine)'
+2021-02-10 13:43:33.935 +08:00 [INF] Route matched with {action = "GetAllHistoryJoinPatientJoinInventory", controller = "VaccineHistories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CovidVaccine.Model.VaccineHistory]]] GetAllHistoryJoinPatientJoinInventory() on controller CovidVaccine.V2.Controllers.VaccineHistoriesController (CovidVaccine).
+2021-02-10 13:43:33.958 +08:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Id`, `v`.`DateVaccinated`, `v`.`Dosage`, `v`.`InventoryId`, `v`.`PatientId`, `p`.`Id`, `p`.`Birthday`, `p`.`ContactNo`, `p`.`FirstName`, `p`.`LastName`, `p`.`MiddleName`, `p`.`Sex`, `v0`.`Id`, `v0`.`Amount`, `v0`.`ExpirationDate`, `v0`.`StorageDate`, `v0`.`VaccineId`, `v1`.`Id`, `v1`.`Description`, `v1`.`Name`
+FROM `VaccineHistories` AS `v`
+INNER JOIN `Patients` AS `p` ON `v`.`PatientId` = `p`.`Id`
+INNER JOIN `VaccineInventories` AS `v0` ON `v`.`InventoryId` = `v0`.`Id`
+INNER JOIN `Vaccines` AS `v1` ON `v0`.`VaccineId` = `v1`.`Id`
+2021-02-10 13:43:33.959 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CovidVaccine.Model.VaccineHistory, CovidVaccine.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-10 13:43:33.960 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.VaccineHistoriesController.GetAllHistoryJoinPatientJoinInventory (CovidVaccine) in 24.1517ms
+2021-02-10 13:43:33.960 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.VaccineHistoriesController.GetAllHistoryJoinPatientJoinInventory (CovidVaccine)'
+2021-02-10 13:43:33.960 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/VaccineHistories/GetAllHistoryJoinPatientJoinInventory - - - 200 - application/json;+charset=utf-8 25.3379ms

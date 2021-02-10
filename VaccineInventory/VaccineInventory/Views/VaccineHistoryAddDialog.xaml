@@ -28,13 +28,13 @@
         </Grid.RowDefinitions>
         <TextBlock Margin="5,0,0,0" Grid.Row="1" VerticalAlignment="Bottom" Text="Patient"/>
         <TextBlock Margin="5,0,0,0" Grid.Row="1" HorizontalAlignment="Right" Foreground="Green" FontSize="20" Text="{Binding Message}"/>
-        <ComboBox Margin="5" Grid.Row="2" ItemsSource="{Binding VaccineList}" DisplayMemberPath="Name" SelectedItem="{Binding SelectedVaccine}"></ComboBox>
+        <ComboBox Margin="5" Grid.Row="2" ItemsSource="{Binding PatientList}" DisplayMemberPath="FullName" SelectedItem="{Binding SelectedPatient}"></ComboBox>
         <TextBlock Margin="5,0,0,0" Grid.Row="3" VerticalAlignment="Bottom" Text="Inventory"/>
-        <ComboBox Margin="5" Grid.Row="4" ItemsSource="{Binding VaccineList}" DisplayMemberPath="Name" SelectedItem="{Binding SelectedVaccine}"></ComboBox>
-        <TextBlock Margin="5,0,0,0" Grid.Row="5" Text="Storage Date"/>
-        <DatePicker Margin="5" Grid.Row="6" Text="{Binding StorageDate, Mode=TwoWay}"/>
-        <TextBlock Margin="5,0,0,0" Grid.Row="7" Text="Expiration Date"/>
-        <DatePicker Margin="5" Grid.Row="8" Text="{Binding ExpirationDate, Mode=TwoWay}"/>
+        <ComboBox Margin="5" Grid.Row="4" ItemsSource="{Binding InventoryList}" DisplayMemberPath="Id" SelectedItem="{Binding SelectedInventory}"></ComboBox>
+        <TextBlock Margin="5,0,0,0" Grid.Row="5" Text="Dosage"/>
+        <TextBox Margin="5" Grid.Row="6" Text="{Binding Dosage}"/>
+        <TextBlock Margin="5,0,0,0" Grid.Row="7" Text="Vaccination Date"/>
+        <DatePicker Margin="5" Grid.Row="8" Text="{Binding DateVaccinated, Mode=TwoWay}"/>
         <StackPanel Grid.Row="9" Margin="0 10 0 0" Orientation="Horizontal" HorizontalAlignment="Right">
             <Button Command="{Binding SaveButtonClick}" CommandParameter="true" Content="Add" Width="75" Height="25" HorizontalAlignment="Right" Margin="5" IsDefault="True" />
             <Button Command="{Binding CloseDialogCommand}" CommandParameter="false" Content="Cancel" Width="75" Height="25" HorizontalAlignment="Right" Margin="0,5,5,5" IsDefault="True" />

@@ -75,7 +75,6 @@ namespace VaccineInventory.ViewModels
 
         private async void GetInventory()
         {
-
             _requestHandler.Execute("http://localhost:16866/");
             HttpResponseMessage response = await Task.Run(() => _requestHandler.GetAsync("api/v2/VaccineInventories/GetAllInventoryJoinVaccine"));
 
