@@ -13,6 +13,7 @@ namespace CovidVaccine.Model
             Id = id;
             VaccineId = vaccineId;
             StartingStock = startingStock;
+            CurrentStock = startingStock;
             StorageDate = storageDate;
             ExpirationDate = expirationDate;
         }
@@ -20,6 +21,7 @@ namespace CovidVaccine.Model
         public int Id { get; private set;}
         public int VaccineId { get; private set; }
         public decimal StartingStock { get; private set; }
+        public decimal CurrentStock { get; private set; }
         public DateTime StorageDate { get; private set; }
 
         public DateTime ExpirationDate { get; private set; }
