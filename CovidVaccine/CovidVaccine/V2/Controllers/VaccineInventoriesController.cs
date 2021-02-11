@@ -92,6 +92,20 @@ namespace CovidVaccine.V2.Controllers
             return NoContent();
         }
 
+        [HttpPut("UpdateCurrentStock/{id}")]
+        public async Task<IActionResult> UpdateCurrentStock(int id, UpdateCurrentStockCommand command)
+        {
+
+            if (id != command.Id)
+            {
+                return BadRequest();
+            }
+
+            var result = await _mediator.Send(command);
+            return result != null ? (ActionResult)Ok(result) : NotFound();
+
+        }
+
         // POST: api/VaccineInventories
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]

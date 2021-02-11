@@ -43,6 +43,12 @@ namespace VaccineInventory.ViewModels
             get { return _startingStock; }
             set { SetProperty(ref _startingStock, value); }
         }
+        private string _currentStock;
+        public string CurrentStock
+        {
+            get { return _currentStock; }
+            set { SetProperty(ref _currentStock, value); }
+        }
         private DateTime _storageDate;
         public DateTime StorageDate
         {

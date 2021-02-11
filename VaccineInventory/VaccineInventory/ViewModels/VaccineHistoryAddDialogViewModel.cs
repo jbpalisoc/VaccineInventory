@@ -99,25 +99,36 @@ namespace VaccineInventory.ViewModels
         }
         private async void Insert()
         {
-            History newHistory = new History()
+            var updateStock = new
             {
-                PatientId = SelectedPatient.Id,
-                InventoryId = SelectedInventory.Id,
-                Dosage = Dosage,
-                DateVaccinated = DateVaccinated
+                Id = SelectedInventory.Id,
+                Dosage = Dosage
             };
 
             _requestHandler.Execute("http://localhost:16866/");
-            HttpResponseMessage response = await Task.Run(() => _requestHandler.InsertAsync("api/v2/VaccineHistories", newHistory));
-
-            if (response.IsSuccessStatusCode)
+            HttpResponseMessage updateResponse = await Task.Run(() => _requestHandler.UpdateAsync("/api/v2/VaccineInventories/UpdateCurrentStock/" + SelectedInventory.Id, updateStock));
+            
+            if (updateResponse.IsSuccessStatusCode)
             {
-                SelectedPatient = null;
-                SelectedInventory = null;
-                Dosage = 0;
-                DateVaccinated = DateTime.Now;
+                
+                History newHistory = new History()
+                {
+                    PatientId = SelectedPatient.Id,
+                    InventoryId = SelectedInventory.Id,
+                    Dosage = Dosage,
+                    DateVaccinated = DateVaccinated
+                };
 
-                Message = "History Added!!!";
+                HttpResponseMessage response = await Task.Run(() => _requestHandler.InsertAsync("api/v2/VaccineHistories", newHistory));
+                if (response.IsSuccessStatusCode)
+                {
+                    SelectedPatient = null;
+                    SelectedInventory = null;
+                    Dosage = 0;
+                    DateVaccinated = DateTime.Now;
+
+                    Message = "History Added!!!";
+                }
             }
         }
         protected virtual void CloseDialog(string parameter)

@@ -17,6 +17,11 @@ namespace CovidVaccine.Model
             StorageDate = storageDate;
             ExpirationDate = expirationDate;
         }
+        public void UpdateCurrentStock(int id, decimal currentStock)
+        {
+            Id = id;
+            CurrentStock = currentStock;
+        }
 
         public int Id { get; private set;}
         public int VaccineId { get; private set; }
