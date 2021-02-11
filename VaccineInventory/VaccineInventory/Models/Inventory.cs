@@ -8,7 +8,7 @@ namespace VaccineInventory.Models
     {
         public int Id { get; set; }
         public int VaccineId { get; set; }
-        public decimal Amount { get; set; }
+        public decimal StartingStock { get; set; }
         public DateTime StorageDate { get; set; }
         public DateTime ExpirationDate { get; set; }
         public Vaccine Vaccine { get; set; }

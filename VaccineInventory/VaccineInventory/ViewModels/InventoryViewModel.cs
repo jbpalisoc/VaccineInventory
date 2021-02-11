@@ -37,11 +37,11 @@ namespace VaccineInventory.ViewModels
             get { return _vaccineId; }
             set { SetProperty(ref _vaccineId, value); }
         }
-        private string _amount;
-        public string Amount
+        private string _startingStock;
+        public string StartingStock
         {
-            get { return _amount; }
-            set { SetProperty(ref _amount, value); }
+            get { return _startingStock; }
+            set { SetProperty(ref _startingStock, value); }
         }
         private DateTime _storageDate;
         public DateTime StorageDate

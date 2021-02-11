@@ -25,7 +25,7 @@
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Id" Width="*" Binding="{Binding Id}"/>
                 <DataGridTextColumn Header="Vaccine" Width="*" Binding="{Binding Vaccine.Name}"/>
-                <DataGridTextColumn Header="Amount" Width="*" Binding="{Binding Amount}"/>
+                <DataGridTextColumn Header="Starting Stock" Width="*" Binding="{Binding StartingStock}"/>
                 <DataGridTextColumn Header="Stored" Width="*" Binding="{Binding StorageDate}"/>
                 <DataGridTextColumn Header="Expiration" Width="*" Binding="{Binding ExpirationDate}"/>
             </DataGrid.Columns>

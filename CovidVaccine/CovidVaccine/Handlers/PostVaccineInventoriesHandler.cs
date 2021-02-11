@@ -25,7 +25,7 @@ namespace CovidVaccine.Handlers
             VaccineInventory vaccineInventory = new VaccineInventory(
                request.Id,
                request.VaccineId,
-               request.Amount,
+               request.StartingStock,
                request.StorageDate,
                request.ExpirationDate
                );

@@ -36,11 +36,11 @@ namespace VaccineInventory.ViewModels
             get { return _selectedVaccine; }
             set { SetProperty(ref _selectedVaccine, value); }
         }
-        private decimal _amount;
-        public decimal Amount
+        private decimal _startingStock;
+        public decimal StartingStock
         {
-            get { return _amount; }
-            set { SetProperty(ref _amount, value); }
+            get { return _startingStock; }
+            set { SetProperty(ref _startingStock, value); }
         }
 
         private DateTime _storageDate;
@@ -87,7 +87,7 @@ namespace VaccineInventory.ViewModels
             Inventory newInventory = new Inventory()
             {
                 VaccineId = SelectedVaccine.Id,
-                Amount = Amount,
+                StartingStock = StartingStock,
                 StorageDate = StorageDate,
                 ExpirationDate = ExpirationDate
             };
@@ -98,7 +98,7 @@ namespace VaccineInventory.ViewModels
             if (response.IsSuccessStatusCode)
             {
                 SelectedVaccine = null;
-                Amount = 0;
+                StartingStock = 0;
                 StorageDate = DateTime.Now;
                 ExpirationDate = DateTime.Now;
 

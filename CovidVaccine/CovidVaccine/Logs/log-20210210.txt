@@ -2621,3 +2621,32 @@ INNER JOIN `Vaccines` AS `v1` ON `v0`.`VaccineId` = `v1`.`Id`
 2021-02-10 13:43:33.960 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.VaccineHistoriesController.GetAllHistoryJoinPatientJoinInventory (CovidVaccine) in 24.1517ms
 2021-02-10 13:43:33.960 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.VaccineHistoriesController.GetAllHistoryJoinPatientJoinInventory (CovidVaccine)'
 2021-02-10 13:43:33.960 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/api/v2/VaccineHistories/GetAllHistoryJoinPatientJoinInventory - - - 200 - application/json;+charset=utf-8 25.3379ms
+2021-02-10 14:31:27.486 +08:00 [INF] Starting web host
+2021-02-10 14:31:28.979 +08:00 [INF] User profile is available. Using 'C:\Users\your name\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-02-10 14:31:29.332 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-10 14:31:29.332 +08:00 [INF] Hosting environment: Development
+2021-02-10 14:31:29.333 +08:00 [INF] Content root path: C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine
+2021-02-10 14:31:29.405 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/index.html - -
+2021-02-10 14:31:29.675 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/index.html - - - 200 - text/html;charset=utf-8 273.6064ms
+2021-02-10 14:31:29.862 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - -
+2021-02-10 14:31:30.026 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 164.3445ms
+2021-02-10 14:31:32.927 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/v2/swagger.json - -
+2021-02-10 14:31:32.951 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/v2/swagger.json - - - 200 - application/json;charset=utf-8 25.4663ms
+2021-02-10 14:31:47.033 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:16866/api/v2/Patients application/json 145
+2021-02-10 14:31:47.045 +08:00 [INF] Executing endpoint 'CovidVaccine.V2.Controllers.PatientsController.PostPatient (CovidVaccine)'
+2021-02-10 14:31:47.113 +08:00 [INF] Route matched with {action = "PostPatient", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CovidVaccine.Model.Patient]] PostPatient(CovidVaccine.Commands.PostPatientCommand) on controller CovidVaccine.V2.Controllers.PatientsController (CovidVaccine).
+2021-02-10 14:31:47.227 +08:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2021-02-10 14:31:47.259 +08:00 [INF] Executed action CovidVaccine.V2.Controllers.PatientsController.PostPatient (CovidVaccine) in 133.3108ms
+2021-02-10 14:31:47.262 +08:00 [INF] Executed endpoint 'CovidVaccine.V2.Controllers.PatientsController.PostPatient (CovidVaccine)'
+2021-02-10 14:31:47.262 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost:16866/api/v2/Patients application/json 145 - 400 - application/problem+json;+charset=utf-8 229.7522ms
+2021-02-10 16:18:24.039 +08:00 [INF] Starting web host
+2021-02-10 16:18:34.827 +08:00 [INF] User profile is available. Using 'C:\Users\your name\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-02-10 16:18:36.144 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-10 16:18:36.145 +08:00 [INF] Hosting environment: Development
+2021-02-10 16:18:36.145 +08:00 [INF] Content root path: C:\Users\your name\source\repos\gitFolder\CovidVaccine\CovidVaccine
+2021-02-10 16:18:36.304 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/index.html - -
+2021-02-10 16:18:36.800 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/index.html - - - 200 - text/html;charset=utf-8 497.6463ms
+2021-02-10 16:18:37.299 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - -
+2021-02-10 16:18:37.439 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 140.0176ms
+2021-02-10 16:19:59.927 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:16866/swagger/v2/swagger.json - -
+2021-02-10 16:19:59.949 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:16866/swagger/v2/swagger.json - - - 200 - application/json;charset=utf-8 23.0270ms
