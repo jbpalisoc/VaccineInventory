@@ -24,7 +24,7 @@
                   IsSynchronizedWithCurrentItem="True" ItemsSource="{Binding HistoryList}">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Id" Width="*" Binding="{Binding Id}"/>
-                <DataGridTextColumn Header="Patient" Width="*" Binding="{Binding Patient.FirstName}"/>
+                <DataGridTextColumn Header="Patient" Width="*" Binding="{Binding Patient.FullName}"/>
                 <DataGridTextColumn Header="Inventory Id" Width="*" Binding="{Binding Inventory.Id}"/>
                 <DataGridTextColumn Header="Vaccine" Width="*" Binding="{Binding Inventory.Vaccine.Name}"/>
                 <DataGridTextColumn Header="Dosage" Width="*" Binding="{Binding Dosage}"/>

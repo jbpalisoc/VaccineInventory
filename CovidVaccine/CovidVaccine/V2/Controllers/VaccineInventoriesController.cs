@@ -61,36 +61,36 @@ namespace CovidVaccine.V2.Controllers
             return vaccineInventory;
         }
 
-        // PUT: api/VaccineInventories/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutVaccineInventory(int id, VaccineInventory vaccineInventory)
-        {
-            if (id != vaccineInventory.Id)
-            {
-                return BadRequest();
-            }
+        //// PUT: api/VaccineInventories/5
+        //// To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        //[HttpPut("{id}")]
+        //public async Task<IActionResult> PutVaccineInventory(int id, VaccineInventory vaccineInventory)
+        //{
+        //    if (id != vaccineInventory.Id)
+        //    {
+        //        return BadRequest();
+        //    }
 
-            _context.Entry(vaccineInventory).State = EntityState.Modified;
+        //    _context.Entry(vaccineInventory).State = EntityState.Modified;
 
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!VaccineInventoryExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+        //    try
+        //    {
+        //        await _context.SaveChangesAsync();
+        //    }
+        //    catch (DbUpdateConcurrencyException)
+        //    {
+        //        if (!VaccineInventoryExists(id))
+        //        {
+        //            return NotFound();
+        //        }
+        //        else
+        //        {
+        //            throw;
+        //        }
+        //    }
 
-            return NoContent();
-        }
+        //    return NoContent();
+        //}
 
         [HttpPut("UpdateCurrentStock/{id}")]
         public async Task<IActionResult> UpdateCurrentStock(int id, UpdateCurrentStockCommand command)
@@ -106,35 +106,35 @@ namespace CovidVaccine.V2.Controllers
 
         }
 
-        // POST: api/VaccineInventories
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPost]
-        public async Task<ActionResult<VaccineInventory>> PostVaccineInventory(PostVaccineInventoryCommand command)
-        {
-            var result = await _mediator.Send(command);
+        //// POST: api/VaccineInventories
+        //// To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        //[HttpPost]
+        //public async Task<ActionResult<VaccineInventory>> PostVaccineInventory(PostVaccineInventoryCommand command)
+        //{
+        //    var result = await _mediator.Send(command);
 
-            return result != null ? (ActionResult)Ok(result) : NotFound();
-        }
+        //    return result != null ? (ActionResult)Ok(result) : NotFound();
+        //}
 
-        // DELETE: api/VaccineInventories/5
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteVaccineInventory(int id)
-        {
-            var vaccineInventory = await _context.VaccineInventories.FindAsync(id);
-            if (vaccineInventory == null)
-            {
-                return NotFound();
-            }
+        //// DELETE: api/VaccineInventories/5
+        //[HttpDelete("{id}")]
+        //public async Task<IActionResult> DeleteVaccineInventory(int id)
+        //{
+        //    var vaccineInventory = await _context.VaccineInventories.FindAsync(id);
+        //    if (vaccineInventory == null)
+        //    {
+        //        return NotFound();
+        //    }
 
-            _context.VaccineInventories.Remove(vaccineInventory);
-            await _context.SaveChangesAsync();
+        //    _context.VaccineInventories.Remove(vaccineInventory);
+        //    await _context.SaveChangesAsync();
 
-            return NoContent();
-        }
+        //    return NoContent();
+        //}
 
-        private bool VaccineInventoryExists(int id)
-        {
-            return _context.VaccineInventories.Any(e => e.Id == id);
-        }
+        //private bool VaccineInventoryExists(int id)
+        //{
+        //    return _context.VaccineInventories.Any(e => e.Id == id);
+        //}
     }
 }

@@ -31,17 +31,22 @@ namespace CovidVaccine.Handlers
             }
             else
             {
-                decimal currentStock = model.CurrentStock - request.Dosage;
+                decimal newCurrentStock = model.CurrentStock - request.Dosage;
+                if (newCurrentStock < 0)
+                {
+                    return null;
+                }
+                else
+                {
+                    model.UpdateCurrentStock(
+                        request.Id,
+                        newCurrentStock
+                    );
 
-                model.UpdateCurrentStock(
-                    request.Id,
-                    currentStock
-                );
-
-                _repository.UpdateAsync<VaccineInventory>(model);
-                await _unitOfWork.Commit();
-                return model;
-
+                    _repository.UpdateAsync<VaccineInventory>(model);
+                    await _unitOfWork.Commit();
+                    return model;
+                }
             }
         }
     }

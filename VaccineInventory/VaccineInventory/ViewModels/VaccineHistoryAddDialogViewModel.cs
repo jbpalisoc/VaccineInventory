@@ -129,6 +129,14 @@ namespace VaccineInventory.ViewModels
 
                     Message = "History Added!!!";
                 }
+                else
+                {
+                    Message = "Something went wrong!!!";
+                }
+            }
+            else
+            {
+                Message = "Something went wrong!!!";
             }
         }
         protected virtual void CloseDialog(string parameter)
